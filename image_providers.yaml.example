@@ -2,10 +2,19 @@
 # 复制此文件为 image_providers.yaml 并填写你的配置
 
 # 当前激活的服务商（填写下方 providers 中的名称）
-active_provider: gemini
+active_provider: apicore_image
 
 # 服务商列表
 providers:
+  # API Core（D:/api-core，密钥从 .env 读取）
+  apicore_image:
+    type: api_core
+    provider_name: gemini_3_1_fi
+    aspect_ratio: "3:4"
+    image_size: "2K"
+    high_concurrency: false
+    short_prompt: false
+
   # Google Gemini 图片生成（推荐）
   gemini:
     type: google_genai

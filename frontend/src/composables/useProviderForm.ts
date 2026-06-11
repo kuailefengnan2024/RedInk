@@ -15,12 +15,21 @@ import { getConfig, updateConfig, testConnection, type Config } from '../api'
 export interface Provider {
   type: string
   model: string
+  provider_name?: string
   base_url?: string
   api_key?: string
   api_key_masked?: string
   endpoint_type?: string
   high_concurrency?: boolean
   short_prompt?: boolean
+  temperature?: number
+  max_output_tokens?: number
+  budget_tokens?: number
+  aspect_ratio?: string
+  image_size?: string
+  size?: string
+  quality?: string
+  watermark?: boolean
 }
 
 // 服务商配置类型
@@ -37,7 +46,11 @@ export interface TextProviderForm {
   api_key_masked: string
   base_url: string
   model: string
+  provider_name: string
   endpoint_type: string
+  temperature: number
+  max_output_tokens: number
+  budget_tokens: number
   _has_api_key: boolean
 }
 
@@ -49,20 +62,28 @@ export interface ImageProviderForm {
   api_key_masked: string
   base_url: string
   model: string
+  provider_name: string
   high_concurrency: boolean
   short_prompt: boolean
   endpoint_type: string
+  aspect_ratio: string
+  image_size: string
+  size: string
+  quality: string
+  watermark: boolean
   _has_api_key: boolean
 }
 
 // 文本服务商类型选项
 export const textTypeOptions = [
+  { value: 'api_core', label: 'API Core (D:/api-core)' },
   { value: 'google_gemini', label: 'Google Gemini' },
   { value: 'openai_compatible', label: 'OpenAI 兼容接口' }
 ]
 
 // 图片服务商类型选项
 export const imageTypeOptions = [
+  { value: 'api_core', label: 'API Core (D:/api-core)' },
   { value: 'google_genai', label: 'Google GenAI' },
   { value: 'image_api', label: 'OpenAI 兼容接口' }
 ]
@@ -104,12 +125,16 @@ export function useProviderForm() {
   function createEmptyTextForm(): TextProviderForm {
     return {
       name: '',
-      type: 'openai_compatible',
+      type: 'api_core',
       api_key: '',
       api_key_masked: '',
       base_url: '',
       model: '',
+      provider_name: 'gemini_3_pro',
       endpoint_type: '/v1/chat/completions',
+      temperature: 1.0,
+      max_output_tokens: 8000,
+      budget_tokens: 2000,
       _has_api_key: false
     }
   }
@@ -120,14 +145,20 @@ export function useProviderForm() {
   function createEmptyImageForm(): ImageProviderForm {
     return {
       name: '',
-      type: 'image_api',
+      type: 'api_core',
       api_key: '',
       api_key_masked: '',
       base_url: '',
       model: '',
+      provider_name: 'gemini_3_1_fi',
       high_concurrency: false,
       short_prompt: false,
       endpoint_type: '/v1/images/generations',
+      aspect_ratio: '3:4',
+      image_size: '2K',
+      size: '2048x2048',
+      quality: 'high',
+      watermark: false,
       _has_api_key: false
     }
   }
@@ -209,7 +240,11 @@ export function useProviderForm() {
       api_key_masked: provider.api_key_masked || '',
       base_url: provider.base_url || '',
       model: provider.model || '',
+      provider_name: provider.provider_name || 'gemini_3_pro',
       endpoint_type: provider.endpoint_type || '/v1/chat/completions',
+      temperature: provider.temperature ?? 1.0,
+      max_output_tokens: provider.max_output_tokens ?? 8000,
+      budget_tokens: provider.budget_tokens ?? 2000,
       _has_api_key: !!provider.api_key_masked
     }
     showTextModal.value = true
@@ -239,9 +274,14 @@ export function useProviderForm() {
       return
     }
 
-    // 新增时必须填写 API Key
-    if (!editingTextProvider.value && !textForm.value.api_key) {
+    // 非 api-core 新增时必须填写 API Key
+    if (textForm.value.type !== 'api_core' && !editingTextProvider.value && !textForm.value.api_key) {
       alert('请填写 API Key')
+      return
+    }
+
+    if (textForm.value.type === 'api_core' && !textForm.value.provider_name) {
+      alert('请选择 api-core 模型')
       return
     }
 
@@ -252,20 +292,23 @@ export function useProviderForm() {
       model: textForm.value.model
     }
 
-    // 如果填写了新的 API Key，使用新的；否则保留原有的
-    if (textForm.value.api_key) {
-      providerData.api_key = textForm.value.api_key
-    } else if (existingProvider.api_key) {
-      providerData.api_key = existingProvider.api_key
-    }
-
-    if (textForm.value.base_url) {
-      providerData.base_url = textForm.value.base_url
-    }
-
-    // 如果是 OpenAI 兼容接口，保存 endpoint_type
-    if (textForm.value.type === 'openai_compatible') {
-      providerData.endpoint_type = textForm.value.endpoint_type
+    if (textForm.value.type === 'api_core') {
+      providerData.provider_name = textForm.value.provider_name
+      providerData.temperature = textForm.value.temperature
+      providerData.max_output_tokens = textForm.value.max_output_tokens
+      providerData.budget_tokens = textForm.value.budget_tokens
+    } else {
+      if (textForm.value.api_key) {
+        providerData.api_key = textForm.value.api_key
+      } else if (existingProvider.api_key) {
+        providerData.api_key = existingProvider.api_key
+      }
+      if (textForm.value.base_url) {
+        providerData.base_url = textForm.value.base_url
+      }
+      if (textForm.value.type === 'openai_compatible') {
+        providerData.endpoint_type = textForm.value.endpoint_type
+      }
     }
 
     textConfig.value.providers[name] = providerData
@@ -295,7 +338,9 @@ export function useProviderForm() {
     try {
       const result = await testConnection({
         type: textForm.value.type,
-        provider_name: editingTextProvider.value || undefined,
+        provider_name: textForm.value.type === 'api_core'
+          ? textForm.value.provider_name
+          : (editingTextProvider.value || undefined),
         api_key: textForm.value.api_key || undefined,
         base_url: textForm.value.base_url,
         model: textForm.value.model
@@ -317,7 +362,7 @@ export function useProviderForm() {
     try {
       const result = await testConnection({
         type: provider.type,
-        provider_name: name,
+        provider_name: provider.type === 'api_core' ? provider.provider_name : name,
         api_key: undefined,
         base_url: provider.base_url,
         model: provider.model
@@ -361,9 +406,15 @@ export function useProviderForm() {
       api_key_masked: provider.api_key_masked || '',
       base_url: provider.base_url || '',
       model: provider.model || '',
+      provider_name: provider.provider_name || 'gemini_3_1_fi',
       high_concurrency: provider.high_concurrency || false,
       short_prompt: provider.short_prompt || false,
       endpoint_type: provider.endpoint_type || '/v1/images/generations',
+      aspect_ratio: provider.aspect_ratio || '3:4',
+      image_size: provider.image_size || '2K',
+      size: provider.size || '2048x2048',
+      quality: provider.quality || 'high',
+      watermark: provider.watermark ?? false,
       _has_api_key: !!provider.api_key_masked
     }
     showImageModal.value = true
@@ -393,9 +444,13 @@ export function useProviderForm() {
       return
     }
 
-    // 新增时必须填写 API Key
-    if (!editingImageProvider.value && !imageForm.value.api_key) {
+    if (imageForm.value.type !== 'api_core' && !editingImageProvider.value && !imageForm.value.api_key) {
       alert('请填写 API Key')
+      return
+    }
+
+    if (imageForm.value.type === 'api_core' && !imageForm.value.provider_name) {
+      alert('请选择 api-core 模型')
       return
     }
 
@@ -408,20 +463,25 @@ export function useProviderForm() {
       short_prompt: imageForm.value.short_prompt
     }
 
-    // 如果是 OpenAI 兼容接口，保存 endpoint_type
-    if (imageForm.value.type === 'image_api') {
-      providerData.endpoint_type = imageForm.value.endpoint_type
-    }
-
-    // 如果填写了新的 API Key，使用新的；否则保留原有的
-    if (imageForm.value.api_key) {
-      providerData.api_key = imageForm.value.api_key
-    } else if (existingProvider.api_key) {
-      providerData.api_key = existingProvider.api_key
-    }
-
-    if (imageForm.value.base_url) {
-      providerData.base_url = imageForm.value.base_url
+    if (imageForm.value.type === 'api_core') {
+      providerData.provider_name = imageForm.value.provider_name
+      providerData.aspect_ratio = imageForm.value.aspect_ratio
+      providerData.image_size = imageForm.value.image_size
+      providerData.size = imageForm.value.size
+      providerData.quality = imageForm.value.quality
+      providerData.watermark = imageForm.value.watermark
+    } else {
+      if (imageForm.value.type === 'image_api') {
+        providerData.endpoint_type = imageForm.value.endpoint_type
+      }
+      if (imageForm.value.api_key) {
+        providerData.api_key = imageForm.value.api_key
+      } else if (existingProvider.api_key) {
+        providerData.api_key = existingProvider.api_key
+      }
+      if (imageForm.value.base_url) {
+        providerData.base_url = imageForm.value.base_url
+      }
     }
 
     imageConfig.value.providers[name] = providerData
@@ -451,7 +511,9 @@ export function useProviderForm() {
     try {
       const result = await testConnection({
         type: imageForm.value.type,
-        provider_name: editingImageProvider.value || undefined,
+        provider_name: imageForm.value.type === 'api_core'
+          ? imageForm.value.provider_name
+          : (editingImageProvider.value || undefined),
         api_key: imageForm.value.api_key || undefined,
         base_url: imageForm.value.base_url,
         model: imageForm.value.model
@@ -473,7 +535,7 @@ export function useProviderForm() {
     try {
       const result = await testConnection({
         type: provider.type,
-        provider_name: name,
+        provider_name: provider.type === 'api_core' ? provider.provider_name : name,
         api_key: undefined,
         base_url: provider.base_url,
         model: provider.model

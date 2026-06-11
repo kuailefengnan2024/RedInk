@@ -270,7 +270,10 @@ def get_text_chat_client(provider_config: dict):
     base_url = provider_config.get('base_url')
     endpoint_type = provider_config.get('endpoint_type')
 
-    if provider_type == 'google_gemini':
+    if provider_type == 'api_core':
+        from .apicore_text_client import ApiCoreTextClient
+        return ApiCoreTextClient(provider_config)
+    elif provider_type == 'google_gemini':
         from .genai_client import GenAIClient
         return GenAIClient(api_key=api_key, base_url=base_url)
     else:

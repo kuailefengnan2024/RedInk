@@ -121,6 +121,16 @@ def create_config_blueprint():
 
     # ==================== 连接测试 ====================
 
+    @config_bp.route('/config/apicore/models', methods=['GET'])
+    def list_apicore_models():
+        """获取 api-core 可用模型列表（供设置页下拉选择）"""
+        try:
+            from backend.utils.apicore_bridge import get_model_catalog
+            category = request.args.get('category', 'text')
+            return jsonify({"success": True, **get_model_catalog(category)})
+        except Exception as e:
+            return jsonify({"success": False, "error": str(e)}), 500
+
     @config_bp.route('/config/test', methods=['POST'])
     def test_connection():
         """
@@ -149,14 +159,15 @@ def create_config_blueprint():
             config = {
                 'api_key': data.get('api_key'),
                 'base_url': data.get('base_url'),
-                'model': data.get('model')
+                'model': data.get('model'),
+                'provider_name': data.get('provider_name'),
             }
 
             # 如果没有提供 api_key，从配置文件读取
             if not config['api_key'] and provider_name:
                 config = _load_provider_config(provider_type, provider_name, config)
 
-            if not config['api_key']:
+            if provider_type != 'api_core' and not config['api_key']:
                 return jsonify({"success": False, "error": "API Key 未配置"}), 400
 
             # 根据类型执行测试
@@ -251,7 +262,14 @@ def _load_provider_config(provider_type: str, provider_name: str, config: dict) 
         dict: 合并后的配置
     """
     # 确定配置文件路径
-    if provider_type in ['openai_compatible', 'google_gemini']:
+    if provider_type == 'api_core':
+        image_provider_names = {
+            'seedream_4_5', 'seedream_5', 'gpt_image_1', 'gpt_image_2',
+            'gemini_3_pro_image', 'gemini_3_1_fi',
+        }
+        pname = config.get('provider_name') or provider_name
+        config_path = IMAGE_CONFIG_PATH if pname in image_provider_names else TEXT_CONFIG_PATH
+    elif provider_type in ['openai_compatible', 'google_gemini']:
         config_path = TEXT_CONFIG_PATH
     else:
         config_path = IMAGE_CONFIG_PATH
@@ -269,6 +287,8 @@ def _load_provider_config(provider_type: str, provider_name: str, config: dict) 
                     config['base_url'] = saved.get('base_url')
                 if not config['model']:
                     config['model'] = saved.get('model')
+                if not config.get('provider_name'):
+                    config['provider_name'] = saved.get('provider_name')
                 if not config.get('endpoint_type'):
                     config['endpoint_type'] = saved.get('endpoint_type')
 
@@ -299,6 +319,9 @@ def _test_provider_connection(provider_type: str, config: dict) -> dict:
 
     elif provider_type == 'image_api':
         return _test_image_api(config)
+
+    elif provider_type == 'api_core':
+        return _test_apicore(config, test_prompt)
 
     else:
         raise ValueError(f"不支持的类型: {provider_type}")
@@ -446,6 +469,42 @@ def _test_image_api(config: dict) -> dict:
         }
     else:
         raise Exception(f"HTTP {response.status_code}: {response.text[:200]}")
+
+
+def _test_apicore(config: dict, test_prompt: str) -> dict:
+    """测试 api-core 连接（文本或图片 provider）"""
+    from backend.utils.apicore_bridge import is_apicore_available, run_async
+
+    if not is_apicore_available():
+        raise Exception(
+            "api-core 未安装。请执行: uv sync\n"
+            "确保 D:/api-core 存在且 pyproject.toml 中已配置路径依赖"
+        )
+
+    provider_name = config.get('provider_name') or config.get('model')
+    if not provider_name:
+        raise Exception("请指定 api-core provider_name（如 gemini_3_pro）")
+
+    # 图片类 provider 用 generate 测试，文本类用 chat 测试
+    image_providers = {
+        'seedream_4_5', 'seedream_5', 'gpt_image_1', 'gpt_image_2',
+        'gemini_3_pro_image', 'gemini_3_1_fi',
+    }
+
+    if provider_name in image_providers:
+        from api_core.client import ImageClient
+        client = ImageClient(provider=provider_name)
+        _, error = run_async(client.generate("一只红色猫咪，简约插画", aspectRatio="1:1", imageSize="1K"))
+        if error:
+            raise Exception(error)
+        return {"success": True, "message": f"api-core 图片模型 [{provider_name}] 连接成功"}
+
+    from api_core.client import LLMClient
+    client = LLMClient(provider=provider_name)
+    text, error = run_async(client.chat([{"role": "user", "content": test_prompt}]))
+    if error:
+        raise Exception(error)
+    return _check_response(text or "")
 
 
 def _check_response(result_text: str) -> dict:

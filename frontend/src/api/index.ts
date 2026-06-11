@@ -766,12 +766,30 @@ export async function updateConfig(config: Partial<Config>): Promise<{
 }
 
 // 测试服务商连接
+// 获取 api-core 可用模型列表
+export async function getApicoreModels(category: 'text' | 'image'): Promise<{
+  success: boolean
+  available?: boolean
+  providers?: Array<{
+    name: string
+    label: string
+    params: string[]
+    defaults: Record<string, unknown>
+  }>
+  error?: string
+}> {
+  const response = await axios.get(`${API_BASE_URL}/config/apicore/models`, {
+    params: { category }
+  })
+  return response.data
+}
+
 export async function testConnection(config: {
   type: string
   provider_name?: string
   api_key?: string
   base_url?: string
-  model: string
+  model?: string
 }): Promise<{
   success: boolean
   message?: string

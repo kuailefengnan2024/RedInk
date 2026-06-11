@@ -35,8 +35,45 @@
           </select>
         </div>
 
+        <!-- api-core 模型选择 -->
+        <div class="form-group" v-if="isApiCore">
+          <label>api-core 模型</label>
+          <select
+            class="form-select"
+            :value="formData.provider_name"
+            @change="updateField('provider_name', ($event.target as HTMLSelectElement).value)"
+          >
+            <option v-for="m in apicoreModels" :key="m.name" :value="m.name">
+              {{ m.label }} ({{ m.name }})
+            </option>
+          </select>
+          <span class="form-hint">密钥从 RedInk 根目录 .env 读取，无需在此填写</span>
+        </div>
+
+        <!-- api-core 文本参数 -->
+        <template v-if="isApiCore">
+          <div class="form-group">
+            <label>Temperature</label>
+            <input type="number" step="0.1" min="0" max="2" class="form-input"
+              :value="formData.temperature"
+              @input="updateNumberField('temperature', ($event.target as HTMLInputElement).value)" />
+          </div>
+          <div class="form-group">
+            <label>Max Output Tokens</label>
+            <input type="number" class="form-input"
+              :value="formData.max_output_tokens"
+              @input="updateNumberField('max_output_tokens', ($event.target as HTMLInputElement).value)" />
+          </div>
+          <div class="form-group" v-if="showBudgetTokens">
+            <label>Budget Tokens (Thinking)</label>
+            <input type="number" class="form-input"
+              :value="formData.budget_tokens"
+              @input="updateNumberField('budget_tokens', ($event.target as HTMLInputElement).value)" />
+          </div>
+        </template>
+
         <!-- API Key -->
-        <div class="form-group">
+        <div class="form-group" v-if="!isApiCore">
           <label>API Key</label>
           <input
             type="text"
@@ -51,7 +88,7 @@
         </div>
 
         <!-- Base URL -->
-        <div class="form-group" v-if="showBaseUrl">
+        <div class="form-group" v-if="showBaseUrl && !isApiCore">
           <label>Base URL</label>
           <input
             type="text"
@@ -66,7 +103,7 @@
         </div>
 
         <!-- 模型 -->
-        <div class="form-group">
+        <div class="form-group" v-if="!isApiCore">
           <label>模型</label>
           <input
             type="text"
@@ -78,7 +115,7 @@
         </div>
 
         <!-- 端点路径（仅 OpenAI 兼容接口） -->
-        <div class="form-group" v-if="showEndpointType">
+        <div class="form-group" v-if="showEndpointType && !isApiCore">
           <label>API 端点路径</label>
           <input
             type="text"
@@ -98,7 +135,7 @@
         <button
           class="btn btn-secondary"
           @click="$emit('test')"
-          :disabled="testing || (!formData.api_key && !isEditing)"
+          :disabled="testing || (!isApiCore && !formData.api_key && !isEditing)"
         >
           <span v-if="testing" class="spinner-small"></span>
           {{ testing ? '测试中...' : '测试连接' }}
@@ -112,7 +149,8 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref, watch } from 'vue'
+import { getApicoreModels } from '../../api'
 
 /**
  * 服务商编辑/添加弹窗组件
@@ -132,7 +170,11 @@ interface FormData {
   _has_api_key?: boolean
   base_url: string
   model: string
+  provider_name?: string
   endpoint_type?: string
+  temperature?: number
+  max_output_tokens?: number
+  budget_tokens?: number
 }
 
 // 定义类型选项
@@ -159,6 +201,23 @@ const emit = defineEmits<{
   (e: 'update:formData', data: FormData): void
 }>()
 
+const apicoreModels = ref<Array<{ name: string; label: string }>>([])
+
+async function loadApicoreModels() {
+  try {
+    const result = await getApicoreModels('text')
+    if (result.success && result.providers) {
+      apicoreModels.value = result.providers
+    }
+  } catch (e) {
+    console.error('加载 api-core 模型失败', e)
+  }
+}
+
+watch(() => props.visible, (v) => {
+  if (v) loadApicoreModels()
+}, { immediate: true })
+
 // 更新表单字段
 function updateField(field: keyof FormData, value: string) {
   emit('update:formData', {
@@ -166,6 +225,20 @@ function updateField(field: keyof FormData, value: string) {
     [field]: value
   })
 }
+
+function updateNumberField(field: 'temperature' | 'max_output_tokens' | 'budget_tokens', value: string) {
+  emit('update:formData', {
+    ...props.formData,
+    [field]: Number(value)
+  })
+}
+
+const isApiCore = computed(() => props.formData.type === 'api_core')
+
+const showBudgetTokens = computed(() => {
+  const name = props.formData.provider_name || ''
+  return ['gemini_2_5_pro', 'gemini_3_pro', 'gemini_3_1_p', 'gemini_3_1_fi'].includes(name)
+})
 
 // 是否显示 Base URL
 const showBaseUrl = computed(() => {

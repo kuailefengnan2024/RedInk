@@ -83,7 +83,7 @@ class ContentService:
 
         provider_config = providers.get(active_provider, {})
 
-        if not provider_config.get('api_key'):
+        if provider_config.get('type') != 'api_core' and not provider_config.get('api_key'):
             logger.error(f"文本服务商 [{active_provider}] 未配置 API Key")
             raise ValueError(
                 f"文本服务商 {active_provider} 未配置 API Key\n"

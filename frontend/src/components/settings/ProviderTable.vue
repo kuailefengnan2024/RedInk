@@ -28,11 +28,11 @@
         <span class="provider-name">{{ name }}</span>
       </div>
       <div class="col-model">
-        <span class="model-name">{{ provider.model }}</span>
+        <span class="model-name">{{ displayModel(provider) }}</span>
       </div>
       <div class="col-apikey">
-        <span class="apikey-masked" :class="{ empty: !provider.api_key_masked }">
-          {{ provider.api_key_masked || '未配置' }}
+        <span class="apikey-masked" :class="{ empty: provider.type !== 'api_core' && !provider.api_key_masked }">
+          {{ provider.type === 'api_core' ? '来自 .env' : (provider.api_key_masked || '未配置') }}
         </span>
       </div>
       <div class="col-actions">
@@ -78,6 +78,7 @@ import { computed } from 'vue'
 interface Provider {
   type: string
   model: string
+  provider_name?: string
   base_url?: string
   api_key?: string
   api_key_masked?: string
@@ -96,6 +97,13 @@ defineEmits<{
   (e: 'delete', name: string): void
   (e: 'test', name: string, provider: Provider): void
 }>()
+
+function displayModel(provider: Provider): string {
+  if (provider.type === 'api_core') {
+    return provider.provider_name || '未选择'
+  }
+  return provider.model || '-'
+}
 
 // 是否可以删除（至少保留一个）
 const canDelete = computed(() => Object.keys(props.providers).length > 1)

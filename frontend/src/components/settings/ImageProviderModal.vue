@@ -35,8 +35,85 @@
           </select>
         </div>
 
+        <!-- api-core 模型选择 -->
+        <div class="form-group" v-if="isApiCore">
+          <label>api-core 生图模型</label>
+          <select
+            class="form-select"
+            :value="formData.provider_name"
+            @change="updateField('provider_name', ($event.target as HTMLSelectElement).value)"
+          >
+            <option v-for="m in apicoreModels" :key="m.name" :value="m.name">
+              {{ m.label }} ({{ m.name }})
+            </option>
+          </select>
+          <span class="form-hint">密钥从 RedInk 根目录 .env 读取（ARK_API_KEY / AZURE_OPENAI_API_KEY）</span>
+        </div>
+
+        <!-- Gemini 系参数 -->
+        <template v-if="isApiCore && isGeminiImage">
+          <div class="form-group">
+            <label>宽高比 (aspect_ratio)</label>
+            <select class="form-select" :value="formData.aspect_ratio"
+              @change="updateField('aspect_ratio', ($event.target as HTMLSelectElement).value)">
+              <option v-for="r in aspectRatios" :key="r" :value="r">{{ r }}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>清晰度 (image_size)</label>
+            <select class="form-select" :value="formData.image_size"
+              @change="updateField('image_size', ($event.target as HTMLSelectElement).value)">
+              <option value="1K">1K</option>
+              <option value="2K">2K</option>
+            </select>
+          </div>
+        </template>
+
+        <!-- GPT 系参数 -->
+        <template v-if="isApiCore && isGptImage">
+          <div class="form-group">
+            <label>尺寸 (size)</label>
+            <select class="form-select" :value="formData.size"
+              @change="updateField('size', ($event.target as HTMLSelectElement).value)">
+              <option value="1024x1024">1024x1024</option>
+              <option value="1536x1024">1536x1024</option>
+              <option value="1024x1536">1024x1536</option>
+              <option value="auto">auto</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>质量 (quality)</label>
+            <select class="form-select" :value="formData.quality"
+              @change="updateField('quality', ($event.target as HTMLSelectElement).value)">
+              <option value="high">high</option>
+              <option value="medium">medium</option>
+              <option value="low">low</option>
+              <option value="auto">auto</option>
+            </select>
+          </div>
+        </template>
+
+        <!-- Seedream 系参数 -->
+        <template v-if="isApiCore && isSeedream">
+          <div class="form-group">
+            <label>尺寸 (size)</label>
+            <input class="form-input" :value="formData.size"
+              @input="updateField('size', ($event.target as HTMLInputElement).value)"
+              placeholder="2048x2048" />
+          </div>
+          <div class="form-group">
+            <label class="toggle-label">
+              <span>水印 (watermark)</span>
+              <div class="toggle-switch" :class="{ active: formData.watermark }"
+                @click="updateField('watermark', !formData.watermark)">
+                <div class="toggle-slider"></div>
+              </div>
+            </label>
+          </div>
+        </template>
+
         <!-- API Key -->
-        <div class="form-group">
+        <div class="form-group" v-if="!isApiCore">
           <label>API Key</label>
           <input
             type="text"
@@ -51,7 +128,7 @@
         </div>
 
         <!-- Base URL -->
-        <div class="form-group" v-if="showBaseUrl">
+        <div class="form-group" v-if="showBaseUrl && !isApiCore">
           <label>Base URL</label>
           <input
             type="text"
@@ -66,7 +143,7 @@
         </div>
 
         <!-- 模型 -->
-        <div class="form-group">
+        <div class="form-group" v-if="!isApiCore">
           <label>模型</label>
           <input
             type="text"
@@ -78,7 +155,7 @@
         </div>
 
         <!-- 端点路径（仅 OpenAI 兼容接口） -->
-        <div class="form-group" v-if="showEndpointType">
+        <div class="form-group" v-if="showEndpointType && !isApiCore">
           <label>API 端点路径</label>
           <input
             type="text"
@@ -132,7 +209,7 @@
         <button
           class="btn btn-secondary"
           @click="$emit('test')"
-          :disabled="testing || (!formData.api_key && !isEditing)"
+          :disabled="testing || (!isApiCore && !formData.api_key && !isEditing)"
         >
           <span v-if="testing" class="spinner-small"></span>
           {{ testing ? '测试中...' : '测试连接' }}
@@ -146,7 +223,8 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref, watch } from 'vue'
+import { getApicoreModels } from '../../api'
 
 /**
  * 图片服务商编辑/添加弹窗组件
@@ -167,9 +245,15 @@ interface FormData {
   _has_api_key?: boolean
   base_url: string
   model: string
+  provider_name?: string
   endpoint_type?: string
   high_concurrency?: boolean
   short_prompt?: boolean
+  aspect_ratio?: string
+  image_size?: string
+  size?: string
+  quality?: string
+  watermark?: boolean
 }
 
 // 定义类型选项
@@ -195,7 +279,24 @@ const emit = defineEmits<{
   (e: 'update:formData', data: FormData): void
 }>()
 
-// 更新表单字段
+const apicoreModels = ref<Array<{ name: string; label: string }>>([])
+const aspectRatios = ['1:1', '2:3', '3:2', '3:4', '4:3', '4:5', '5:4', '9:16', '16:9', '21:9']
+
+async function loadApicoreModels() {
+  try {
+    const result = await getApicoreModels('image')
+    if (result.success && result.providers) {
+      apicoreModels.value = result.providers
+    }
+  } catch (e) {
+    console.error('加载 api-core 模型失败', e)
+  }
+}
+
+watch(() => props.visible, (v) => {
+  if (v) loadApicoreModels()
+}, { immediate: true })
+
 function updateField(field: keyof FormData, value: string | boolean) {
   emit('update:formData', {
     ...props.formData,
@@ -203,7 +304,12 @@ function updateField(field: keyof FormData, value: string | boolean) {
   })
 }
 
-// 是否显示 Base URL
+const isApiCore = computed(() => props.formData.type === 'api_core')
+const providerName = computed(() => props.formData.provider_name || '')
+const isGeminiImage = computed(() => ['gemini_3_pro_image', 'gemini_3_1_fi'].includes(providerName.value))
+const isGptImage = computed(() => ['gpt_image_1', 'gpt_image_2'].includes(providerName.value))
+const isSeedream = computed(() => ['seedream_4_5', 'seedream_5'].includes(providerName.value))
+
 const showBaseUrl = computed(() => {
   return ['image_api', 'google_genai'].includes(props.formData.type)
 })

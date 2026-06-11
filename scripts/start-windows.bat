@@ -8,11 +8,16 @@ title 红墨 AI图文生成器
 
 cd /d "%~dp0\.."
 
+:: 确保 Node.js 在 PATH 中（部分环境安装后未写入系统 PATH）
+if exist "C:\Program Files\nodejs\node.exe" (
+    set "PATH=C:\Program Files\nodejs;%PATH%"
+)
+
 cls
 echo.
-echo ╔═══════════════════════════════════════════════╗
-echo ║     🪟 红墨 AI图文生成器 - Windows 版         ║
-echo ╚═══════════════════════════════════════════════╝
+echo ===============================================
+echo      RedInk AI - Windows
+echo ===============================================
 echo.
 
 :: ========== 环境检查 ==========
@@ -113,14 +118,14 @@ cd ..
 timeout /t 3 /nobreak >nul
 
 echo.
-echo ╔═══════════════════════════════════════════════╗
-echo ║         🎉 服务启动成功！                     ║
-echo ╠═══════════════════════════════════════════════╣
-echo ║  🌐 前端: http://localhost:5173              ║
-echo ║  🔧 后端: http://localhost:12398             ║
-echo ╠═══════════════════════════════════════════════╣
-echo ║  已打开两个服务窗口，关闭它们即可停止服务    ║
-echo ╚═══════════════════════════════════════════════╝
+echo ===============================================
+echo      Services started successfully!
+echo ===============================================
+echo   Frontend: http://localhost:5173
+echo   Backend:  http://localhost:12398
+echo ===============================================
+echo   Close the two service windows to stop.
+echo ===============================================
 echo.
 
 :: 自动打开浏览器

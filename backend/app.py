@@ -3,8 +3,12 @@ import sys
 from pathlib import Path
 from flask import Flask, send_from_directory
 from flask_cors import CORS
+from dotenv import load_dotenv
 from backend.config import Config
 from backend.routes import register_routes
+
+# 加载 RedInk 根目录 .env，供 api-core 读取密钥
+load_dotenv(Path(__file__).parent.parent / '.env')
 
 
 def setup_logging():

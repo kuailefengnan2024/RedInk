@@ -2,10 +2,18 @@
 # 复制此文件为 text_providers.yaml 并填写你的配置
 
 # 当前激活的服务商（填写下方 providers 中的名称）
-active_provider: openai
+active_provider: apicore_text
 
 # 服务商列表
 providers:
+  # API Core（D:/api-core，密钥从 .env 读取）
+  apicore_text:
+    type: api_core
+    provider_name: gemini_3_pro
+    temperature: 1.0
+    max_output_tokens: 8000
+    budget_tokens: 2000
+
   # OpenAI 官方 API
   openai:
     type: openai_compatible
