@@ -1,0 +1,42 @@
+# 小红书轮播文案规则（lint + prompt 共用）
+
+page_count:
+  suggest_min: 6
+  suggest_max: 12
+  # 仅作 prompt 参考，不强制；分页由 LLM 自行规划
+
+title:
+  max_lines: 2
+  max_chars_per_line: 16
+
+sub_item:
+  min_per_page: 2
+  max_per_page: 4
+  max_chars: 32
+
+banned_phrases:
+  - 综上所述
+  - 值得注意的是
+  - 不可或缺
+  - 赋能
+  - 助力
+  - 深度洞察
+  - 在当今
+  - 随着……的发展
+  - 让我们
+  - 首先
+  - 其次
+  - 最后
+
+style:
+  - 短句为主，单条不超过 32 字
+  - 具体名词优于抽象词
+  - 允许口语：发完就走、这笔账、真钱
+  - 禁用 AI 套话与公文腔
+  - 封面用问句或反差句
+  - 末页必须有明确 CTA
+
+replace:
+  征税: 专项筹集
+  立法: 制度设计
+  倒逼: 推动讨论

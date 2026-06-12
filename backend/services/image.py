@@ -189,6 +189,14 @@ class ImageService:
                     model=self.provider_config.get('model', 'nano-banana-2'),
                     reference_images=reference_images if reference_images else None,
                 )
+            elif self.provider_config.get('type') == 'api_core':
+                logger.debug(f"  使用 api-core 生成器")
+                image_data = self.generator.generate_image(
+                    prompt=prompt,
+                    aspect_ratio=self.provider_config.get('aspect_ratio', '3:4'),
+                    image_size=self.provider_config.get('image_size'),
+                    reference_image=reference_image,
+                )
             else:
                 logger.debug(f"  使用 OpenAI 兼容生成器")
                 image_data = self.generator.generate_image(

@@ -121,9 +121,10 @@ class Config:
             )
 
         provider_config = providers[provider_name].copy()
+        provider_type = provider_config.get('type', provider_name)
 
-        # 验证必要字段
-        if not provider_config.get('api_key'):
+        # 验证必要字段（api-core 从 .env 读取密钥，yaml 无需 api_key）
+        if provider_type != 'api_core' and not provider_config.get('api_key'):
             logger.error(f"图片服务商 [{provider_name}] 未配置 API Key")
             raise ValueError(
                 f"服务商 {provider_name} 未配置 API Key\n"
@@ -131,8 +132,6 @@ class Config:
                 "1. 在系统设置页面编辑该服务商，填写 API Key\n"
                 "2. 或手动在 image_providers.yaml 中添加 api_key 字段"
             )
-
-        provider_type = provider_config.get('type', provider_name)
         if provider_type in ['openai', 'openai_compatible', 'image_api']:
             if not provider_config.get('base_url'):
                 logger.error(f"服务商 [{provider_name}] 类型为 {provider_type}，但未配置 base_url")

@@ -1,0 +1,184 @@
+{
+  "post_title": "AI赚的千亿美金，为什么没分你一分钱？",
+  "tags": [
+    "AI",
+    "全民红利",
+    "数字经济",
+    "未来已来",
+    "搞钱"
+  ],
+  "caption": "AI时代，我们的数据成了“新石油”，但收益却与普通人无关？这不公平！\n我倡议推动「AI全民红利」，把AI的超额收益，像挪威分石油红利一样，分享给每个数据贡献者。\n这不是空想，每年可能是千亿级的真金白银。\n如果你也认同，评论区打“支持”！",
+  "slides": [
+    {
+      "type": "cover",
+      "label": "01 / 封面",
+      "icon": "🤔",
+      "title": [
+        "AI赚的千亿美金",
+        "为什么没分你一分钱？"
+      ],
+      "sub_items": [
+        {
+          "tag": "现状",
+          "text": "翻译、设计、客服…越来越多岗位被AI取代"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "body",
+      "label": "02 / 痛点",
+      "icon": "💸",
+      "title": [
+        "工作被AI取代",
+        "钱却只流进少数人口袋"
+      ],
+      "sub_items": [
+        {
+          "tag": "不公",
+          "text": "我们贡献数据，收益却与我们无关"
+        },
+        {
+          "tag": "现实",
+          "text": "财富加速向少数公司和个人集中"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "body",
+      "label": "03 / 矛盾",
+      "icon": "🧐",
+      "title": [
+        "这不公平！AI的养料是我们"
+      ],
+      "sub_items": [
+        {
+          "tag": "区别",
+          "text": "这跟工业革命的机器完全不同"
+        },
+        {
+          "tag": "原料",
+          "text": "AI的“智能”来自我们的数据和内容"
+        },
+        {
+          "tag": "质问",
+          "text": "用我们的数据赚钱，凭什么不分红？"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "hero",
+      "label": "04 / 核心主张",
+      "icon": "💡",
+      "title": [
+        "我倡议：推动「AI全民红利」"
+      ],
+      "sub_items": [
+        {
+          "tag": "类比",
+          "text": "AI就是我们这个时代的“数字石油”"
+        },
+        {
+          "tag": "先例",
+          "text": "就像挪威，靠石油给国民分红几十年"
+        },
+        {
+          "tag": "主张",
+          "text": "AI的超额收益，理应全民共享"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "estimate",
+      "label": "05 / 估算",
+      "icon": "💰",
+      "title": [
+        "这不是一笔小数目"
+      ],
+      "sub_items": [
+        {
+          "tag": "来源",
+          "text": "将AI带来的部分超额收益注入公共池"
+        },
+        {
+          "tag": "体量",
+          "text": "按当下发展估算，这是一个讨论量级"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "¥2000亿",
+      "highlight_sub": "每年",
+      "footnote": "*数据为基于当前行业增长的推测性估算"
+    },
+    {
+      "type": "body",
+      "label": "06 / 愿景",
+      "icon": "🌟",
+      "title": [
+        "这是真金白银的未来福利"
+      ],
+      "sub_items": [
+        {
+          "tag": "本质",
+          "text": "它不是虚头巴脑的遥远概念"
+        },
+        {
+          "tag": "机制",
+          "text": "建立公共基金池，确保分配公平"
+        },
+        {
+          "tag": "目标",
+          "text": "让创造价值的每个人，都能分享果实"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "cta",
+      "label": "07 / 行动号召",
+      "icon": "📢",
+      "title": [
+        "如果你也认同，请加入我们"
+      ],
+      "sub_items": [
+        {
+          "tag": "发声",
+          "text": "在评论区打下“支持”，让更多人看到"
+        },
+        {
+          "tag": "关注",
+          "text": "主页置顶有持续跟进，我不是说说而已"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    }
+  ]
+}

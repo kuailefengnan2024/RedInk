@@ -3,11 +3,13 @@
 【输入】prompt、宽高比/尺寸等模型参数
 【输出】图片二进制数据
 """
+import base64
 import logging
-from typing import Any, Dict
+from typing import Any, Dict, Optional
 
 from .base import ImageGeneratorBase
 from backend.utils.apicore_bridge import build_image_kwargs, run_async
+from backend.utils.image_compressor import compress_image
 
 logger = logging.getLogger(__name__)
 
@@ -37,6 +39,8 @@ class ApiCoreImageGenerator(ImageGeneratorBase):
 
     async def _generate_async(self, prompt: str, **kwargs) -> bytes:
         merged = {**self.image_kwargs, **kwargs}
+        if kwargs.get("reference_image"):
+            merged["reference_image"] = compress_image(kwargs["reference_image"], max_size_kb=200)
         image_bytes, error = await self._client.generate(prompt, **merged)
         if error:
             raise Exception(f"api-core 图片生成失败: {error}")
@@ -54,6 +58,11 @@ class ApiCoreImageGenerator(ImageGeneratorBase):
             call_kwargs["size"] = kwargs["size"]
         if kwargs.get("quality"):
             call_kwargs["quality"] = kwargs["quality"]
+        if kwargs.get("reference_image"):
+            call_kwargs["reference_image"] = kwargs["reference_image"]
 
-        logger.info(f"api-core 生图: provider={self.provider_name}, kwargs={call_kwargs or self.image_kwargs}")
+        logger.info(
+            f"api-core 生图: provider={self.provider_name}, "
+            f"ref={bool(kwargs.get('reference_image'))}, kwargs={call_kwargs or self.image_kwargs}"
+        )
         return run_async(self._generate_async(prompt, **call_kwargs))
