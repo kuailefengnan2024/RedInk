@@ -1,0 +1,205 @@
+{
+  "post_title": "你的数据，成了别人的年报",
+  "tags": [
+    "AI搞钱",
+    "数据资产",
+    "数字分红",
+    "搞钱思路",
+    "个人成长"
+  ],
+  "caption": "AI 公司用你的每句话、每张图炼金，利润进少数公司账户。\n这个账不太对。\n科技进步了，你的账户没进步。\n我们来把账算清楚。",
+  "slides": [
+    {
+      "type": "cover",
+      "label": "01 / 封面",
+      "icon": "!",
+      "title": [
+        "你的数据",
+        "别人的年报"
+      ],
+      "layout": {
+        "title_scale": "poster",
+        "body_density": "sparse",
+        "composition": "statement",
+        "emphasis": "title"
+      },
+      "sub_items": [
+        {
+          "tag": "喂养",
+          "text": "AI的燃料，是你我过去20年发的每张自拍、每句评论、每一行开源代码。它不是凭空变聪明的。"
+        },
+        {
+          "tag": "账单",
+          "text": "科技公司挖石油，至少会付钱给地主。数据公司只给你一份日渐变长的用户协议，和一张涨了价的会员账单。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "hero",
+      "label": "02 / 核心",
+      "icon": "💸",
+      "title": [
+        "AI 欠每个网民",
+        "一张工资条"
+      ],
+      "layout": {
+        "title_scale": "xlarge",
+        "body_density": "rich",
+        "composition": "list",
+        "emphasis": "title"
+      },
+      "sub_items": [
+        {
+          "tag": "技能替代",
+          "text": "模型学会了你的绘画风格，下一步不是署名感谢，是接手你的稿件订单，并报出更低的价格。"
+        },
+        {
+          "tag": "岗位预算",
+          "text": "一个AI客服席位，比一个员工的五险一金便宜。客服、翻译、初级设计的岗位消失，首先是为了财报好看。"
+        },
+        {
+          "tag": "价值错配",
+          "text": "三天的设计初稿，AI三分钟出图。省下来的不是工时，是这个岗位的年度预算。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "estimate",
+      "label": "03 / 算账",
+      "icon": "💰",
+      "title": [
+        "一笔隐形收入"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "normal",
+        "composition": "metric",
+        "emphasis": "number"
+      },
+      "sub_items": [
+        {
+          "tag": "口径",
+          "text": "只看头部几家科技公司的AI相关利润，刨去研发和运营成本，剩下的超额部分。"
+        },
+        {
+          "tag": "对照",
+          "text": "这笔钱如果能进公共账户，体量接近一个中等国家的年度财政预算，或者够给全球网民每人买杯咖啡。"
+        },
+        {
+          "tag": "性质",
+          "text": "这不是补贴。这是你作为生产资料（数据）所有者，开出的一张账单。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "¥ 2000 亿",
+      "highlight_sub": "每年 / 公共池规模",
+      "footnote": "数据为讨论量级示意，非精确财报数字"
+    },
+    {
+      "type": "body",
+      "label": "04 / 对照",
+      "icon": "🌍",
+      "title": [
+        "别人的作业"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "rich",
+        "composition": "list",
+        "emphasis": "card"
+      },
+      "sub_items": [
+        {
+          "tag": "挪威",
+          "text": "挖自家门口的石油，钱不只进公司账户，而是注入主权财富基金，每个国民都有一份无形的资产。"
+        },
+        {
+          "tag": "韩国",
+          "text": "那边在讨论「机器人税」。如果工厂用机器替代了工人，就从省下的工资和多出的利润里拿一部分，建个缓冲基金。"
+        },
+        {
+          "tag": "我们",
+          "text": "全民数据炼出了AI，利润进了少数公司的年报。这个账本，看起来不太对。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "flow",
+      "label": "05 / 路径",
+      "icon": "➡️",
+      "title": [
+        "把账算清楚"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "normal",
+        "composition": "steps",
+        "emphasis": "card"
+      },
+      "sub_items": [
+        {
+          "tag": "总判断",
+          "text": "这事不是喊口号，而是个会计问题。钱从哪来，进哪个账户，谁少拿了一笔。"
+        }
+      ],
+      "steps": [
+        "确认来源：AI公司的超额利润，算清楚哪部分来自公共数据。",
+        "建立账户：一个独立的公共池，用来存放这笔钱，账目公开。",
+        "记录分红：定期结算，就像公司给股东分红，给数据贡献者记上一笔。"
+      ],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "cta",
+      "label": "06 / 下一步",
+      "icon": "💬",
+      "title": [
+        "从记下这笔账开始"
+      ],
+      "layout": {
+        "title_scale": "xlarge",
+        "body_density": "normal",
+        "composition": "cta",
+        "emphasis": "action"
+      },
+      "sub_items": [
+        {
+          "tag": "主页置顶",
+          "text": "我做了个追踪记录页，跟进这个「数字分红」想法的进展和讨论，链接在主页。"
+        },
+        {
+          "tag": "评论区",
+          "text": "如果认同这个方向，在评论区留个「支持」，让更多人看到具体的算法，而不只是情绪。"
+        },
+        {
+          "tag": "你的账户",
+          "text": "下次看到会员涨价通知，可以想一下，你贡献的数据，有没有一张对等的账单。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    }
+  ]
+}

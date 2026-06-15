@@ -1,0 +1,178 @@
+{
+  "post_title": "AI公司开香槟，你的工资条还好吗",
+  "tags": [
+    "AI搞钱",
+    "普通人搞钱",
+    "搞钱思路",
+    "AI搞我"
+  ],
+  "caption": "AI 的万亿营收，分你一毛钱了吗？\n客服、翻译、设计师的技能包，正在变成 API 接口，按调用次数收费。\n模型学会你的毕生所学，下一步不是发毕业证，是给你的前老板报一个更低的价格。\n一个想法，不一定对。",
+  "slides": [
+    {
+      "type": "cover",
+      "label": "01 / 封面",
+      "icon": "?",
+      "title": [
+        "你贡献数据",
+        "AI 贡献裁员指标"
+      ],
+      "layout": {
+        "title_scale": "poster",
+        "body_density": "sparse",
+        "composition": "statement",
+        "emphasis": "title"
+      },
+      "sub_items": [
+        {
+          "tag": "喂养",
+          "text": "你发的帖子，点的赞，聊的天，都是模型的免费原料。数据来自全民，收入归于股东，用户只收到会员涨价通知。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "body",
+      "label": "02 / 账本",
+      "icon": "≠",
+      "title": [
+        "谁的燃料",
+        "谁的香槟"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "rich",
+        "composition": "list",
+        "emphasis": "card"
+      },
+      "sub_items": [
+        {
+          "tag": "你的技能",
+          "text": "客服、翻译、初级设计的技能包，正在变成模型的 API 接口，按调用次数收费。你的简历还没改完，岗位先瘦了一圈。"
+        },
+        {
+          "tag": "你的工资条",
+          "text": "AI 公司年报数字万亿计，普通人打开工资条，上面的数字很稳定，稳定得像个意外，甚至还可能变少。"
+        },
+        {
+          "tag": "你的数据",
+          "text": "模型学会了你的毕生所学，下一步不是发毕业证，是给你的前老板报一个更低的价格，报价单上甚至没有你的名字。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "hero",
+      "label": "03 / 对比",
+      "icon": "🛢️",
+      "title": [
+        "挪威人分石油",
+        "我们分什么"
+      ],
+      "layout": {
+        "title_scale": "xlarge",
+        "body_density": "normal",
+        "composition": "list",
+        "emphasis": "title"
+      },
+      "sub_items": [
+        {
+          "tag": "开采许可",
+          "text": "石油从地下挖出来，利润进主权基金，全民收到分红账单。这需要许可证、环评报告和利润分成合同。"
+        },
+        {
+          "tag": "数据许可",
+          "text": "数据从你的手机里“挖”出来，利润进公司账户，你收到会员涨价通知。这只需要一个弹窗和“我已阅读并同意”。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "estimate",
+      "label": "04 / 结算",
+      "icon": "💰",
+      "title": [
+        "这不是福利",
+        "是结算"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "normal",
+        "composition": "metric",
+        "emphasis": "number"
+      },
+      "sub_items": [],
+      "steps": [],
+      "phases": [],
+      "highlight": "2000亿+",
+      "highlight_sub": "可能的池子有多大",
+      "footnote": "讨论量级，示意。基于头部公司部分利润的估算，把AI的超额利润放进一个公共账户，会是怎样一个数字。"
+    },
+    {
+      "type": "flow",
+      "label": "05 / 路径",
+      "icon": "→",
+      "title": [
+        "把AI分红",
+        "放上台面"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "normal",
+        "composition": "steps",
+        "emphasis": "card"
+      },
+      "sub_items": [
+        {
+          "tag": "一个思路",
+          "text": "把用户贡献的数据资产，做一次价值结算，不是新鲜事，只是换了个标的物。"
+        }
+      ],
+      "steps": [
+        "确认 AI 的超额利润，有一部分来自全民贡献的无偿数据。",
+        "算一算账，把这部分价值从公司财报里单独拎出来。",
+        "建一个公共账户，把这笔钱放进去，变成每个人的数字资产。"
+      ],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "cta",
+      "label": "06 / 下一步",
+      "icon": "👀",
+      "title": [
+        "主页见"
+      ],
+      "layout": {
+        "title_scale": "xlarge",
+        "body_density": "sparse",
+        "composition": "cta",
+        "emphasis": "action"
+      },
+      "sub_items": [
+        {
+          "tag": "关注我",
+          "text": "持续追踪 AI 时代，普通人的搞钱账本和避坑指南。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    }
+  ]
+}

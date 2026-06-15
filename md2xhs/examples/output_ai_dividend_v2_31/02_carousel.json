@@ -1,0 +1,206 @@
+{
+  "post_title": "AI 欠每个被取代的岗位一张账单",
+  "tags": [
+    "AI",
+    "商业分析",
+    "职场"
+  ],
+  "caption": "AI 不会凭空变聪明。\n它吃的是你的自拍、代码和聊天记录。\n数据来自用户，收入进公司账户。\n这笔账不怕吵，怕没人翻。",
+  "slides": [
+    {
+      "type": "cover",
+      "label": "01 / 封面",
+      "icon": "🧾",
+      "title": [
+        "你喂饱了 AI",
+        "AI 却没给你发工资"
+      ],
+      "layout": {
+        "title_scale": "poster",
+        "body_density": "rich",
+        "composition": "statement",
+        "emphasis": "title"
+      },
+      "sub_items": [
+        {
+          "tag": "账本",
+          "text": "数据来自用户，收入进公司账户，普通人只收到一份更长的隐私协议弹窗。"
+        },
+        {
+          "tag": "喂养",
+          "text": "你的自拍、代码和聊天记录换了个马甲叫训练数据。词变高级了，工资条上的余额没变。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "body",
+      "label": "02 / 岗位代价",
+      "icon": "📉",
+      "title": [
+        "岗位不会明天消失",
+        "只是先被重新报价"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "rich",
+        "composition": "list",
+        "emphasis": "card"
+      },
+      "sub_items": [
+        {
+          "tag": "客服",
+          "text": "聊天记录喂熟了自动回复。人还没走，排班表先瘦了，公司账户里省下了一笔人头费。"
+        },
+        {
+          "tag": "设计",
+          "text": "你的三张参考图换来它三分钟出图。省下的不是时间，是外包预算和你的设计稿结款单。"
+        },
+        {
+          "tag": "程序员",
+          "text": "报错记录养出了代码助手。它在弹窗里补全代码，HR在工资条上顺手补全降薪报价。"
+        },
+        {
+          "tag": "翻译",
+          "text": "字幕组熬夜翻的稿子变成了免费外语插件。模型学会了技能，下一步不是感谢，是合同上的低价。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "estimate",
+      "label": "03 / 美国账本",
+      "icon": "💵",
+      "title": [
+        "先算美国的账",
+        "超额利润去了哪"
+      ],
+      "layout": {
+        "title_scale": "xlarge",
+        "body_density": "normal",
+        "composition": "metric",
+        "emphasis": "number"
+      },
+      "sub_items": [
+        {
+          "tag": "硬件",
+          "text": "显卡一年多卖了几百亿。显卡不会自己写诗，它只负责把账单烧热，把利润留在财报里。"
+        },
+        {
+          "tag": "云端",
+          "text": "微软和亚马逊的云服务挤出增量。模型抽干公共数据，普通人只收到会员涨价的弹窗。"
+        },
+        {
+          "tag": "缓冲金",
+          "text": "拿两成出来建个缓冲金账户，大约上千亿。钱不是没有，它只是全躺在公司的分红记录里。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "747",
+      "highlight_sub": "亿美元",
+      "footnote": "讨论量级 / 示意。基于 NVIDIA、微软、谷歌等 AI 超额毛利粗算。"
+    },
+    {
+      "type": "estimate",
+      "label": "04 / 中国账本",
+      "icon": "📊",
+      "title": [
+        "中国公司也在牌桌上",
+        "保守算个底线"
+      ],
+      "layout": {
+        "title_scale": "xlarge",
+        "body_density": "normal",
+        "composition": "metric",
+        "emphasis": "number"
+      },
+      "sub_items": [
+        {
+          "tag": "广告",
+          "text": "广告被用户的点击喂准了，多出来的利润以亿计。台面挺空，公司账户挺满。"
+        },
+        {
+          "tag": "云基建",
+          "text": "卖算力和模型基建赚了钱。剧本是一样的，利润流进财报，代价留在普通人的排班表上。"
+        },
+        {
+          "tag": "账单",
+          "text": "抽两成出来大概几十亿元。数字不大，但它打破了一个幻觉：这笔结算账单不是不存在。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "160-333",
+      "highlight_sub": "亿元",
+      "footnote": "讨论量级 / 示意。基于阿里、腾讯、百度等云和广告增量保守估算。"
+    },
+    {
+      "type": "flow",
+      "label": "05 / 计划",
+      "icon": "📝",
+      "title": [
+        "账单不怕吵",
+        "怕没人翻"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "normal",
+        "composition": "steps",
+        "emphasis": "action"
+      },
+      "sub_items": [
+        {
+          "tag": "偏科",
+          "text": "这不叫技术进步，这叫账本偏科。先别急着感动，先看看钱进哪个账户了。"
+        }
+      ],
+      "steps": [
+        "公开中美两套计算表格。口径直接写清楚，不怕算错，就怕不算。",
+        "盘点被压价的真实岗位。收集评论区的工资条和排班表，不靠情绪凑数。",
+        "写一版缓冲金草案。找懂账单的人挑错，看看这笔钱能不能算清楚。"
+      ],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "cta",
+      "label": "06 / 动作",
+      "icon": "👀",
+      "title": [
+        "如果你也觉得账不对"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "sparse",
+        "composition": "cta",
+        "emphasis": "action"
+      },
+      "sub_items": [
+        {
+          "tag": "留证",
+          "text": "在评论区留下你被压价的经历或工资条。人够多，我们下一条就把计算表格摊开。"
+        },
+        {
+          "tag": "算账",
+          "text": "点个赞让这笔账被更多人看见。追踪后续更新，看看这笔钱到底进哪个账户，谁少拿了一口。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    }
+  ]
+}

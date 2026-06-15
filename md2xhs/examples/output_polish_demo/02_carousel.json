@@ -1,0 +1,216 @@
+{
+  "post_title": "AI先发了账单，分红还没开始",
+  "tags": [
+    "AI全民红利",
+    "AI时代",
+    "公共池",
+    "普通人机会"
+  ],
+  "caption": "AI不是突然变聪明。\n它只是把我们的旧内容，变成别人的新收入。\n如果训练数据来自公众，超额收益就不该只睡在少数账户里。",
+  "slides": [
+    {
+      "type": "cover",
+      "label": "01 / 封面",
+      "icon": "?",
+      "title": [
+        "AI先发了账单"
+      ],
+      "layout": {
+        "title_scale": "poster",
+        "body_density": "rich",
+        "composition": "statement",
+        "emphasis": "title"
+      },
+      "sub_items": [
+        {
+          "tag": "钩子",
+          "text": "分红页面还没加载，普通人先收到焦虑账单"
+        },
+        {
+          "tag": "冷账",
+          "text": "旧内容变成新收入，收款人却不是内容来源"
+        },
+        {
+          "tag": "问题",
+          "text": "AI 不是没创造价值，是分账规则还没出现"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "body",
+      "label": "02 / 误区",
+      "icon": "!",
+      "title": [
+        "别只问",
+        "AI抢不抢工作"
+      ],
+      "layout": {
+        "title_scale": "xlarge",
+        "body_density": "rich",
+        "composition": "list",
+        "emphasis": "card"
+      },
+      "sub_items": [
+        {
+          "tag": "更冷",
+          "text": "它已经训练完了，很多岗位只是后知后觉"
+        },
+        {
+          "tag": "尴尬",
+          "text": "普通人收到的说法叫效率提升，听着像安慰奖"
+        },
+        {
+          "tag": "现实",
+          "text": "客服、设计、翻译、编程，都在被重新定价"
+        },
+        {
+          "tag": "关键",
+          "text": "问题不止是岗位减少，而是谁拿走新增收益"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "hero",
+      "label": "03 / 判断",
+      "icon": "$",
+      "title": [
+        "这不是仇富",
+        "是算账"
+      ],
+      "layout": {
+        "title_scale": "poster",
+        "body_density": "rich",
+        "composition": "statement",
+        "emphasis": "title"
+      },
+      "sub_items": [
+        {
+          "tag": "来源",
+          "text": "训练数据来自公共互联网，不是凭空长出来的矿"
+        },
+        {
+          "tag": "去向",
+          "text": "收益集中在少数账户，贡献却分散在所有人身上"
+        },
+        {
+          "tag": "主张",
+          "text": "一部分超额收益进入公共池，才算把账摊开"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "estimate",
+      "label": "04 / 量级",
+      "icon": "#",
+      "title": [
+        "数字别上头",
+        "账本先翻开"
+      ],
+      "layout": {
+        "title_scale": "xlarge",
+        "body_density": "rich",
+        "composition": "metric",
+        "emphasis": "number"
+      },
+      "sub_items": [
+        {
+          "tag": "口径",
+          "text": "当前只能做讨论量级估算，不能包装成精确承诺"
+        },
+        {
+          "tag": "重点",
+          "text": "数字不是煽动情绪，数字是逼问题落到桌面上"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "2000亿+",
+      "highlight_sub": "讨论量级 · 示意",
+      "footnote": "方向比数字更重要"
+    },
+    {
+      "type": "flow",
+      "label": "05 / 路径",
+      "icon": "→",
+      "title": [
+        "别许愿",
+        "按流程推进"
+      ],
+      "layout": {
+        "title_scale": "xlarge",
+        "body_density": "rich",
+        "composition": "steps",
+        "emphasis": "action"
+      },
+      "sub_items": [
+        {
+          "tag": "原则",
+          "text": "不编数字，不喊空话，不把倡议写成鸡血口号"
+        },
+        {
+          "tag": "节奏",
+          "text": "先让概念被看见，再让机制进入讨论"
+        }
+      ],
+      "steps": [
+        "讲清概念",
+        "记录支持",
+        "追踪先例",
+        "推动讨论"
+      ],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "cta",
+      "label": "06 / 行动",
+      "icon": "✓",
+      "title": [
+        "支持这笔账",
+        "评论支持"
+      ],
+      "layout": {
+        "title_scale": "xlarge",
+        "body_density": "rich",
+        "composition": "cta",
+        "emphasis": "action"
+      },
+      "sub_items": [
+        {
+          "tag": "评论",
+          "text": "留下「支持」，先把分散共识变成可见记录"
+        },
+        {
+          "tag": "主页",
+          "text": "置顶页持续更新，不做发完就走的互联网许愿"
+        },
+        {
+          "tag": "提醒",
+          "text": "这不是结论，这是把账本翻开的开始"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    }
+  ]
+}

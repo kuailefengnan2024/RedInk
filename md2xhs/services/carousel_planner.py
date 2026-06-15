@@ -28,7 +28,7 @@ class LlmCarouselPlanner:
                 out = self._llm.complete(prompt + extra)
                 data = parse_json_object(out)
                 return build_carousel(data)
-            except (ValueError, json.JSONDecodeError) as e:
+            except (ValueError, json.JSONDecodeError, TimeoutError, RuntimeError) as e:
                 last_err = e
                 extra = f"\n\n【JSON 不合格】{e}\n请重新输出完整合法 JSON。"
         raise last_err or ValueError("规划失败")

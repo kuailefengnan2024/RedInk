@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+.page {
+  width: 1242px;
+  height: 1660px;
+  background-color: #F4F5F7;
+  color: #1A1A1A;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  padding: 100px 96px;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 0;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 120px;
+}
+
+.icon {
+  font-size: 42px;
+}
+
+.label {
+  font-size: 38px;
+  font-weight: 600;
+  color: #555;
+}
+
+.title-section {
+  margin-bottom: 140px;
+}
+
+.page-title p {
+  font-size: 136px;
+  font-weight: 900;
+  line-height: 1.25;
+  color: #111;
+  letter-spacing: 0;
+}
+
+.page-title .highlight-title {
+  color: #D32F2F;
+}
+
+.proof-list {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  flex: 1;
+}
+
+.proof-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-top: 3px solid #E0E2E6;
+  padding-top: 32px;
+}
+
+.proof-tag {
+  font-size: 38px;
+  font-weight: 800;
+  color: #D32F2F;
+}
+
+.proof-text {
+  font-size: 44px;
+  line-height: 1.6;
+  color: #333;
+  font-weight: 400;
+}
+</style>
+</head>
+<body>
+<main class="page page-01 type-cover">
+  <header class="header">
+    <span class="icon">📄</span>
+    <span class="label">01 / 封面</span>
+  </header>
+  <section class="title-section">
+    <div class="page-title">
+      <p>利润写在财报里</p>
+      <p class="highlight-title">代价写在排班表上</p>
+    </div>
+  </section>
+  <section class="proof-list">
+    <div class="proof-item">
+      <div class="proof-tag">账单</div>
+      <p class="proof-text">成本来自用户，收入进公司账户，普通人只在隐私协议的弹窗里点了同意。</p>
+    </div>
+    <div class="proof-item">
+      <div class="proof-tag">拐点</div>
+      <p class="proof-text">系统学会了流程，下一步不是发感谢信，是外包合同的单价先降了。</p>
+    </div>
+    <div class="proof-item">
+      <div class="proof-tag">冷感</div>
+      <p class="proof-text">灾难预言太省事，这其实是个会计问题：财报上的利润先上桌了，裁员的风险还在门口换鞋。</p>
+    </div>
+  </section>
+</main>
+</body>
+</html>

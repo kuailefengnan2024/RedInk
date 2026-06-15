@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+
+
+.page-02 {
+  width: 1242px;
+  height: 1660px;
+  background-color: #F4F5F7;
+  box-sizing: border-box;
+  padding: 88px 100px;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #111111;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.header-icon {
+  font-size: 48px;
+}
+
+.header-label {
+  font-size: 38px;
+  font-weight: 600;
+  color: #888888;
+  letter-spacing: 0;
+}
+
+.page-title {
+  margin-bottom: 64px;
+}
+
+.page-title p {
+  font-size: 100px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0;
+  letter-spacing: 0;
+  color: #111111;
+}
+
+.proof-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  flex: 1;
+}
+
+.proof-item {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 40px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.02);
+  border-left: 8px solid #D93025;
+}
+
+.proof-tag {
+  font-size: 34px;
+  font-weight: 700;
+  color: #D93025;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.proof-tag::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #D93025;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.proof-text {
+  font-size: 42px;
+  line-height: 1.45;
+  color: #222222;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 0;
+}
+</style>
+</head>
+<body>
+<main class="page page-02 type-body">
+  <header class="page-header">
+    <span class="header-icon">📉</span>
+    <span class="header-label">02 / 就业账本</span>
+  </header>
+  <section class="page-title">
+    <p>系统没改变命运</p>
+    <p>它先改了招聘计划</p>
+  </section>
+  <section class="proof-list">
+    <div class="proof-item">
+      <div class="proof-tag">入场券</div>
+      <div class="proof-text">AI没把所有人赶出办公室。它只是让外包单价下降，初级岗位合并。普通人不是被落下，是根本没上车。</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-tag">年轻人</div>
+      <div class="proof-text">Stanford口径很冷：22到25岁的软件开发者就业两年降了近20%。结果还没公布，岗位预算已经先瘦了。</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-tag">换名字</div>
+      <div class="proof-text">很少有企业承认因为AI裁员，他们管这叫「调整岗位结构」。不是效率提升，是岗位预算换了个说法。</div>
+    </div>
+  </section>
+</main>
+</body>
+</html>

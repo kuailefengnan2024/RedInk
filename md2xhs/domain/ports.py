@@ -31,3 +31,7 @@ class CopyLinter(Protocol):
 
 class SlideRenderer(Protocol):
     def render_all(self, slides: list[Slide], output_dir: str) -> list[str]: ...
+
+
+class CarouselRenderer(Protocol):
+    def render_carousel(self, carousel: Carousel, output_dir: str) -> list[str]: ...

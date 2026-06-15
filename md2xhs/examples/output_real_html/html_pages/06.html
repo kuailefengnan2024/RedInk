@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+/* Global Styles */
+:root {
+  --bg-color: #111214;
+  --text-color: #F0F0F0;
+  --accent-color: #4ADE80;
+  --muted-color: #888888;
+  --border-color: #333333;
+  --card-bg-color: #1A1B1E;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  width: 1242px;
+  height: 1660px;
+  overflow: hidden;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 100px;
+}
+
+.page-header {
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 60px;
+}
+
+.page-label {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--muted-color);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.page-title {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -2px;
+}
+
+.page-title .accent {
+  color: var(--accent-color);
+}
+
+.sub-item-list {
+  list-style: none;
+  margin-top: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sub-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sub-item-tag {
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--muted-color);
+}
+
+.sub-item-text {
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--text-color);
+}
+.page-06 .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.page-06 .page-title {
+  font-size: 132px;
+  font-weight: 800;
+  margin-top: 100px;
+}
+.page-06 .cta-button {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  border-radius: 18px;
+  padding: 40px 60px;
+  margin: auto 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  align-self: center;
+}
+.page-06 .cta-icon {
+  font-size: 64px;
+}
+.page-06 .cta-text {
+  font-size: 60px;
+  font-weight: 700;
+}
+.page-06 .sub-item-list {
+  text-align: left;
+  gap: 40px;
+  margin-top: auto;
+}
+.page-06 .sub-item-text {
+  font-size: 38px;
+}
+.page-06 .sub-item-tag {
+ font-size: 34px;
+}
+</style>
+</head>
+<body>
+<main class="page page-06 type-cta">
+  <header class="page-header">
+    <span class="page-label">06 / 行动</span>
+  </header>
+  <div class="content-wrapper">
+    <div class="page-title">
+      <p>开始算账</p>
+    </div>
+    <div class="cta-button">
+      <span class="cta-icon">👉</span>
+      <span class="cta-text">在主页追踪进展</span>
+    </div>
+    <ul class="sub-item-list">
+      <li class="sub-item">
+        <span class="sub-item-tag">进展记录</span>
+        <p class="sub-item-text">一个记录想法和进展的落地页，放在了主页置顶，方便追踪这笔账怎么算。</p>
+      </li>
+      <li class="sub-item">
+        <span class="sub-item-tag">表达认同</span>
+        <p class="sub-item-text">如果认同这个方向，评论区留个「支持」，让更多人看到这个思路。</p>
+      </li>
+    </ul>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+
+
+.page-05 {
+  width: 1242px;
+  height: 1660px;
+  background-color: #F8F9FA;
+  color: #1A1A1A;
+  box-sizing: border-box;
+  padding: 100px 90px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  letter-spacing: 0;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 60px;
+}
+
+.header-icon {
+  font-size: 40px;
+}
+
+.header-label {
+  font-size: 38px;
+  color: #666666;
+  font-weight: 500;
+}
+
+.title-section {
+  margin-bottom: 80px;
+}
+
+.page-title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title-line {
+  font-size: 120px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #111111;
+}
+
+.content-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sub-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #E5E5E5;
+}
+
+.sub-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.sub-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 38px;
+  font-weight: 700;
+  color: #E02020;
+  background-color: rgba(224, 32, 32, 0.08);
+  padding: 10px 24px;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.sub-text {
+  font-size: 42px;
+  line-height: 1.6;
+  color: #333333;
+  font-weight: 400;
+}
+</style>
+</head>
+<body>
+<main class="page page-05 type-cta">
+  <header class="page-header">
+    <span class="header-icon">📝</span>
+    <span class="header-label">05 / 验账</span>
+  </header>
+  
+  <section class="title-section">
+    <div class="page-title">
+      <div class="title-line">这本账</div>
+      <div class="title-line">能不能走出评论区</div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="sub-list">
+      <div class="sub-item">
+        <div class="sub-tag">挑错</div>
+        <div class="sub-text">算少了，或者算多了，可以在评论区留言。拿财报和数据来对账，这不是灾难预言，是个纯粹的会计问题。</div>
+      </div>
+      <div class="sub-item">
+        <div class="sub-tag">证据</div>
+        <div class="sub-text">如果你的岗位已经被AI改价、外包、砍预算，发工资条和排班表来。别发口号，拿具体的账单说话。</div>
+      </div>
+      <div class="sub-item">
+        <div class="sub-tag">下一步</div>
+        <div class="sub-text">如果挑错的人多，作者下一步可能做个公开表格，把中美两套口径列清楚，找财税的人继续验这笔账。</div>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>

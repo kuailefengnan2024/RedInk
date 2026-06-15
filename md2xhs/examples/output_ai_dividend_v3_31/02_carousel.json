@@ -1,0 +1,207 @@
+{
+  "post_title": "利润写在财报里，代价写在排班表上",
+  "tags": [
+    "职场",
+    "商业分析",
+    "会计账本"
+  ],
+  "caption": "把 AI 公司的利润表，和普通人的排班表放在一起看。故事的两面不太对称。\n\n灾难预言太省事，这其实是个会计问题。利润先上桌，风险还在门口换鞋。\n\n这本账算得粗糙，发出来是为了找人挑错。口号没用，带上工资条和排班表来评论区。",
+  "slides": [
+    {
+      "type": "cover",
+      "label": "01 / 封面",
+      "icon": "📄",
+      "title": [
+        "利润写在财报里",
+        "代价写在排班表上"
+      ],
+      "layout": {
+        "title_scale": "poster",
+        "body_density": "rich",
+        "composition": "statement",
+        "emphasis": "title"
+      },
+      "sub_items": [
+        {
+          "tag": "账单",
+          "text": "成本来自用户，收入进公司账户，普通人只在隐私协议的弹窗里点了同意。"
+        },
+        {
+          "tag": "拐点",
+          "text": "系统学会了流程，下一步不是发感谢信，是外包合同的单价先降了。"
+        },
+        {
+          "tag": "冷感",
+          "text": "灾难预言太省事，这其实是个会计问题：财报上的利润先上桌了，裁员的风险还在门口换鞋。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "body",
+      "label": "02 / 现象",
+      "icon": "📉",
+      "title": [
+        "AI没发全员裁员信",
+        "它只是冻结了招聘入口"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "normal",
+        "composition": "list",
+        "emphasis": "card"
+      },
+      "sub_items": [
+        {
+          "tag": "排班表",
+          "text": "企业很少发全员信说裁员，但22到25岁的软件开发者，就业盘子直接少了近20%。"
+        },
+        {
+          "tag": "报价单",
+          "text": "失业率还没爆，客服和初级原画先被压了预算，报表还没发，外包的单价先瘦了。"
+        },
+        {
+          "tag": "工位",
+          "text": "知识工作者一边在调查里赞美效率，一边看着简历投不出去，效率和焦虑挤在同一张工位上。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "estimate",
+      "label": "03 / 算账",
+      "icon": "💰",
+      "title": [
+        "一本747亿美元的粗账",
+        "不丰盛但确实在桌上"
+      ],
+      "layout": {
+        "title_scale": "xlarge",
+        "body_density": "normal",
+        "composition": "metric",
+        "emphasis": "number"
+      },
+      "sub_items": [
+        {
+          "tag": "切蛋糕",
+          "text": "NVIDIA一年多出558亿毛利，加上云厂商超额利润，切20%进缓冲金，折合上千亿人民币。"
+        },
+        {
+          "tag": "不对称",
+          "text": "合同有签名和账本，这149亿美元的对公流水里，很多数据贡献者只有免费使用的额度。"
+        },
+        {
+          "tag": "工资条",
+          "text": "公司说这是技术带来的效率飞跃，但员工的工资条听不懂，只看到排班表上的班次变少了。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "747亿美元",
+      "highlight_sub": "海外科技巨头AI超额利润保守估算",
+      "footnote": "基于NVIDIA、微软、AWS、Google Cloud及Meta财报口径粗算"
+    },
+    {
+      "type": "estimate",
+      "label": "04 / 算账",
+      "icon": "📊",
+      "title": [
+        "数不大和账不存在",
+        "完全是两回事"
+      ],
+      "layout": {
+        "title_scale": "xlarge",
+        "body_density": "normal",
+        "composition": "metric",
+        "emphasis": "number"
+      },
+      "sub_items": [
+        {
+          "tag": "装睡",
+          "text": "国内的账更难算，但逻辑一样。利润进了大厂的对公账户，这笔钱听起来不大，但不算就是装睡。"
+        },
+        {
+          "tag": "预算",
+          "text": "职业不会马上消失，只是工资结构变了。三天的初稿变三分钟，省下来的不是时间，是你的岗位预算。"
+        },
+        {
+          "tag": "净利润",
+          "text": "系统越来越聪明，客服的工单被大量拦截，省下的成本没有变成奖金，而是变成了财报上的净利润。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "32至67亿元",
+      "highlight_sub": "国内大厂AI超额利润按20%折算的盘子",
+      "footnote": "基于阿里、腾讯、百度、华为财报及云/营销业务增长估算"
+    },
+    {
+      "type": "flow",
+      "label": "05 / 流程",
+      "icon": "⚙️",
+      "title": [
+        "如果账算得通",
+        "我们下一步做什么"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "normal",
+        "composition": "steps",
+        "emphasis": "action"
+      },
+      "sub_items": [
+        {
+          "tag": "清算",
+          "text": "这不是政策宣讲，而是真实的结算单。如果这笔账能活过评论区，下一步的动作才算站得住脚。"
+        }
+      ],
+      "steps": [
+        "做公开表格：把中美大厂利润的细账拆开，一笔笔对齐口径。",
+        "盘点岗位案例：按行业收集被算法改过的报价单和排班表。",
+        "找专业人看草案：拉财税和法律的人下场，把分账逻辑写进普通人的账单里。"
+      ],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "cta",
+      "label": "06 / 评论区",
+      "icon": "💬",
+      "title": [
+        "口号没用",
+        "带上工资条来挑错"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "normal",
+        "composition": "cta",
+        "emphasis": "action"
+      },
+      "sub_items": [
+        {
+          "tag": "挑错",
+          "text": "这本账算得粗糙，发出来是为了找人挑错。如果你算过细账，带上你的Excel和数据来留言。"
+        },
+        {
+          "tag": "证据",
+          "text": "如果你所在行业的排班表、外包合同已经被修改，带上数字来。口号没用，工资条才有用。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    }
+  ]
+}

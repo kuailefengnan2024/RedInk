@@ -1,0 +1,177 @@
+{
+  "post_title": "AI赚的钱，和消失的岗位不在一张表",
+  "tags": [
+    "商业观察",
+    "职场真相",
+    "财报分析"
+  ],
+  "caption": "AI赚到的钱，和消失的岗位。这两样东西，从来不在一张表上。\n利润有清楚的入账单，风险还在统计口径外。\n我正在整理两套计算的公开表格，这本账刚翻开第一页，先看它能不能经得起挑剔。",
+  "slides": [
+    {
+      "type": "cover",
+      "label": "01 / 账本的背面",
+      "icon": "📄",
+      "title": [
+        "系统学会了流程",
+        "招聘预算先变薄了"
+      ],
+      "layout": {
+        "title_scale": "poster",
+        "body_density": "normal",
+        "composition": "statement",
+        "emphasis": "title"
+      },
+      "sub_items": [
+        {
+          "tag": "利润表",
+          "text": "利润表里的故事很整齐。美国大厂交出漂亮财报，芯片、云和模型订阅，全换成了账上现金。"
+        },
+        {
+          "tag": "就业表",
+          "text": "就业表没那么好看。年轻人还没递出简历，初级岗位的招聘计划已经提前瘦身了。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "estimate",
+      "label": "02 / 消失的岗位",
+      "icon": "📉",
+      "title": [
+        "漂亮财报背后",
+        "是消失的初级岗位"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "rich",
+        "composition": "metric",
+        "emphasis": "number"
+      },
+      "sub_items": [
+        {
+          "tag": "超额利润",
+          "text": "美国的超额利润保守算有747亿美元。英伟达和微软们靠AI多切的钱，都有清楚的入账单。"
+        },
+        {
+          "tag": "预算转移",
+          "text": "Challenger的数据很直白，前四个月49135个岗位因为AI没了。这不是技术迭代，这是预算转移。"
+        },
+        {
+          "tag": "年轻人",
+          "text": "代价不是平均落下的。斯坦福的统计口径更冷，22到25岁的软件开发者，就业降了快20%。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "747亿美元",
+      "highlight_sub": "美国AI超额利润保守估算",
+      "footnote": "叠加未上市模型公司估算，数据源自各公司FY25/26财报推演"
+    },
+    {
+      "type": "body",
+      "label": "03 / 弹窗与账户",
+      "icon": "💰",
+      "title": [
+        "重点不是怎么分钱",
+        "是账本少了一页"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "normal",
+        "composition": "list",
+        "emphasis": "card"
+      },
+      "sub_items": [
+        {
+          "tag": "缓冲金",
+          "text": "如果拿20%算作数据池的缓冲金，约合1007亿元人民币。但这笔钱只停留在草稿里，不在公共账户上。"
+        },
+        {
+          "tag": "账本断裂",
+          "text": "账本的断裂很明显。巨额利润安稳躺在公司的财报里，而用户只留在隐私协议的弹窗中。"
+        },
+        {
+          "tag": "会计问题",
+          "text": "灾难预言太省事，这只是个简单的会计问题。利润有清楚的入账单，风险还在统计口径外。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "body",
+      "label": "04 / 隐蔽的账单",
+      "icon": "📅",
+      "title": [
+        "国内的账单",
+        "藏在排班表和外包单价里"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "normal",
+        "composition": "list",
+        "emphasis": "card"
+      },
+      "sub_items": [
+        {
+          "tag": "国内账单",
+          "text": "阿里云、腾讯营销和百度云的报表在涨。保守估算，国内AI超额利润在160到333亿元。"
+        },
+        {
+          "tag": "排班表",
+          "text": "国际劳工组织把影响拆得很细。系统没打算直接消灭职业，它只是悄悄改了排班表。"
+        },
+        {
+          "tag": "外包单价",
+          "text": "顺便砍了外包单价。知识工作者既相信AI能提效，又担心被替代，效率和焦虑挤在同一张工位上。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "cta",
+      "label": "05 / 验算与证据",
+      "icon": "🔍",
+      "title": [
+        "比起下结论",
+        "我更想看这笔账哪里有漏洞"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "rich",
+        "composition": "cta",
+        "emphasis": "action"
+      },
+      "sub_items": [
+        {
+          "tag": "验算账本",
+          "text": "如果中美两边的算法太保守，账本可以重做。我正在整理两套计算的公开表格，留给懂财税的人挑错。"
+        },
+        {
+          "tag": "留下线索",
+          "text": "记录比情绪有用。如果你的行业已经被AI改价，或者初级岗位被外包替代，可以在评论区留下线索。"
+        },
+        {
+          "tag": "寻找单据",
+          "text": "这笔账刚翻开第一页。降薪通知、外包合同、招聘冻结邮件，这些具体的单据，都是重做账本的证据。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    }
+  ]
+}

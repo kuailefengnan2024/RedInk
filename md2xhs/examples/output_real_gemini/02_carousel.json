@@ -1,0 +1,225 @@
+{
+  "post_title": "你的数据，正在别人公司上市",
+  "tags": [
+    "AI",
+    "数字资产",
+    "搞钱",
+    "搞钱思路",
+    "AI搞钱"
+  ],
+  "caption": "AI公司的财报很好看，但你的账单还没收到。\n你发的每条评论、点的每个赞，都在喂养一个千亿模型。\n这笔账，有人开始算了。\n我做了个持续更新的落地页，记录这笔「全民分红」的账本。",
+  "slides": [
+    {
+      "type": "cover",
+      "label": "01 / 封面",
+      "icon": "📝",
+      "title": [
+        "AI的账单",
+        "忘了寄给你"
+      ],
+      "layout": {
+        "title_scale": "poster",
+        "body_density": "sparse",
+        "composition": "statement",
+        "emphasis": "title"
+      },
+      "sub_items": [
+        {
+          "tag": "燃料",
+          "text": "工业革命烧煤，互联网烧钱，这一轮烧的是你的生活痕迹，但油费还没人结。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "body",
+      "label": "02 / 燃料",
+      "icon": "⛽️",
+      "title": [
+        "你不是用户",
+        "你是燃料"
+      ],
+      "layout": {
+        "title_scale": "xlarge",
+        "body_density": "rich",
+        "composition": "list",
+        "emphasis": "title"
+      },
+      "sub_items": [
+        {
+          "tag": "点赞",
+          "text": "你点的每个赞，都在告诉模型什么是受欢迎的，帮它训练审美，这比请艺术总监便宜。"
+        },
+        {
+          "tag": "评论",
+          "text": "你写的每条评论，都在教模型如何对话、反驳、抖机灵，相当于给它请了7x24小时的私教。"
+        },
+        {
+          "tag": "发帖",
+          "text": "你发的每篇帖子，都成了模型的知识库素材，它学会了你的经验，但没说要付学费。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "hero",
+      "label": "03 / 账本",
+      "icon": "🧾",
+      "title": [
+        "数据是你的",
+        "财报是他的"
+      ],
+      "layout": {
+        "title_scale": "xlarge",
+        "body_density": "rich",
+        "composition": "list",
+        "emphasis": "card"
+      },
+      "sub_items": [
+        {
+          "tag": "数据源",
+          "text": "你的主页、相册、聊天记录，打包成了训练数据，喂饱了模型，也喂饱了公司的估值。"
+        },
+        {
+          "tag": "价值链",
+          "text": "数据来自用户，收入进公司账户，用户端只收到一份更长、更看不懂的用户协议。"
+        },
+        {
+          "tag": "分红权",
+          "text": "股票有分红，房子有租金，你的数据日夜加班产生价值，工资条却没你的名字。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "body",
+      "label": "04 / 代价",
+      "icon": "💸",
+      "title": [
+        "有些岗位",
+        "正在静悄悄瘦身"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "rich",
+        "composition": "list",
+        "emphasis": "title"
+      },
+      "sub_items": [
+        {
+          "tag": "设计师",
+          "text": "初稿需求从三天缩到三分钟，老板对AI出的图很满意，对你的加班费不太满意。"
+        },
+        {
+          "tag": "翻译员",
+          "text": "一份合同的翻译报价，AI可以比人类译员便宜一个数量级，质量不够，数量来凑。"
+        },
+        {
+          "tag": "程序员",
+          "text": "初级代码和测试脚本，模型已经能7x24小时输出，不抱怨，也不要期权。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "body",
+      "label": "05 / 先例",
+      "icon": "📖",
+      "title": [
+        "别处有账本",
+        "我们只有弹窗"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "rich",
+        "composition": "list",
+        "emphasis": "card"
+      },
+      "sub_items": [
+        {
+          "tag": "石油账本",
+          "text": "挪威把石油收入放进一个大池子，每年给国民发钱，他们管这叫资源结算。"
+        },
+        {
+          "tag": "机器账本",
+          "text": "韩国有公司试算，如果工厂机器人替代了工人，从机器人身上收一笔钱，能不能填上工人的工资单。"
+        },
+        {
+          "tag": "数据账本",
+          "text": "石油有井口和账本，机器人有序列号和产线。你的数据，只有用户协议里的一个同意按钮。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "estimate",
+      "label": "06 / 估算",
+      "icon": "💰",
+      "title": [
+        "这笔被忘掉的账",
+        "有多大"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "normal",
+        "composition": "metric",
+        "emphasis": "number"
+      },
+      "sub_items": [],
+      "steps": [],
+      "phases": [],
+      "highlight": "2000亿+",
+      "highlight_sub": "每年注入公共池的估算资金",
+      "footnote": "粗略匡算，仅作讨论量级示意"
+    },
+    {
+      "type": "cta",
+      "label": "07 / 行动",
+      "icon": "➡️",
+      "title": [
+        "算笔明白账"
+      ],
+      "layout": {
+        "title_scale": "xlarge",
+        "body_density": "normal",
+        "composition": "cta",
+        "emphasis": "action"
+      },
+      "sub_items": [
+        {
+          "tag": "这不是帖子",
+          "text": "这是一个持续跟进的账本，记录这笔「AI全民分红」的账，主页置顶链接直达。"
+        },
+        {
+          "tag": "你的态度",
+          "text": "如果你觉得这笔账该算，在评论区留个「支持」，让更多人看到这个账本。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    }
+  ]
+}

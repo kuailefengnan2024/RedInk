@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+
+
+.page {
+  width: 1242px;
+  height: 1660px;
+  background-color: #F8F9FA;
+  box-sizing: border-box;
+  padding: 90px 100px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  position: relative;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 36px;
+  color: #888888;
+  font-weight: 600;
+  margin-bottom: 50px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.page-title {
+  margin-bottom: 60px;
+}
+
+.page-title p {
+  font-size: 106px;
+  font-weight: 900;
+  line-height: 1.2;
+  color: #111111;
+  margin: 0;
+  letter-spacing: 0;
+}
+
+.page-title p.highlight {
+  color: #D90429;
+}
+
+.proof-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.proof-item {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 32px 40px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+  border: 1px solid #EFEFEF;
+  border-left: 8px solid #D90429;
+}
+
+.proof-tag {
+  display: inline-block;
+  font-size: 34px;
+  font-weight: 800;
+  color: #D90429;
+  background-color: #FFF0F1;
+  padding: 8px 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.proof-text {
+  font-size: 38px;
+  line-height: 1.55;
+  color: #333333;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0;
+}
+</style>
+</head>
+<body>
+<main class="page page-04 type-body">
+  <header class="page-header">
+    <span class="label">04 / 就业账本</span>
+    <span class="icon">📉</span>
+  </header>
+  
+  <section class="page-title">
+    <p>失业率还没爆</p>
+    <p class="highlight">外包报价单先动了</p>
+  </section>
+
+  <section class="proof-list">
+    <div class="proof-item">
+      <div class="proof-tag">门槛</div>
+      <p class="proof-text">斯坦福报告显示，锤子全砸在入职门槛上。22到25岁程序员就业降了快20%，初级岗位的预算直接从系统里消失。</p>
+    </div>
+    <div class="proof-item">
+      <div class="proof-tag">结构</div>
+      <p class="proof-text">纽约联储调查很克制，企业不说裁员，只说调整岗位结构。翻译过来就是：三天初稿变三分钟，省下的是岗位预算。</p>
+    </div>
+    <div class="proof-item">
+      <div class="proof-tag">焦虑</div>
+      <p class="proof-text">ADP调查里，员工觉得AI能提效，也怕被替代。效率和焦虑坐在同一个工位上，系统学会了流程，下一步是给你更低的报价。</p>
+    </div>
+  </section>
+</main>
+</body>
+</html>

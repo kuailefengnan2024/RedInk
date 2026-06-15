@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+
+
+.page { width: 1242px; height: 1660px; background-color: #F8F8F7; padding: 100px 96px; box-sizing: border-box; display: flex; flex-direction: column; font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; position: relative; }
+.page-header { display: flex; align-items: center; gap: 16px; margin-bottom: 48px; }
+.header-icon { font-size: 42px; }
+.header-label { font-size: 40px; font-weight: 600; color: #666666; letter-spacing: 0; }
+.title-container { margin-bottom: 48px; }
+.title-line { font-size: 112px; font-weight: 900; color: #1A1A1A; line-height: 1.15; margin: 0; letter-spacing: 0; }
+.highlight-box { background-color: #FFFFFF; border-radius: 16px; padding: 40px 48px; margin-bottom: 48px; border-left: 12px solid #D94A38; box-shadow: 0 8px 24px rgba(0,0,0,0.03); }
+.highlight-value { font-size: 92px; font-weight: 800; color: #D94A38; line-height: 1.1; margin-bottom: 12px; letter-spacing: 0; }
+.highlight-sub { font-size: 38px; font-weight: 600; color: #666666; line-height: 1.4; letter-spacing: 0; }
+.sub-items-list { display: flex; flex-direction: column; gap: 36px; flex-grow: 1; }
+.sub-item { display: flex; flex-direction: column; gap: 12px; }
+.item-tag { font-size: 40px; font-weight: 800; color: #1A1A1A; display: flex; align-items: center; letter-spacing: 0; }
+.item-tag::before { content: ""; display: inline-block; width: 12px; height: 12px; background-color: #D94A38; border-radius: 2px; margin-right: 16px; }
+.item-text { font-size: 38px; line-height: 1.55; color: #444444; margin: 0; letter-spacing: 0; }
+.footnote { margin-top: auto; padding-top: 32px; border-top: 2px solid #EAEAEA; }
+.footnote p { font-size: 34px; color: #999999; margin: 0; line-height: 1.4; letter-spacing: 0; }
+</style>
+</head>
+<body>
+<main class="page page-03 type-estimate">
+  <header class="page-header">
+    <span class="header-icon">💰</span>
+    <span class="header-label">03 / 利润</span>
+  </header>
+  
+  <section class="title-container">
+    <p class="title-line">多出747亿美元</p>
+    <p class="title-line">没人问它从哪来</p>
+  </section>
+
+  <section class="highlight-box">
+    <div class="highlight-value">747亿美元</div>
+    <div class="highlight-sub">AI新增超额利润粗算</div>
+  </section>
+
+  <div class="sub-items-list">
+    <div class="sub-item">
+      <div class="item-tag">显卡毛利</div>
+      <p class="item-text">英伟达FY2026数据中心收入1937亿美元，按71.1%毛利率粗算，一年多出的毛利大概558亿美元，这仅仅是卖显卡的账。</p>
+    </div>
+    <div class="sub-item">
+      <div class="item-tag">云端利润</div>
+      <p class="item-text">微软Azure、亚马逊AWS和谷歌云，保守切出一块AI新增利润，加起来近100亿美元。Meta靠AI提高广告效率，算它40亿美元。</p>
+    </div>
+    <div class="sub-item">
+      <div class="item-tag">模型合同</div>
+      <p class="item-text">OpenAI这批没上市的模型公司，企业合同的超额毛利往低了算也有50亿美元。利润进了公司账户，用户只收到隐私协议更新弹窗。</p>
+    </div>
+  </div>
+
+  <div class="footnote">
+    <p>数据来源：各公司最新财报及保守估算口径</p>
+  </div>
+</main>
+</body>
+</html>

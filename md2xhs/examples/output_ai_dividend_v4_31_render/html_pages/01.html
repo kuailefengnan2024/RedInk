@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+
+
+.page-01 {
+  width: 1242px;
+  height: 1660px;
+  background-color: #F4F4F2;
+  padding: 100px 96px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-icon {
+  font-size: 46px;
+}
+
+.header-label {
+  font-size: 38px;
+  font-weight: 600;
+  color: #888888;
+  letter-spacing: 0;
+}
+
+.title-section {
+  margin-top: 280px;
+  flex: 1;
+}
+
+.page-title {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.title-line {
+  font-size: 128px;
+  font-weight: 900;
+  color: #111111;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.proof-list {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  margin-bottom: 60px;
+}
+
+.proof-item {
+  display: flex;
+  gap: 48px;
+  border-top: 3px solid #D1D1D1;
+  padding-top: 48px;
+}
+
+.proof-tag {
+  font-size: 38px;
+  font-weight: 700;
+  color: #D93829;
+  width: 110px;
+  flex-shrink: 0;
+  line-height: 1.6;
+}
+
+.proof-text {
+  font-size: 42px;
+  line-height: 1.6;
+  color: #222222;
+  font-weight: 400;
+}
+</style>
+</head>
+<body>
+<main class="page page-01 type-cover">
+  <header class="page-header">
+    <span class="header-icon">🧾</span>
+    <span class="header-label">01 / 账面</span>
+  </header>
+  
+  <section class="title-section">
+    <div class="page-title">
+      <div class="title-line">公司在算利润</div>
+      <div class="title-line">HR在改报价单</div>
+    </div>
+  </section>
+
+  <section class="proof-list">
+    <div class="proof-item">
+      <div class="proof-tag">对账</div>
+      <div class="proof-text">把英伟达的利润表和普通人的工资条放一起，账面对不上。钱进了公司账户，代价留在排班表里。</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-tag">采购</div>
+      <div class="proof-text">AI没把所有人连夜赶出办公室。它更像个精明的采购：先不裁员，先压外包报价单。</div>
+    </div>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+
+
+.page-06 {
+  width: 1242px;
+  height: 1660px;
+  background-color: #F4F5F7;
+  padding: 90px 100px;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  letter-spacing: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 60px;
+}
+
+.icon {
+  font-size: 40px;
+}
+
+.label {
+  font-size: 36px;
+  font-weight: 600;
+  color: #666;
+}
+
+.title-section {
+  margin-bottom: 70px;
+}
+
+.title-line {
+  font-size: 112px;
+  font-weight: 900;
+  line-height: 1.2;
+  color: #111;
+  margin: 0;
+}
+
+.title-line.highlight {
+  color: #E63946;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.sub-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #FFFFFF;
+  padding: 36px 44px;
+  border-radius: 16px;
+  border-left: 12px solid #111;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.sub-item:nth-child(2) {
+  border-left-color: #E63946;
+}
+
+.sub-item:nth-child(3) {
+  border-left-color: #457B9D;
+}
+
+.tag {
+  font-size: 34px;
+  font-weight: 800;
+  color: #111;
+}
+
+.text {
+  font-size: 38px;
+  line-height: 1.55;
+  color: #333;
+  margin: 0;
+}
+</style>
+</head>
+<body>
+<main class="page page-06 type-cta">
+  <header class="header">
+    <span class="icon">✍️</span>
+    <span class="label">06 / 验账</span>
+  </header>
+  
+  <section class="title-section">
+    <p class="title-line">把账摊开</p>
+    <p class="title-line highlight">等评论区挑错</p>
+  </section>
+  
+  <section class="content-section">
+    <div class="sub-item">
+      <div class="tag">核对算法</div>
+      <p class="text">这不是精确审计，但足够用来核对。如果你觉得算法太保守，或者有更准的口径，欢迎在评论区留言挑错。</p>
+    </div>
+    <div class="sub-item">
+      <div class="tag">补充证据</div>
+      <p class="text">如果你的岗位已经被AI改了标价，发外包单价、招聘冻结邮件和排班表在评论里。这些具体的流水和单据，比口号有用。</p>
+    </div>
+    <div class="sub-item">
+      <div class="tag">下一步</div>
+      <p class="text">如果挑不出大错，作者下一步可能把计算过程做成公开表格，再按行业整理一版被AI降薪的岗位记录，找懂财税的人核对。</p>
+    </div>
+  </section>
+</main>
+</body>
+</html>

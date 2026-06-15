@@ -7,9 +7,10 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from md2xhs.domain.models import PipelineResult, RawInput
-from md2xhs.domain.ports import CarouselPlanner, CopyLinter, SlideRenderer
+from md2xhs.domain.models import Carousel, PipelineResult, RawInput, Slide, SubItem
+from md2xhs.domain.ports import CarouselPlanner, CopyLinter, CopyOptimizer, SlideRenderer
 from md2xhs.infra.carousel_json import carousel_to_dict
+from md2xhs.infra.rules_loader import load_copy_rules
 
 
 class Md2XhsPipeline:
@@ -18,10 +19,12 @@ class Md2XhsPipeline:
         planner: CarouselPlanner,
         linter: CopyLinter,
         renderer: SlideRenderer,
+        polisher: CopyOptimizer | None = None,
     ):
         self._planner = planner
         self._linter = linter
         self._renderer = renderer
+        self._polisher = polisher
 
     def run(
         self,
@@ -29,6 +32,7 @@ class Md2XhsPipeline:
         output_dir: str | Path,
         *,
         save_intermediate: bool = True,
+        lint_retries: int = 4,
     ) -> PipelineResult:
         out = Path(output_dir)
         out.mkdir(parents=True, exist_ok=True)
@@ -36,20 +40,47 @@ class Md2XhsPipeline:
         if save_intermediate:
             (out / "00_raw.txt").write_text(raw.text, encoding="utf-8")
 
-        carousel = self._planner.plan(raw)
+        planner_input = raw
+        if self._polisher:
+            polished = self._polisher.optimize(raw)
+            planner_input = RawInput(text=polished, source_path=raw.source_path)
+            if save_intermediate:
+                (out / "01_polished.md").write_text(polished, encoding="utf-8")
+
+        carousel = self._apply_replacements(self._planner.plan(planner_input))
+        issues = self._linter.lint(carousel)
+        for _ in range(lint_retries):
+            if not issues:
+                break
+            feedback = "\n".join(f"- {x}" for x in issues)
+            planner_input = RawInput(
+                text=(
+                    planner_input.text
+                    + "\n\n【上一版 carousel 未通过文案校验】\n"
+                    + feedback
+                    + "\n请逐条修复后重写完整 JSON：小字少于要求的页面必须补足；禁词必须删除；不要解释，不要保留这些词，也不要换成同类说教口吻或平台套话。"
+                ),
+                source_path=planner_input.source_path,
+            )
+            carousel = self._apply_replacements(self._planner.plan(planner_input))
+            issues = self._linter.lint(carousel)
+
         if save_intermediate:
-            (out / "01_carousel.json").write_text(
+            (out / "02_carousel.json").write_text(
                 json.dumps(carousel_to_dict(carousel), ensure_ascii=False, indent=2),
                 encoding="utf-8",
             )
 
-        issues = self._linter.lint(carousel)
         if save_intermediate:
-            (out / "02_lint.txt").write_text("\n".join(issues) or "OK", encoding="utf-8")
+            (out / "03_lint.txt").write_text("\n".join(issues) or "OK", encoding="utf-8")
         if issues:
             raise ValueError("文案校验未通过:\n" + "\n".join(f"- {x}" for x in issues))
 
-        images = self._renderer.render_all(carousel.slides, str(out))
+        render_carousel = getattr(self._renderer, "render_carousel", None)
+        if callable(render_carousel):
+            images = render_carousel(carousel, str(out))
+        else:
+            images = self._renderer.render_all(carousel.slides, str(out))
         (out / "caption.txt").write_text(
             f"{carousel.post_title}\n\n{carousel.caption}\n\n"
             + " ".join(f"#{t}" for t in carousel.tags),
@@ -61,4 +92,39 @@ class Md2XhsPipeline:
             optimized_text=carousel.caption,
             output_dir=str(out),
             image_paths=images,
+        )
+
+    def _apply_replacements(self, carousel: Carousel) -> Carousel:
+        replacements = (load_copy_rules().get("replace") or {})
+        if not replacements:
+            return carousel
+
+        def clean(value: str) -> str:
+            out = value
+            for src, dst in replacements.items():
+                out = out.replace(str(src), str(dst))
+            return out
+
+        slides = []
+        for slide in carousel.slides:
+            slides.append(
+                Slide(
+                    type=clean(slide.type),
+                    label=clean(slide.label),
+                    icon=clean(slide.icon),
+                    title=[clean(x) for x in slide.title],
+                    layout=dict(slide.layout),
+                    sub_items=[SubItem(tag=clean(x.tag), text=clean(x.text)) for x in slide.sub_items],
+                    steps=[clean(x) for x in slide.steps],
+                    highlight=clean(slide.highlight),
+                    highlight_sub=clean(slide.highlight_sub),
+                    footnote=clean(slide.footnote),
+                    phases=[(clean(phase), clean(desc)) for phase, desc in slide.phases],
+                )
+            )
+        return Carousel(
+            post_title=clean(carousel.post_title),
+            tags=[clean(x) for x in carousel.tags],
+            slides=slides,
+            caption=clean(carousel.caption),
         )

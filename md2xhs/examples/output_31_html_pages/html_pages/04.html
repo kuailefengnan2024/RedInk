@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+
+
+.page-04 { width: 1242px; height: 1660px; background-color: #FAFAFA; box-sizing: border-box; padding: 100px 112px; display: flex; flex-direction: column; color: #111111; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; letter-spacing: 0; }
+.page-header { display: flex; align-items: center; font-size: 38px; color: #888888; margin-bottom: 60px; }
+.page-header .label { font-weight: 600; margin-right: 16px; }
+.page-title { font-size: 132px; font-weight: 900; line-height: 1.1; color: #111111; margin-bottom: 80px; }
+.proof-list { display: flex; flex-direction: column; gap: 60px; flex: 1; }
+.proof-item { display: flex; flex-direction: column; position: relative; padding-left: 40px; }
+.proof-item::before { content: ''; position: absolute; left: 0; top: 12px; bottom: 12px; width: 6px; background-color: #DDDDDD; border-radius: 4px; }
+.proof-tag { font-size: 46px; font-weight: 800; color: #111111; margin-bottom: 16px; }
+.proof-text { font-size: 42px; line-height: 1.4; color: #444444; margin: 0; }
+.highlight-item { margin-top: 20px; padding: 50px; background-color: #111111; border-radius: 16px; }
+.highlight-item::before { display: none; }
+.highlight-item .proof-tag { color: #FFFFFF; display: inline-block; background-color: #FF4D4F; padding: 8px 24px; border-radius: 8px; font-size: 40px; margin-bottom: 24px; }
+.highlight-item .proof-text { color: #FFFFFF; font-size: 46px; font-weight: 600; line-height: 1.4; }
+</style>
+</head>
+<body>
+<main class="page page-04 type-body">
+  <header class="page-header">
+    <span class="label">04 / 对照</span>
+    <span class="icon">🌍</span>
+  </header>
+  <div class="page-title">
+    <strong>别人的作业</strong>
+  </div>
+  <section class="proof-list">
+    <div class="proof-item">
+      <div class="proof-tag">挪威</div>
+      <p class="proof-text">挖自家门口的石油，钱不只进公司账户，而是注入主权财富基金，每个国民都有一份无形的资产。</p>
+    </div>
+    <div class="proof-item">
+      <div class="proof-tag">韩国</div>
+      <p class="proof-text">那边在讨论「机器人税」。如果工厂用机器替代了工人，就从省下的工资和多出的利润里拿一部分，建个缓冲基金。</p>
+    </div>
+    <div class="proof-item highlight-item">
+      <div class="proof-tag">我们</div>
+      <p class="proof-text">全民数据炼出了AI，利润进了少数公司的年报。这个账本，看起来不太对。</p>
+    </div>
+  </section>
+</main>
+</body>
+</html>

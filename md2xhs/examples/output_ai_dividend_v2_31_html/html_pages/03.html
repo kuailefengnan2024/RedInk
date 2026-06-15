@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+
+
+.page {
+  width: 1242px;
+  height: 1660px;
+  box-sizing: border-box;
+  padding: 100px 100px 88px 100px;
+  background-color: #0A0A0C;
+  color: #FFFFFF;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  font-size: 38px;
+  font-weight: 600;
+  color: #888888;
+  letter-spacing: 0;
+}
+
+.icon {
+  margin-right: 16px;
+}
+
+.title-section {
+  margin-bottom: 60px;
+}
+
+.page-title {
+  font-size: 110px;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: #FFFFFF;
+}
+
+.metric-section {
+  margin-bottom: 60px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #222222;
+}
+
+.metric-value {
+  display: flex;
+  align-items: baseline;
+}
+
+.highlight {
+  font-size: 220px;
+  font-weight: 900;
+  color: #FF4500;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.highlight-sub {
+  font-size: 56px;
+  font-weight: 700;
+  color: #FF4500;
+  margin-left: 20px;
+  letter-spacing: 0;
+}
+
+.proof-list {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  flex: 1;
+}
+
+.proof-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-left: 24px;
+  border-left: 4px solid #333333;
+}
+
+.proof-tag {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0A0A0C;
+  background-color: #EEEEEE;
+  padding: 6px 16px;
+  border-radius: 8px;
+  align-self: flex-start;
+  letter-spacing: 0;
+}
+
+.proof-text {
+  font-size: 42px;
+  line-height: 1.5;
+  color: #CCCCCC;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0;
+}
+
+.footnote-section {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #222222;
+}
+
+.footnote-text {
+  font-size: 32px;
+  color: #666666;
+  line-height: 1.5;
+  margin: 0;
+  letter-spacing: 0;
+}
+</style>
+</head>
+<body>
+<main class="page page-03 type-estimate">
+  <header class="page-header">
+    <div class="label"><span class="icon">💵</span> 03 / 美国账本</div>
+  </header>
+  
+  <section class="title-section">
+    <div class="page-title">先算美国的账</div>
+    <div class="page-title">超额利润去了哪</div>
+  </section>
+
+  <section class="metric-section">
+    <div class="metric-value">
+      <span class="highlight">747</span>
+      <span class="highlight-sub">亿美元</span>
+    </div>
+  </section>
+
+  <section class="proof-list">
+    <div class="proof-item">
+      <div class="proof-tag">硬件</div>
+      <p class="proof-text">显卡一年多卖了几百亿。显卡不会自己写诗，它只负责把账单烧热，把利润留在财报里。</p>
+    </div>
+    <div class="proof-item">
+      <div class="proof-tag">云端</div>
+      <p class="proof-text">微软和亚马逊的云服务挤出增量。模型抽干公共数据，普通人只收到会员涨价的弹窗。</p>
+    </div>
+    <div class="proof-item">
+      <div class="proof-tag">缓冲金</div>
+      <p class="proof-text">拿两成出来建个缓冲金账户，大约上千亿。钱不是没有，它只是全躺在公司的分红记录里。</p>
+    </div>
+  </section>
+
+  <section class="footnote-section">
+    <p class="footnote-text">讨论量级 / 示意。基于 NVIDIA、微软、谷歌等 AI 超额毛利粗算。</p>
+  </section>
+</main>
+</body>
+</html>

@@ -19,6 +19,7 @@ class Slide:
     label: str
     icon: str
     title: list[str]
+    layout: dict[str, str] = field(default_factory=dict)
     sub_items: list[SubItem] = field(default_factory=list)
     steps: list[str] = field(default_factory=list)
     highlight: str = ""

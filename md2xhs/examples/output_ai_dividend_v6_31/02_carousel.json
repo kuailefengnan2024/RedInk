@@ -1,0 +1,212 @@
+{
+  "post_title": "AI 的利润表很漂亮，但少算了一页",
+  "tags": [
+    "商业逻辑",
+    "职场生存",
+    "AI应用",
+    "职场"
+  ],
+  "caption": "把AI公司的利润表，和被AI改价的岗位放在一起，账对不上。\n利润有清楚的入口写进财报，风险还在统计口径外。\n这笔账算到一半，先看能不能经得起挑错。\n工资条、外包单价、招聘冻结记录、排班表，永远比口号有用。",
+  "slides": [
+    {
+      "type": "cover",
+      "label": "01 / 账单",
+      "icon": "🧾",
+      "title": [
+        "AI的利润表很漂亮",
+        "但少算了一页"
+      ],
+      "layout": {
+        "title_scale": "poster",
+        "body_density": "normal",
+        "composition": "statement",
+        "emphasis": "title"
+      },
+      "sub_items": [
+        {
+          "tag": "对不上",
+          "text": "芯片、云和模型订阅，变成了巨头的收入。但把这份漂亮的报表和被AI改价的岗位放在一起看，账根本对不上。"
+        },
+        {
+          "tag": "没上车",
+          "text": "系统学会了流程，下一步不是发感谢信，而是招聘变少、外包单价下降、初级岗位合并。这笔账，完全不在公共账本里。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "body",
+      "label": "02 / 就业表",
+      "icon": "📉",
+      "title": [
+        "失业率还没爆",
+        "招聘入口先变窄了"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "rich",
+        "composition": "list",
+        "emphasis": "card"
+      },
+      "sub_items": [
+        {
+          "tag": "裁员主因",
+          "text": "Challenger 2026年4月数据显示，21490个裁员计划因为AI，占了26%。系统没改变命运，它只是先改了招聘计划。"
+        },
+        {
+          "tag": "预算变薄",
+          "text": "Stanford AI Index 2026的口径更冷：22到25岁软件开发者就业两年降了近20%。结果还没公布，初级岗位预算已经先变薄。"
+        },
+        {
+          "tag": "结构调整",
+          "text": "企业很少承认因为AI大规模裁员，他们管这叫“调整岗位结构”。不是效率提升，是岗位预算换了个新名字，排班表先瘦了下来。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "estimate",
+      "label": "03 / 超额利润",
+      "icon": "💰",
+      "title": [
+        "747 亿美元的超额利润",
+        "不在公共账本里"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "rich",
+        "composition": "metric",
+        "emphasis": "number"
+      },
+      "sub_items": [
+        {
+          "tag": "硬件账本",
+          "text": "NVIDIA FY2026数据中心收入1937亿美元，按71.1%毛利率粗算，新增毛利约558亿美元。这还仅仅是硬件层面的账。"
+        },
+        {
+          "tag": "保守口径",
+          "text": "加上微软Azure、AWS、Google Cloud和Meta的AI超额利润，保守算747亿美元。这不是精确审计，但足够把账摊开。"
+        },
+        {
+          "tag": "钱去哪了",
+          "text": "成本来自用户，收入进公司账户。如果拿20%算作公共数据红利，约1007亿元人民币。重点不是怎么切蛋糕，是这笔钱无人认领。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "747 亿美元",
+      "highlight_sub": "保守口径下的 AI 超额利润",
+      "footnote": "数据参考：NVIDIA FY2026、Microsoft FY2025、Amazon 2025、Alphabet 2025、Meta 2025 财报粗算"
+    },
+    {
+      "type": "estimate",
+      "label": "04 / 国内账单",
+      "icon": "📊",
+      "title": [
+        "国内的账更难看清",
+        "但压力不是凭空的"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "rich",
+        "composition": "metric",
+        "emphasis": "number"
+      },
+      "sub_items": [
+        {
+          "tag": "巨头链条",
+          "text": "阿里、腾讯、百度、华为等巨头都在AI链条里，超额利润没单独拆出。保守估算合计160到333亿元，按20%算红利也有32到67亿元。"
+        },
+        {
+          "tag": "没人结算",
+          "text": "数不大和账不存在是两回事。前者是早期，后者是装睡。利润有清楚的入口写进财报，代价还在统计口径外，没人负责结算。"
+        },
+        {
+          "tag": "改变结构",
+          "text": "16到24岁青年失业率旧口径曾到过21.3%。AI不一定让职业消失，它只改变工资结构。公司说这是效率，工资条说它听不懂。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "32-67 亿元",
+      "highlight_sub": "估算国内20%公共数据红利",
+      "footnote": "数据参考：阿里云、腾讯、百度、华为等 2025 财报保守估算及 ILO 就业研究"
+    },
+    {
+      "type": "body",
+      "label": "05 / 代价",
+      "icon": "⏳",
+      "title": [
+        "三天的初稿变三分钟",
+        "然后呢？"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "rich",
+        "composition": "list",
+        "emphasis": "card"
+      },
+      "sub_items": [
+        {
+          "tag": "效率代价",
+          "text": "知识工作者相信AI能提高效率，也担心被替代。三天的初稿变三分钟，省下来的不是时间，是公司账户里的岗位预算。"
+        },
+        {
+          "tag": "会计问题",
+          "text": "效率和焦虑坐在同一张工位，谁也没让谁。这不是灾难预言，灾难预言太省事。这只是个会计问题，需要有人把账算清楚。"
+        },
+        {
+          "tag": "风险外溢",
+          "text": "合同有签名和账本，但很多劳动只有弹窗和协议。利润写进财报，风险留在统计口径外，用户只收到长长的涨价通知。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "cta",
+      "label": "06 / 验账",
+      "icon": "🔍",
+      "title": [
+        "这笔账算到一半",
+        "先看能不能经得起挑错"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "normal",
+        "composition": "cta",
+        "emphasis": "action"
+      },
+      "sub_items": [
+        {
+          "tag": "验证账本",
+          "text": "如果你觉得算得偏保守，或者所在行业正被AI改价、减岗、外包替代，欢迎在评论区挑错。工资条、外包单价、排班表，比口号有用。"
+        },
+        {
+          "tag": "整理案例",
+          "text": "如果账单确实有问题，作者下一步可能公开中美计算表格，把口径写清楚，并收集被影响的岗位案例，不靠情绪凑数。"
+        },
+        {
+          "tag": "草案挑错",
+          "text": "之后可能会写一版公共数据红利草案，找人继续挑错。这笔账算到一半，还没按发送键，先看大家怎么对这本账。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    }
+  ]
+}

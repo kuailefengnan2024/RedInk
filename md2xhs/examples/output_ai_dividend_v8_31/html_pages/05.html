@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+
+
+.page-05 {
+  width: 1242px;
+  height: 1660px;
+  background-color: #F4F5F7;
+  box-sizing: border-box;
+  padding: 88px 100px;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.header-icon {
+  font-size: 40px;
+}
+
+.header-label {
+  font-size: 36px;
+  font-weight: 600;
+  color: #6C757D;
+  letter-spacing: 0;
+}
+
+.page-title {
+  margin-bottom: 60px;
+}
+
+.title-line {
+  font-size: 112px;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #111111;
+  letter-spacing: 0;
+}
+
+.proof-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.proof-card {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 40px 48px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.proof-tag {
+  font-size: 32px;
+  font-weight: 700;
+  color: #C5221F;
+  background-color: #FCE8E6;
+  padding: 8px 16px;
+  border-radius: 6px;
+  align-self: flex-start;
+  letter-spacing: 0;
+}
+
+.proof-tag::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #C5221F;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+}
+
+.proof-text {
+  font-size: 38px;
+  line-height: 1.55;
+  color: #3C4043;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+</style>
+</head>
+<body>
+<main class="page page-05 type-body">
+  <header class="page-header">
+    <span class="header-icon">⏱️</span>
+    <span class="header-label">05 / 效率</span>
+  </header>
+  
+  <section class="page-title">
+    <div class="title-line">工资条的厚度</div>
+    <div class="title-line">被系统改写了</div>
+  </section>
+
+  <section class="proof-list">
+    <div class="proof-card">
+      <div class="proof-tag">结构变化</div>
+      <p class="proof-text">国际劳工组织的研究写得很清楚，AI没让职业直接消失，它只是像切香肠一样，把任务拆碎，改写了打工人工资条的厚度。</p>
+    </div>
+    <div class="proof-card">
+      <div class="proof-tag">外包缩水</div>
+      <p class="proof-text">三天的初稿变三分钟，省下来的不是时间，而是外包单价和岗位预算。很多劳动没有合同签名，只有弹窗和协议。</p>
+    </div>
+    <div class="proof-card">
+      <div class="proof-tag">效率焦虑</div>
+      <p class="proof-text">ADP调查显示，知识工作者既相信系统能提效，又怕自己被优化。老板要求用AI提效，员工却发现结算单价变低，效率和焦虑坐在同一个工位上。</p>
+    </div>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+
+
+.page-06 {
+  width: 1242px;
+  height: 1660px;
+  background-color: #101010;
+  color: #FFFFFF;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  box-sizing: border-box;
+  padding: 100px 96px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  letter-spacing: 0;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 180px;
+}
+
+.header-icon {
+  font-size: 40px;
+}
+
+.header-label {
+  font-size: 38px;
+  color: #888888;
+  font-weight: 600;
+}
+
+.title-section {
+  flex: 1;
+}
+
+.page-title {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title-line {
+  font-size: 120px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 0;
+  color: #FFFFFF;
+}
+
+.title-line.highlight {
+  color: #FF4444;
+}
+
+.action-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.action-item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: #1A1A1A;
+  padding: 48px;
+  border-radius: 16px;
+  border-left: 8px solid #FF4444;
+}
+
+.action-tag {
+  display: inline-flex;
+  font-size: 34px;
+  background: rgba(255, 68, 68, 0.15);
+  color: #FF4444;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  align-self: flex-start;
+}
+
+.action-text {
+  font-size: 42px;
+  line-height: 1.6;
+  color: #CCCCCC;
+  margin: 0;
+  font-weight: 400;
+}
+</style>
+</head>
+<body>
+<main class="page page-06 type-cta">
+  <header class="page-header">
+    <span class="header-icon">💬</span>
+    <span class="header-label">06 / 评论区</span>
+  </header>
+  
+  <section class="title-section">
+    <div class="page-title">
+      <p class="title-line">口号没用</p>
+      <p class="title-line highlight">带上工资条来挑错</p>
+    </div>
+  </section>
+
+  <section class="action-section">
+    <div class="action-item">
+      <span class="action-tag">挑错</span>
+      <p class="action-text">这本账算得粗糙，发出来是为了找人挑错。如果你算过细账，带上你的Excel和数据来留言。</p>
+    </div>
+    <div class="action-item">
+      <span class="action-tag">证据</span>
+      <p class="action-text">如果你所在行业的排班表、外包合同已经被修改，带上数字来。口号没用，工资条才有用。</p>
+    </div>
+  </section>
+</main>
+</body>
+</html>

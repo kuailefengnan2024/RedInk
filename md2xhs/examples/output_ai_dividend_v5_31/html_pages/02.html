@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+
+
+.page-02 {
+  width: 1242px;
+  height: 1660px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  padding: 88px 96px;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #111111;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.page-label {
+  font-size: 38px;
+  color: #888888;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.page-icon {
+  font-size: 46px;
+}
+
+.title-section {
+  margin-bottom: 56px;
+}
+
+.page-title {
+  font-size: 104px;
+  font-weight: 900;
+  line-height: 1.25;
+  color: #111111;
+  letter-spacing: 0;
+}
+
+.highlight-section {
+  background-color: #F8F9FA;
+  border-radius: 12px;
+  padding: 40px 48px;
+  margin-bottom: 60px;
+  border-left: 12px solid #E63946;
+}
+
+.highlight-value {
+  font-size: 112px;
+  font-weight: 900;
+  color: #E63946;
+  line-height: 1.1;
+  margin-bottom: 12px;
+  letter-spacing: 0;
+}
+
+.highlight-sub {
+  font-size: 42px;
+  font-weight: 600;
+  color: #333333;
+  letter-spacing: 0;
+}
+
+.proof-list {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  flex: 1;
+}
+
+.proof-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.proof-tag {
+  font-size: 38px;
+  font-weight: 800;
+  color: #111111;
+  letter-spacing: 0;
+  display: flex;
+  align-items: center;
+}
+
+.proof-tag::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #E63946;
+  margin-right: 16px;
+}
+
+.proof-text {
+  font-size: 42px;
+  line-height: 1.6;
+  color: #444444;
+  letter-spacing: 0;
+}
+
+.page-footnote {
+  margin-top: auto;
+  padding-top: 32px;
+  font-size: 36px;
+  color: #999999;
+  line-height: 1.5;
+  border-top: 2px solid #EEEEEE;
+  letter-spacing: 0;
+}
+</style>
+</head>
+<body>
+<main class="page page-02 type-estimate">
+  <header class="page-header">
+    <span class="page-label">02 / 消失的岗位</span>
+    <span class="page-icon">📉</span>
+  </header>
+  
+  <section class="title-section">
+    <div class="page-title">漂亮财报背后</div>
+    <div class="page-title">是消失的初级岗位</div>
+  </section>
+
+  <section class="highlight-section">
+    <div class="highlight-value">747亿美元</div>
+    <div class="highlight-sub">美国AI超额利润保守估算</div>
+  </section>
+
+  <section class="proof-list">
+    <div class="proof-item">
+      <div class="proof-tag">超额利润</div>
+      <div class="proof-text">美国的超额利润保守算有747亿美元。英伟达和微软们靠AI多切的钱，都有清楚的入账单。</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-tag">预算转移</div>
+      <div class="proof-text">Challenger的数据很直白，前四个月49135个岗位因为AI没了。这不是技术迭代，这是预算转移。</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-tag">年轻人</div>
+      <div class="proof-text">代价不是平均落下的。斯坦福的统计口径更冷，22到25岁的软件开发者，就业降了快20%。</div>
+    </div>
+  </section>
+
+  <div class="page-footnote">叠加未上市模型公司估算，数据源自各公司FY25/26财报推演</div>
+</main>
+</body>
+</html>

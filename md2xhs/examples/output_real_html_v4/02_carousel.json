@@ -1,0 +1,158 @@
+{
+  "post_title": "你的数据，别人的分红",
+  "tags": [
+    "AI",
+    "数字资产",
+    "年度账单",
+    "数据分红",
+    "冷知识"
+  ],
+  "caption": "AI 公司年入千亿，模型是你喂大的。\n这和挖石油不一样，石油有井口和账本，数据只有弹窗和用户协议。\n如果 AI 赚的钱，能有一笔小小的进账出现在你的年度账单里，这笔账该怎么算？\n不一定对，但值得算算。\n认同这笔账，评论区见。",
+  "slides": [
+    {
+      "type": "cover",
+      "label": "01 / 封面",
+      "icon": "⚡️",
+      "title": [
+        "数据是你喂的",
+        "分红是他们的"
+      ],
+      "layout": {
+        "title_scale": "poster",
+        "body_density": "rich",
+        "composition": "statement",
+        "emphasis": "title"
+      },
+      "sub_items": [
+        {
+          "tag": "你的工作",
+          "text": "客服、翻译、初级设计的简历还没改完，招聘网站上的岗位先瘦了一圈。模型学会了你的技能，下一步不是感谢，是报价更低。"
+        },
+        {
+          "tag": "你的数据",
+          "text": "你贡献了数据，AI 年入千亿，你只收到一条会员涨价的推送通知。数据来自用户，收入进了公司账户，这笔账不太对。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "body",
+      "label": "02 / 两种原料",
+      "icon": "⚖️",
+      "title": [
+        "机器吃的原料变了"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "rich",
+        "composition": "list",
+        "emphasis": "card"
+      },
+      "sub_items": [
+        {
+          "tag": "工业革命",
+          "text": "原料是地下的煤和铁，所有权在井口和账本上写得很清楚。谁开采，谁投资，利润怎么分，合同上都得签字。"
+        },
+        {
+          "tag": "AI 革命",
+          "text": "原料是你每次点击、每条评论、每张照片，是你本人。所有权只有一份你永远不会读完的用户协议弹窗。"
+        },
+        {
+          "tag": "一个后果",
+          "text": "挪威的石油收入，有一部分进了国家公共账户。你的数据收入，只体现在科技公司的季度财报和股价上。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "estimate",
+      "label": "03 / 一笔匡算",
+      "icon": "💰",
+      "title": [
+        "算一笔「数据税」的账"
+      ],
+      "layout": {
+        "title_scale": "xlarge",
+        "body_density": "normal",
+        "composition": "metric",
+        "emphasis": "number"
+      },
+      "sub_items": [],
+      "steps": [],
+      "phases": [],
+      "highlight": "2000亿+",
+      "highlight_sub": "可能的年度池子规模",
+      "footnote": "口径：对头部 AI 公司超额利润征收一定比例，形成一个缓冲与再分配的资金池。数字为讨论量级，非精确预测。"
+    },
+    {
+      "type": "flow",
+      "label": "04 / 怎么实现",
+      "icon": "⚙️",
+      "title": [
+        "它不是空想，是个会计问题"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "rich",
+        "composition": "steps",
+        "emphasis": "card"
+      },
+      "sub_items": [
+        {
+          "tag": "总判断",
+          "text": "这个想法不是什么新发明，本质是一种更现代的资源税。不改变世界，但至少，你喂养大的东西，回头能分你一小块肉。"
+        }
+      ],
+      "steps": [
+        "匡算 AI 公司因用户数据产生的超额利润，从财报里剥离出来。",
+        "建立一个独立的公共账户，定期注入这部分利润的一部分，账目公开。",
+        "每年，这笔钱以「数据分红」的形式，出现在你的个人年度账单里。"
+      ],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "cta",
+      "label": "05 / 下一步",
+      "icon": "👉",
+      "title": [
+        "这笔账，你认同吗？"
+      ],
+      "layout": {
+        "title_scale": "xlarge",
+        "body_density": "rich",
+        "composition": "cta",
+        "emphasis": "action"
+      },
+      "sub_items": [
+        {
+          "tag": "想看演算",
+          "text": "这笔账的具体算法和逻辑依据，放在了主页置顶的链接里，随时可以查看和提出疑问。"
+        },
+        {
+          "tag": "表达态度",
+          "text": "如果认同「算这笔账」这个动作本身，就在评论区留下「支持」，让更多人看到这个讨论。"
+        },
+        {
+          "tag": "追踪进展",
+          "text": "这个账号会持续追踪关于数据资产和分红的讨论，你可以把它当作一个个人项目进展记录页。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    }
+  ]
+}

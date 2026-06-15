@@ -4,6 +4,16 @@
 # 当前激活的服务商（填写下方 providers 中的名称）
 active_provider: apicore_text
 
+# md2xhs 可为「润色」和「规划/格式化」指定不同模型。
+# 不配置时会回退到 active_provider。
+md2xhs:
+  # 建议：高文字审美模型，负责把原稿改成「反常识理性冷幽默」文案。
+  polish_provider: gemini_formatter
+  # 建议：最新 Gemini Pro/Flash，负责 JSON 结构化规划与格式化。
+  plan_provider: gemini_formatter
+  # 建议：同一个稳定 LLM，负责把 carousel 转成受控 HTML/CSS 排版代码。
+  render_provider: gemini_formatter
+
 # 服务商列表
 providers:
   # API Core（D:/api-core，密钥从 .env 读取）
@@ -12,6 +22,21 @@ providers:
     provider_name: gemini_3_pro
     temperature: 1.0
     max_output_tokens: 8000
+    budget_tokens: 2000
+
+  # md2xhs 润色：在 api-core 中配置到 GPT-5.5 对应 provider
+  gpt55_polisher:
+    type: api_core
+    provider_name: gpt_5_5
+    temperature: 0.8
+    max_output_tokens: 8000
+
+  # md2xhs 规划/格式化：在 api-core 中配置到最新 Gemini
+  gemini_formatter:
+    type: api_core
+    provider_name: gemini_3_1_p
+    temperature: 0.6
+    max_output_tokens: 12000
     budget_tokens: 2000
 
   # OpenAI 官方 API

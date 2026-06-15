@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+
+
+.page {
+  width: 1242px;
+  height: 1660px;
+  background-color: #F7F8FA;
+  box-sizing: border-box;
+  padding: 100px 96px;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #111111;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 56px;
+}
+
+.icon {
+  font-size: 48px;
+}
+
+.label {
+  font-size: 38px;
+  font-weight: 600;
+  color: #555555;
+  letter-spacing: 0;
+}
+
+.title-section {
+  margin-bottom: 64px;
+}
+
+.page-title {
+  font-size: 112px;
+  font-weight: 900;
+  line-height: 1.25;
+  color: #111111;
+  letter-spacing: 0;
+}
+
+.page-title.highlight {
+  color: #0055FF;
+}
+
+.sub-item-section {
+  margin-bottom: 56px;
+  background-color: #FFFFFF;
+  padding: 40px;
+  border-radius: 16px;
+  border-left: 12px solid #0055FF;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04);
+}
+
+.sub-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sub-tag {
+  font-size: 34px;
+  font-weight: 800;
+  color: #0055FF;
+  background-color: rgba(0, 85, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 8px;
+  align-self: flex-start;
+  letter-spacing: 0;
+}
+
+.sub-text {
+  font-size: 40px;
+  line-height: 1.6;
+  color: #333333;
+  letter-spacing: 0;
+}
+
+.step-list {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.step-item {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  border-bottom: 2px dashed #DCDEDF;
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+}
+
+.step-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.step-num {
+  font-size: 40px;
+  font-weight: 900;
+  color: #FFFFFF;
+  background-color: #111111;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  flex-shrink: 0;
+  letter-spacing: 0;
+}
+
+.step-text {
+  font-size: 42px;
+  line-height: 1.5;
+  color: #222222;
+  padding-top: 4px;
+  letter-spacing: 0;
+}
+</style>
+</head>
+<body>
+<main class="page page-06 type-flow">
+  <header class="header">
+    <span class="icon">📋</span>
+    <span class="label">06 / 计划</span>
+  </header>
+  
+  <section class="title-section">
+    <div class="page-title">这笔账算到一半</div>
+    <div class="page-title highlight">还没按发送键</div>
+  </section>
+
+  <section class="sub-item-section">
+    <div class="sub-item">
+      <span class="sub-tag">总判断</span>
+      <span class="sub-text">与其用口号抱怨，不如把证据和计算过程摊开。如果账单确实有问题，作者下一步可能做三件事。</span>
+    </div>
+  </section>
+
+  <section class="step-list">
+    <div class="step-item">
+      <div class="step-num">01</div>
+      <div class="step-text">放出中美计算表格，把估算逻辑和基准数据写清楚，先看能不能经得起挑错。</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">02</div>
+      <div class="step-text">按行业整理被影响的岗位事实。不靠情绪凑数，只看外包单价、招聘冻结记录和排班表。</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">03</div>
+      <div class="step-text">写一版公共数据红利草案。不讲抽象主义，只算账本逻辑，找懂行的人继续对账。</div>
+    </div>
+  </section>
+</main>
+</body>
+</html>

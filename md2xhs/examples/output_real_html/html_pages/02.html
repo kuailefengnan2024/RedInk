@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+/* Global Styles */
+:root {
+  --bg-color: #111214;
+  --text-color: #F0F0F0;
+  --accent-color: #4ADE80;
+  --muted-color: #888888;
+  --border-color: #333333;
+  --card-bg-color: #1A1B1E;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  width: 1242px;
+  height: 1660px;
+  overflow: hidden;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 100px;
+}
+
+.page-header {
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 60px;
+}
+
+.page-label {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--muted-color);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.page-title {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -2px;
+}
+
+.page-title .accent {
+  color: var(--accent-color);
+}
+
+.sub-item-list {
+  list-style: none;
+  margin-top: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sub-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sub-item-tag {
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--muted-color);
+}
+
+.sub-item-text {
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--text-color);
+}
+.page-02 .page-title {
+  font-size: 128px;
+  margin-bottom: 80px;
+}
+
+.page-02 .sub-item-list {
+  gap: 60px;
+}
+
+.page-02 .sub-item-text {
+  font-size: 40px;
+  line-height: 1.45;
+}
+</style>
+</head>
+<body>
+<main class="page page-02 type-body">
+  <header class="page-header">
+    <span class="page-label">02 / 代价</span>
+  </header>
+  <div class="page-title">
+    <p>AI学会了你的技能，</p>
+    <p>然后呢？</p>
+  </div>
+  <ul class="sub-item-list">
+    <li class="sub-item">
+      <span class="sub-item-tag">岗位置换</span>
+      <p class="sub-item-text">客服、翻译、初级设计先被接手，你的简历还没改完，招聘网站上的岗位先瘦了一圈。</p>
+    </li>
+    <li class="sub-item">
+      <span class="sub-item-tag">价值重估</span>
+      <p class="sub-item-text">模型学会了你的技能，下一步不是感谢你，而是用更低的市场报价，跟你谈同一个项目。</p>
+    </li>
+    <li class="sub-item">
+      <span class="sub-item-tag">效率账本</span>
+      <p class="sub-item-text">三天的初稿变成三分钟出图，省下来的不是你的周末，而是下个季度的岗位 headcount。</p>
+    </li>
+  </ul>
+</main>
+</body>
+</html>

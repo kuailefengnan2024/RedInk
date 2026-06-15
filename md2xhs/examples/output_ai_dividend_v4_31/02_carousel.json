@@ -1,0 +1,177 @@
+{
+  "post_title": "AI公司的利润表，和普通人的工资条",
+  "tags": [
+    "AI",
+    "职场",
+    "财报"
+  ],
+  "caption": "把 AI 公司的利润表，和普通人的工资条放一起。\n账面对不上。\n利润找到了入口，风险还没找到出口。\n这不是灾难预言，是个纯粹的会计问题。\n先看这笔账，能不能走出评论区。",
+  "slides": [
+    {
+      "type": "cover",
+      "label": "01 / 账面",
+      "icon": "🧾",
+      "title": [
+        "公司在算利润",
+        "HR在改报价单"
+      ],
+      "layout": {
+        "title_scale": "poster",
+        "body_density": "rich",
+        "composition": "statement",
+        "emphasis": "title"
+      },
+      "sub_items": [
+        {
+          "tag": "对账",
+          "text": "把英伟达的利润表和普通人的工资条放一起，账面对不上。钱进了公司账户，代价留在排班表里。"
+        },
+        {
+          "tag": "采购",
+          "text": "AI没把所有人连夜赶出办公室。它更像个精明的采购：先不裁员，先压外包报价单。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "estimate",
+      "label": "02 / 海外账本",
+      "icon": "💰",
+      "title": [
+        "保守算一笔：",
+        "747亿美元上桌了"
+      ],
+      "layout": {
+        "title_scale": "xlarge",
+        "body_density": "normal",
+        "composition": "metric",
+        "emphasis": "number"
+      },
+      "sub_items": [
+        {
+          "tag": "硬件",
+          "text": "英伟达数据中心一年多卖了784亿美元，按毛利粗算，新增毛利约558亿。这仅仅是硬件的账单。"
+        },
+        {
+          "tag": "软件",
+          "text": "微软Azure新增收入算40%给AI，超额利润约34亿。合同签了，钱直接进了公司的财务报表。"
+        },
+        {
+          "tag": "去向",
+          "text": "抽20%当公共账户缓冲金，约1007亿人民币。但这笔钱目前不在公共账户，用户只留在隐私协议里。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "747 亿美元",
+      "highlight_sub": "科技巨头AI超额利润保守估算",
+      "footnote": "依据Nvidia/MS/AWS/Google等2025-2026财报粗算"
+    },
+    {
+      "type": "estimate",
+      "label": "03 / 国内账本",
+      "icon": "📊",
+      "title": [
+        "国内的账类似",
+        "只是更隐蔽"
+      ],
+      "layout": {
+        "title_scale": "xlarge",
+        "body_density": "normal",
+        "composition": "metric",
+        "emphasis": "number"
+      },
+      "sub_items": [
+        {
+          "tag": "隐蔽",
+          "text": "大厂都在AI链条上，但超额利润没单拆。阿里云算20到30亿，腾讯广告多赚25到28亿，账单都在财报里。"
+        },
+        {
+          "tag": "缓冲",
+          "text": "抽20%做资金池，约32到67亿。数不大，但这笔钱能给被砍预算的初级岗位买点排班时间。"
+        },
+        {
+          "tag": "盲区",
+          "text": "账本的底牌不在分钱比例，在于假装没这笔账。利润进了企业账户，用户只收到服务涨价通知。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "160-333 亿元",
+      "highlight_sub": "国内大厂AI超额利润区间",
+      "footnote": "阿里云/腾讯/百度/华为等保守估算"
+    },
+    {
+      "type": "body",
+      "label": "04 / 就业账本",
+      "icon": "📉",
+      "title": [
+        "失业率还没爆",
+        "外包报价单先动了"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "rich",
+        "composition": "list",
+        "emphasis": "card"
+      },
+      "sub_items": [
+        {
+          "tag": "门槛",
+          "text": "斯坦福报告显示，锤子全砸在入职门槛上。22到25岁程序员就业降了快20%，初级岗位的预算直接从系统里消失。"
+        },
+        {
+          "tag": "结构",
+          "text": "纽约联储调查很克制，企业不说裁员，只说调整岗位结构。翻译过来就是：三天初稿变三分钟，省下的是岗位预算。"
+        },
+        {
+          "tag": "焦虑",
+          "text": "ADP调查里，员工觉得AI能提效，也怕被替代。效率和焦虑坐在同一个工位上，系统学会了流程，下一步是给你更低的报价。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "cta",
+      "label": "05 / 验账",
+      "icon": "📝",
+      "title": [
+        "这本账",
+        "能不能走出评论区"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "normal",
+        "composition": "cta",
+        "emphasis": "action"
+      },
+      "sub_items": [
+        {
+          "tag": "挑错",
+          "text": "算少了，或者算多了，可以在评论区留言。拿财报和数据来对账，这不是灾难预言，是个纯粹的会计问题。"
+        },
+        {
+          "tag": "证据",
+          "text": "如果你的岗位已经被AI改价、外包、砍预算，发工资条和排班表来。别发口号，拿具体的账单说话。"
+        },
+        {
+          "tag": "下一步",
+          "text": "如果挑错的人多，作者下一步可能做个公开表格，把中美两套口径列清楚，找财税的人继续验这笔账。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    }
+  ]
+}

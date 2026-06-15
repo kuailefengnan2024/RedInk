@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+
+
+.page-05 {
+  width: 1242px;
+  height: 1660px;
+  background-color: #F4F5F7;
+  color: #000;
+  padding: 120px 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  letter-spacing: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.label {
+  font-size: 38px;
+  color: #555;
+  font-weight: 600;
+}
+
+.icon {
+  font-size: 42px;
+  margin-left: 16px;
+}
+
+.title-section {
+  margin-bottom: 70px;
+}
+
+.page-title {
+  font-size: 132px;
+  font-weight: 900;
+  line-height: 1.15;
+  margin: 0;
+  color: #111;
+}
+
+.sub-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  padding: 48px;
+  border-radius: 16px;
+  margin-bottom: 70px;
+  border-left: 12px solid #E63946;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+}
+
+.proof-tag {
+  display: inline-block;
+  background-color: #E63946;
+  color: #FFFFFF;
+  font-size: 36px;
+  padding: 8px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  align-self: flex-start;
+}
+
+.proof-text {
+  font-size: 42px;
+  line-height: 1.6;
+  color: #222;
+  margin: 0;
+  font-weight: 500;
+}
+
+.steps-container {
+  flex: 1;
+}
+
+.proof-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.proof-item {
+  display: flex;
+  align-items: flex-start;
+  background-color: transparent;
+  border-bottom: 2px solid #E5E7EB;
+  padding-bottom: 40px;
+}
+
+.proof-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.step-num {
+  font-size: 72px;
+  font-weight: 900;
+  color: #E63946;
+  margin-right: 36px;
+  line-height: 0.9;
+  font-family: Arial, sans-serif;
+}
+
+.step-text {
+  font-size: 40px;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  flex: 1;
+}
+</style>
+</head>
+<body>
+<main class="page page-05 type-flow">
+  <header class="header">
+    <span class="label">05 / 计划</span>
+    <span class="icon">📝</span>
+  </header>
+  <section class="title-section">
+    <p class="page-title">账单不怕吵，</p>
+    <p class="page-title">怕没人翻</p>
+  </section>
+  <section class="sub-item">
+    <span class="proof-tag">偏科</span>
+    <p class="proof-text">这不叫技术进步，这叫账本偏科。先别急着感动，先看看钱进哪个账户了。</p>
+  </section>
+  <section class="steps-container">
+    <ol class="proof-list">
+      <li class="proof-item">
+        <span class="step-num">01</span>
+        <p class="step-text">公开中美两套计算表格。口径直接写清楚，不怕算错，就怕不算。</p>
+      </li>
+      <li class="proof-item">
+        <span class="step-num">02</span>
+        <p class="step-text">盘点被压价的真实岗位。收集评论区的工资条和排班表，不靠情绪凑数。</p>
+      </li>
+      <li class="proof-item">
+        <span class="step-num">03</span>
+        <p class="step-text">写一版缓冲金草案。找懂账单的人挑错，看看这笔钱能不能算清楚。</p>
+      </li>
+    </ol>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,190 @@
+{
+  "post_title": "你的数据，喂饱了谁的财报？",
+  "tags": [
+    "AI",
+    "搞钱",
+    "个人成长",
+    "数据资产",
+    "数字分红"
+  ],
+  "caption": "AI 行业年入千亿，你的工资条没变化。\n模型学会了你的技能，下一步不是发感谢信，是给客户报一个更低的价格。\n这笔账，总得有人开始算。",
+  "slides": [
+    {
+      "type": "cover",
+      "label": "01 / 封面",
+      "icon": "🤔",
+      "title": [
+        "你的数据，",
+        "喂饱了谁的财报？"
+      ],
+      "layout": {
+        "title_scale": "poster",
+        "body_density": "sparse",
+        "composition": "statement",
+        "emphasis": "title"
+      },
+      "sub_items": [
+        {
+          "tag": "喂养",
+          "text": "你的照片、帖子、聊天记录，构成了模型的智慧。模型产生的利润，进入了公司财报。"
+        },
+        {
+          "tag": "回报",
+          "text": "数据被拿走，你只多收到一个弹窗和一份你不会读的用户协议，以及会员涨价通知。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "body",
+      "label": "02 / 代价",
+      "icon": "📉",
+      "title": [
+        "AI学会了你的技能，",
+        "然后呢？"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "normal",
+        "composition": "list",
+        "emphasis": "card"
+      },
+      "sub_items": [
+        {
+          "tag": "岗位置换",
+          "text": "客服、翻译、初级设计先被接手，你的简历还没改完，招聘网站上的岗位先瘦了一圈。"
+        },
+        {
+          "tag": "价值重估",
+          "text": "模型学会了你的技能，下一步不是感谢你，而是用更低的市场报价，跟你谈同一个项目。"
+        },
+        {
+          "tag": "效率账本",
+          "text": "三天的初稿变成三分钟出图，省下来的不是你的周末，而是下个季度的岗位 headcount。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "hero",
+      "label": "03 / 资产",
+      "icon": "🔒",
+      "title": [
+        "这次的生产资料，",
+        "有点特别"
+      ],
+      "layout": {
+        "title_scale": "xlarge",
+        "body_density": "rich",
+        "composition": "list",
+        "emphasis": "title"
+      },
+      "sub_items": [
+        {
+          "tag": "工业时代",
+          "text": "铁矿和石油有清晰的产权和账本，谁开采、谁加工、谁赚钱，记录得明明白白。"
+        },
+        {
+          "tag": "网络时代",
+          "text": "宽带和服务器也有明确的物主和账单，IDC 机房按机柜和电费收钱，一分不会少。"
+        },
+        {
+          "tag": "数据时代",
+          "text": "你的数据贡献没有井口和账本，只有一个打勾的弹窗，和一份随时更新的用户协议。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "estimate",
+      "label": "04 / 估算",
+      "icon": "💰",
+      "title": [
+        "一张迟到的分成账单"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "sparse",
+        "composition": "metric",
+        "emphasis": "number"
+      },
+      "sub_items": [],
+      "steps": [],
+      "phases": [],
+      "highlight": "¥ 1000亿+",
+      "highlight_sub": "每年注入公共池的利润规模",
+      "footnote": "基于头部公司利润估算，讨论量级"
+    },
+    {
+      "type": "flow",
+      "label": "05 / 方案",
+      "icon": "🏦",
+      "title": [
+        "一个不聊感情的方案：",
+        "AI 全民红利"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "normal",
+        "composition": "steps",
+        "emphasis": "action"
+      },
+      "sub_items": [
+        {
+          "tag": "灵感来源",
+          "text": "学挪威的石油基金。国家挖石油，每年给国民分红。逻辑简单，不谈情怀，只算账。"
+        }
+      ],
+      "steps": [
+        "AI 从公共数据里提取价值，产生超额利润。",
+        "部分利润进入一个公共池，像个巨型储蓄罐。",
+        "池子里的钱，给被替代的人缓冲，给下一代投资源。"
+      ],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "cta",
+      "label": "06 / 行动",
+      "icon": "👉",
+      "title": [
+        "开始算账"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "normal",
+        "composition": "cta",
+        "emphasis": "action"
+      },
+      "sub_items": [
+        {
+          "tag": "进展记录",
+          "text": "一个记录想法和进展的落地页，放在了主页置顶，方便追踪这笔账怎么算。"
+        },
+        {
+          "tag": "表达认同",
+          "text": "如果认同这个方向，评论区留个「支持」，让更多人看到这个思路。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    }
+  ]
+}

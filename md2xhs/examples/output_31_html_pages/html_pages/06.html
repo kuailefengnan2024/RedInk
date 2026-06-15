@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+
+
+.page-06 {
+  width: 1242px;
+  height: 1660px;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  padding: 112px 100px;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  letter-spacing: 0;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 100px;
+}
+
+.header-icon {
+  font-size: 44px;
+}
+
+.header-label {
+  font-size: 40px;
+  color: #888888;
+  font-weight: 600;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.page-title {
+  font-size: 132px;
+  font-weight: 900;
+  color: #111111;
+  line-height: 1.1;
+  margin-bottom: 140px;
+}
+
+.cta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.cta-item {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 72px;
+  border-bottom: 2px solid #F0F0F0;
+}
+
+.cta-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.cta-tag {
+  font-size: 40px;
+  font-weight: 800;
+  color: #111111;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.cta-tag::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 40px;
+  background-color: #0052FF;
+  margin-right: 20px;
+  border-radius: 6px;
+}
+
+.cta-text {
+  font-size: 44px;
+  color: #555555;
+  line-height: 1.6;
+  margin: 0;
+}
+</style>
+</head>
+<body>
+<main class="page page-06 type-cta">
+  <header class="page-header">
+    <span class="header-icon">💬</span>
+    <span class="header-label">06 / 下一步</span>
+  </header>
+  <section class="content">
+    <div class="page-title">从记下这笔账开始</div>
+    <div class="cta-list">
+      <div class="cta-item">
+        <div class="cta-tag">主页置顶</div>
+        <p class="cta-text">我做了个追踪记录页，跟进这个「数字分红」想法的进展和讨论，链接在主页。</p>
+      </div>
+      <div class="cta-item">
+        <div class="cta-tag">评论区</div>
+        <p class="cta-text">如果认同这个方向，在评论区留个「支持」，让更多人看到具体的算法，而不只是情绪。</p>
+      </div>
+      <div class="cta-item">
+        <div class="cta-tag">你的账户</div>
+        <p class="cta-text">下次看到会员涨价通知，可以想一下，你贡献的数据，有没有一张对等的账单。</p>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+
+
+.page { width: 1242px; height: 1660px; background-color: #111111; color: #FFFFFF; padding: 100px; box-sizing: border-box; font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; display: flex; flex-direction: column; letter-spacing: 0; }
+
+.page-header { display: flex; align-items: center; gap: 16px; font-size: 36px; color: #888888; margin-bottom: 40px; font-weight: 500; }
+
+.page-title { font-size: 88px; font-weight: 900; line-height: 1.25; margin-bottom: 40px; color: #FFFFFF; }
+
+.page-title p { margin: 0; }
+
+.highlight-section { background-color: #1A1A1A; border-left: 12px solid #FF4433; padding: 32px 40px; margin-bottom: 40px; border-radius: 0 16px 16px 0; }
+
+.highlight-value { font-size: 100px; font-weight: 900; color: #FF4433; line-height: 1.1; margin-bottom: 12px; }
+
+.highlight-sub { font-size: 36px; color: #CCCCCC; line-height: 1.4; }
+
+.sub-items { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 32px; }
+
+.sub-item { padding-bottom: 32px; border-bottom: 1px solid #2A2A2A; }
+
+.sub-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+.sub-content { line-height: 1.55; text-align: justify; }
+
+.sub-tag { display: inline-block; background-color: #2A2A2A; color: #FF4433; font-size: 32px; font-weight: bold; padding: 4px 12px; border-radius: 6px; margin-right: 16px; position: relative; top: -2px; }
+
+.sub-text { font-size: 38px; color: #DDDDDD; }
+
+.footnote { margin-top: auto; font-size: 30px; color: #666666; line-height: 1.4; border-top: 1px solid #222222; padding-top: 24px; }
+</style>
+</head>
+<body>
+<main class="page page-04 type-estimate">
+  <header class="page-header">
+    <span class="label">04 / 国内账单</span>
+    <span class="icon">📊</span>
+  </header>
+  
+  <div class="page-title">
+    <p>国内的账更难看清</p>
+    <p>但压力不是凭空的</p>
+  </div>
+
+  <section class="highlight-section">
+    <div class="highlight-value">32-67 亿元</div>
+    <div class="highlight-sub">估算国内20%公共数据红利</div>
+  </section>
+
+  <ul class="sub-items">
+    <li class="sub-item">
+      <div class="sub-content">
+        <span class="sub-tag">巨头链条</span>
+        <span class="sub-text">阿里、腾讯、百度、华为等巨头都在AI链条里，超额利润没单独拆出。保守估算合计160到333亿元，按20%算红利也有32到67亿元。</span>
+      </div>
+    </li>
+    <li class="sub-item">
+      <div class="sub-content">
+        <span class="sub-tag">没人结算</span>
+        <span class="sub-text">数不大和账不存在是两回事。前者是早期，后者是装睡。利润有清楚的入口写进财报，代价还在统计口径外，没人负责结算。</span>
+      </div>
+    </li>
+    <li class="sub-item">
+      <div class="sub-content">
+        <span class="sub-tag">改变结构</span>
+        <span class="sub-text">16到24岁青年失业率旧口径曾到过21.3%。AI不一定让职业消失，它只改变工资结构。公司说这是效率，工资条说它听不懂。</span>
+      </div>
+    </li>
+  </ul>
+
+  <div class="footnote">数据参考：阿里云、腾讯、百度、华为等 2025 财报保守估算及 ILO 就业研究</div>
+</main>
+</body>
+</html>

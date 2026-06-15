@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+/* Global Styles */
+:root {
+  --bg-color: #111214;
+  --text-color: #F0F0F0;
+  --accent-color: #4ADE80;
+  --muted-color: #888888;
+  --border-color: #333333;
+  --card-bg-color: #1A1B1E;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  width: 1242px;
+  height: 1660px;
+  overflow: hidden;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 100px;
+}
+
+.page-header {
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 60px;
+}
+
+.page-label {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--muted-color);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.page-title {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -2px;
+}
+
+.page-title .accent {
+  color: var(--accent-color);
+}
+
+.sub-item-list {
+  list-style: none;
+  margin-top: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sub-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sub-item-tag {
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--muted-color);
+}
+
+.sub-item-text {
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--text-color);
+}
+.page-05 .page-title {
+  font-size: 108px;
+  margin-bottom: 80px;
+}
+.page-05 .intro-item {
+  margin-bottom: 80px;
+}
+.page-05 .intro-item .sub-item-tag {
+   font-size: 36px;
+   font-weight: 600;
+   color: var(--muted-color);
+   margin-bottom: 12px;
+}
+.page-05 .intro-item .sub-item-text {
+  font-size: 40px;
+  line-height: 1.45;
+}
+.page-05 .flow-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: auto;
+}
+.page-05 .flow-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+}
+.page-05 .step-number {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--muted-color);
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--border-color);
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.page-05 .step-text {
+  font-size: 42px;
+  line-height: 1.4;
+  padding-top: 6px;
+}
+.page-05 .flow-step.is-last .step-number {
+  color: var(--bg-color);
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+.page-05 .flow-step.is-last .step-text {
+  color: var(--accent-color);
+}
+</style>
+</head>
+<body>
+<main class="page page-05 type-flow">
+  <header class="page-header">
+    <span class="page-label">05 / 方案</span>
+  </header>
+  <div class="page-title">
+    <p>一个不聊感情的方案：</p>
+    <p>AI 全民红利</p>
+  </div>
+  <div class="intro-item">
+    <span class="sub-item-tag">灵感来源</span>
+    <p class="sub-item-text">学挪威的石油基金。国家挖石油，每年给国民分红。逻辑简单，不谈情怀，只算账。</p>
+  </div>
+  <div class="flow-steps">
+    <div class="flow-step">
+      <span class="step-number">1</span>
+      <p class="step-text">AI 从公共数据里提取价值，产生超额利润。</p>
+    </div>
+    <div class="flow-step">
+      <span class="step-number">2</span>
+      <p class="step-text">部分利润进入一个公共池，像个巨型储蓄罐。</p>
+    </div>
+    <div class="flow-step is-last">
+      <span class="step-number">3</span>
+      <p class="step-text">池子里的钱，给被替代的人缓冲，给下一代投资源。</p>
+    </div>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+
+
+.page {
+  width: 1242px;
+  height: 1660px;
+  background-color: #F8F9FA;
+  color: #1A1A1A;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  box-sizing: border-box;
+  padding: 100px 96px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.header-icon {
+  font-size: 40px;
+}
+
+.header-label {
+  font-size: 36px;
+  color: #666666;
+  font-weight: 600;
+}
+
+.title-section {
+  margin-bottom: 48px;
+}
+
+.page-title {
+  font-size: 116px;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #111111;
+}
+
+.metric-section {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 40px 40px;
+  margin-bottom: 48px;
+  border-left: 12px solid #D90429;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.05);
+}
+
+.metric-value {
+  font-size: 104px;
+  font-weight: 900;
+  color: #D90429;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.metric-label {
+  font-size: 38px;
+  color: #444444;
+  font-weight: 500;
+}
+
+.proof-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  flex: 1;
+}
+
+.proof-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.proof-tag {
+  display: inline-block;
+  font-size: 34px;
+  font-weight: 700;
+  color: #D90429;
+  background-color: rgba(217, 4, 41, 0.08);
+  padding: 8px 20px;
+  border-radius: 8px;
+  align-self: flex-start;
+}
+
+.proof-text {
+  font-size: 42px;
+  color: #2B2B2B;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.page-footer {
+  position: absolute;
+  bottom: 80px;
+  left: 96px;
+  right: 96px;
+  border-top: 2px solid #E5E5E5;
+  padding-top: 24px;
+}
+
+.footnote {
+  font-size: 32px;
+  color: #888888;
+  line-height: 1.5;
+}
+</style>
+</head>
+<body>
+<main class="page page-02 type-estimate">
+  <header class="page-header">
+    <span class="header-icon">💰</span>
+    <span class="header-label">02 / 海外账本</span>
+  </header>
+  
+  <section class="title-section">
+    <div class="page-title">保守算一笔：</div>
+    <div class="page-title">747亿美元上桌了</div>
+  </section>
+
+  <section class="metric-section">
+    <div class="metric-value">747 亿美元</div>
+    <div class="metric-label">科技巨头AI超额利润保守估算</div>
+  </section>
+
+  <section class="proof-list">
+    <div class="proof-item">
+      <div class="proof-tag">硬件</div>
+      <div class="proof-text">英伟达数据中心一年多卖了784亿美元，按毛利粗算，新增毛利约558亿。这仅仅是硬件的账单。</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-tag">软件</div>
+      <div class="proof-text">微软Azure新增收入算40%给AI，超额利润约34亿。合同签了，钱直接进了公司的财务报表。</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-tag">去向</div>
+      <div class="proof-text">抽20%当公共账户缓冲金，约1007亿人民币。但这笔钱目前不在公共账户，用户只留在隐私协议里。</div>
+    </div>
+  </section>
+
+  <div class="page-footer">
+    <span class="footnote">依据Nvidia/MS/AWS/Google等2025-2026财报粗算</span>
+  </div>
+</main>
+</body>
+</html>

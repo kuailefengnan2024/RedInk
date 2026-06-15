@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+
+
+.page {
+  box-sizing: border-box;
+  width: 1242px;
+  height: 1660px;
+  background-color: #0A0D14;
+  color: #FFFFFF;
+  padding: 96px 96px 80px 96px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  letter-spacing: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.header-icon {
+  font-size: 40px;
+  margin-right: 16px;
+}
+
+.header-label {
+  font-size: 38px;
+  font-weight: 600;
+  color: #8B95A5;
+}
+
+.page-title-section {
+  margin-bottom: 48px;
+}
+
+.page-title {
+  font-size: 96px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #FFFFFF;
+}
+
+.highlight-section {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #1A2233;
+}
+
+.highlight-value {
+  font-size: 112px;
+  font-weight: 900;
+  color: #00E599;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.highlight-sub {
+  font-size: 40px;
+  color: #8B95A5;
+  font-weight: 500;
+}
+
+.sub-items-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  flex: 1;
+}
+
+.sub-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-tag {
+  display: flex;
+  align-items: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #00E599;
+  margin-bottom: 8px;
+}
+
+.sub-tag::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 32px;
+  background-color: #00E599;
+  margin-right: 16px;
+  border-radius: 4px;
+}
+
+.sub-text {
+  font-size: 38px;
+  line-height: 1.5;
+  color: #D1D6E0;
+}
+
+.page-footnote {
+  font-size: 34px;
+  color: #5A6475;
+  line-height: 1.5;
+  margin-top: 32px;
+  border-top: 1px solid #1A2233;
+  padding-top: 32px;
+}
+</style>
+</head>
+<body>
+<main class="page page-03 type-estimate">
+  <header class="page-header">
+    <span class="header-icon">💰</span>
+    <span class="header-label">03 / 超额利润</span>
+  </header>
+  
+  <section class="page-title-section">
+    <div class="page-title">747 亿美元的超额利润</div>
+    <div class="page-title">不在公共账本里</div>
+  </section>
+
+  <section class="highlight-section">
+    <div class="highlight-value">747 亿美元</div>
+    <div class="highlight-sub">保守口径下的 AI 超额利润</div>
+  </section>
+
+  <section class="sub-items-section">
+    <div class="sub-item">
+      <div class="sub-tag">硬件账本</div>
+      <div class="sub-text">NVIDIA FY2026数据中心收入1937亿美元，按71.1%毛利率粗算，新增毛利约558亿美元。这还仅仅是硬件层面的账。</div>
+    </div>
+    <div class="sub-item">
+      <div class="sub-tag">保守口径</div>
+      <div class="sub-text">加上微软Azure、AWS、Google Cloud和Meta的AI超额利润，保守算747亿美元。这不是精确审计，但足够把账摊开。</div>
+    </div>
+    <div class="sub-item">
+      <div class="sub-tag">钱去哪了</div>
+      <div class="sub-text">成本来自用户，收入进公司账户。如果拿20%算作公共数据红利，约1007亿元人民币。重点不是怎么切蛋糕，是这笔钱无人认领。</div>
+    </div>
+  </section>
+
+  <div class="page-footnote">数据参考：NVIDIA FY2026、Microsoft FY2025、Amazon 2025、Alphabet 2025、Meta 2025 财报粗算</div>
+</main>
+</body>
+</html>
