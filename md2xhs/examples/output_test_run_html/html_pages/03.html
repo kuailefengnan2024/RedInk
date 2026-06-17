@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+.page {
+  box-sizing: border-box;
+  width: 1242px;
+  height: 1660px;
+  overflow: hidden;
+  position: relative;
+  padding: 100px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+h1, h2, h3, h4, h5, h6, p, span, li, div {
+  text-wrap: pretty;
+}
+.page-title, h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+.system-page-label {
+  font-size: 38px;
+  font-weight: 600;
+  color: #888888;
+  margin-bottom: 48px;
+  text-align: left;
+  width: 100%;
+  font-family: system-ui, -apple-system, sans-serif;
+  letter-spacing: 0;
+}
+
+
+.page {
+  padding: 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  color: #111;
+}
+.page-03 {
+  background-color: #F8F7F5;
+}
+.page-header {
+  flex-shrink: 0;
+}
+.page-title {
+  font-size: 112px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0;
+  margin: 0;
+}
+.content-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 0;
+}
+.proof-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.proof-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.proof-tag {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #666;
+  letter-spacing: 0;
+}
+.proof-text {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.6;
+  letter-spacing: 0;
+  text-wrap: pretty;
+}
+.page-footer {
+  flex-shrink: 0;
+  margin-top: auto;
+}
+.metric-card {
+  background-color: #ECEAE6;
+  border-radius: 16px;
+  padding: 56px 60px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+.metric-icon {
+  position: absolute;
+  top: 24px;
+  left: 32px;
+  font-size: 80px;
+  font-weight: 200;
+  line-height: 1;
+  color: #B2B0AD;
+  transform: rotate(-10deg);
+}
+.metric-value {
+  font-size: 148px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: 0;
+  color: #265BFF;
+}
+.metric-sub {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 12px 0 0;
+  letter-spacing: 0;
+  color: #333;
+}
+.footnote {
+  font-size: 32px;
+  line-height: 1.5;
+  color: #999;
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+</style>
+</head>
+<body>
+<main class="page page-03 type-estimate">
+  <div class="system-page-label">03 / 07</div>
+  <header class="page-header">
+    <p class="page-title">国内也是类似的账<br>只是<span style="white-space: nowrap;">更难看清</span></p>
+  </header>
+  <section class="content-body">
+    <div class="proof-list">
+      <div class="proof-item">
+        <p class="proof-tag">广告</p>
+        <p class="proof-text">腾讯的混元模型让广告点击率提升，一年带动的超额收益估算约 90 亿元，这些增长来自<span style="white-space: nowrap;">更懂你的 AI。</span></p>
+      </div>
+      <div class="proof-item">
+        <p class="proof-tag">云+搜索</p>
+        <p class="proof-text">百度和阿里的生成式 AI，分别为云业务和电商推荐贡献了显著增量，两家年超额收益估算均在 45 <span style="white-space: nowrap;">亿元左右。</span></p>
+      </div>
+      <div class="proof-item">
+        <p class="proof-tag">国产算力</p>
+        <p class="proof-text">华为的昇腾 AI 芯片和盘古大模型云服务也在扩张，估算相关超额收益约 65 亿元，<span style="white-space: nowrap;">同样是笔大钱。</span></p>
+      </div>
+    </div>
+  </section>
+  <footer class="page-footer">
+    <div class="metric-card">
+      <div class="metric-icon">¥</div>
+      <p class="metric-value">≈ 245 亿元</p>
+      <p class="metric-sub">年度超额收益（讨论量级）</p>
+    </div>
+    <p class="footnote">数据源：机构财报预测与市场估算，仅用于讨论量级</p>
+  </footer>
+</main>
+<script>
+(function() {
+    const page = document.querySelector('.page');
+    if (!page) return;
+    
+    // Ensure the page root itself is exactly fixed size
+    page.style.width = '1242px';
+    page.style.height = '1660px';
+    page.style.boxSizing = 'border-box';
+    page.style.overflow = 'hidden';
+    page.style.position = 'relative';
+    page.style.display = 'flex';
+    page.style.flexDirection = 'column';
+    
+    // Check if the content overflows the page height
+    const scrollHeight = page.scrollHeight;
+    const clientHeight = 1660;
+    
+    if (scrollHeight > clientHeight) {
+        const style = window.getComputedStyle(page);
+        const paddingTop = parseFloat(style.paddingTop) || 0;
+        const paddingBottom = parseFloat(style.paddingBottom) || 0;
+        
+        const label = page.querySelector('.system-page-label');
+        const labelHeight = label ? label.offsetHeight + parseFloat(window.getComputedStyle(label).marginBottom || 0) : 0;
+        const availableHeight = clientHeight - paddingTop - paddingBottom - labelHeight;
+        
+        const children = Array.from(page.children).filter(child => !child.classList.contains('system-page-label'));
+        if (children.length === 0) return;
+        
+        const wrapper = document.createElement('div');
+        wrapper.className = 'page-content-wrapper';
+        wrapper.style.width = '100%';
+        wrapper.style.height = 'auto';
+        wrapper.style.display = 'flex';
+        wrapper.style.flexDirection = 'column';
+        
+        // Move children into wrapper
+        children.forEach(child => wrapper.appendChild(child));
+        page.appendChild(wrapper);
+        
+        // Measure content height and scale if it exceeds available space
+        const contentHeight = wrapper.offsetHeight;
+        if (contentHeight > availableHeight) {
+            const scale = availableHeight / contentHeight;
+            wrapper.style.transform = 'scale(' + scale + ')';
+            wrapper.style.transformOrigin = 'top center';
+        }
+    }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+.page {
+  box-sizing: border-box;
+  width: 1242px;
+  height: 1660px;
+  overflow: hidden;
+  position: relative;
+  padding: 100px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+h1, h2, h3, h4, h5, h6, p, span, li, div {
+  text-wrap: pretty;
+}
+.page-title, h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+.system-page-label {
+  font-size: 38px;
+  font-weight: 600;
+  color: #888888;
+  margin-bottom: 48px;
+  text-align: left;
+  width: 100%;
+  font-family: system-ui, -apple-system, sans-serif;
+  letter-spacing: 0;
+}
+
+
+main.page-06 {
+    justify-content: flex-start;
+    gap: 80px;
+}
+
+.page-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-title {
+    font-size: 132px;
+    font-weight: bold;
+    line-height: 1.25;
+    margin: 0;
+    color: #111;
+}
+
+.page-subtitle {
+    font-size: 56px;
+    line-height: 1.5;
+    margin-top: 16px;
+    color: #444;
+}
+
+.content-body {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.summary-card {
+    background-color: #F7F7F7;
+    padding: 32px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.proof-tag {
+    align-self: flex-start;
+    font-size: 36px;
+    font-weight: 500;
+    color: #111;
+    background-color: #ECECEC;
+    padding: 6px 18px;
+    border-radius: 8px;
+}
+
+.proof-text {
+    font-size: 40px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+}
+
+.steps-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    counter-reset: steps-counter;
+}
+
+.step-item {
+    font-size: 40px;
+    line-height: 1.65;
+    color: #111;
+    padding-left: 60px;
+    position: relative;
+}
+
+.step-item::before {
+    counter-increment: steps-counter;
+    content: counter(steps-counter);
+    position: absolute;
+    left: 0;
+    top: 5px;
+    font-size: 42px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #111;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+</style>
+</head>
+<body>
+<main class="page page-06 type-flow">
+  <div class="system-page-label">06 / 07</div>
+  <header class="page-header">
+    <p class="page-title">先算账，<br>再谈钱</p>
+    <p class="page-subtitle">一个“AI红利基金”的草稿</p>
+  </header>
+  <div class="content-body">
+    <div class="summary-card">
+      <span class="proof-tag">总判断</span>
+      <p class="proof-text">目的不是立刻分钱，是先把这笔因公共数据产生的收益，从科技公司的利润表里单独拎出来，算清楚规模。</p>
+    </div>
+    <ol class="steps-list">
+      <li class="step-item">识别范围。定义哪些公司、哪些业务的增长，是由<span class="nowrap">公共数据训练的</span>大模型显著驱动的。</li>
+      <li class="step-item">核算规模。联合财税和技术专家，估算这部分业务带来的<span class="nowrap">“超额收益”</span>，形成一份独立的影子财报。</li>
+      <li class="step-item">讨论用途。账算清了，才有讨论的基础。是投入公共服务，还是直接返还，<span class="nowrap">都是后话</span>。</li>
+    </ol>
+  </div>
+</main>
+<script>
+(function() {
+    const page = document.querySelector('.page');
+    if (!page) return;
+    
+    // Ensure the page root itself is exactly fixed size
+    page.style.width = '1242px';
+    page.style.height = '1660px';
+    page.style.boxSizing = 'border-box';
+    page.style.overflow = 'hidden';
+    page.style.position = 'relative';
+    page.style.display = 'flex';
+    page.style.flexDirection = 'column';
+    
+    // Check if the content overflows the page height
+    const scrollHeight = page.scrollHeight;
+    const clientHeight = 1660;
+    
+    if (scrollHeight > clientHeight) {
+        const style = window.getComputedStyle(page);
+        const paddingTop = parseFloat(style.paddingTop) || 0;
+        const paddingBottom = parseFloat(style.paddingBottom) || 0;
+        
+        const label = page.querySelector('.system-page-label');
+        const labelHeight = label ? label.offsetHeight + parseFloat(window.getComputedStyle(label).marginBottom || 0) : 0;
+        const availableHeight = clientHeight - paddingTop - paddingBottom - labelHeight;
+        
+        const children = Array.from(page.children).filter(child => !child.classList.contains('system-page-label'));
+        if (children.length === 0) return;
+        
+        const wrapper = document.createElement('div');
+        wrapper.className = 'page-content-wrapper';
+        wrapper.style.width = '100%';
+        wrapper.style.height = 'auto';
+        wrapper.style.display = 'flex';
+        wrapper.style.flexDirection = 'column';
+        
+        // Move children into wrapper
+        children.forEach(child => wrapper.appendChild(child));
+        page.appendChild(wrapper);
+        
+        // Measure content height and scale if it exceeds available space
+        const contentHeight = wrapper.offsetHeight;
+        if (contentHeight > availableHeight) {
+            const scale = availableHeight / contentHeight;
+            wrapper.style.transform = 'scale(' + scale + ')';
+            wrapper.style.transformOrigin = 'top center';
+        }
+    }
+})();
+</script>
+</body>
+</html>

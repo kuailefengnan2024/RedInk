@@ -1,0 +1,203 @@
+{
+  "post_title": "AI公司利润大增，谁的岗位先没了？",
+  "tags": [
+    "AI",
+    "搞钱",
+    "职场",
+    "个人成长"
+  ],
+  "caption": "AI公司赚的钱，一部分来自效率，一部分来自被“优化”掉的岗位预算。\n这笔账，和过去任何一次技术变革都不太一样。\n我们贡献了数据，只收到一个产品升级的弹窗。",
+  "slides": [
+    {
+      "type": "cover",
+      "label": "01 / 封面",
+      "icon": "?",
+      "title": [
+        "AI公司年赚千亿",
+        "岗位在消失"
+      ],
+      "layout": {
+        "title_scale": "poster",
+        "body_density": "rich",
+        "composition": "statement",
+        "emphasis": "title"
+      },
+      "sub_items": [
+        {
+          "tag": "账本",
+          "text": "这不是技术效率故事，这是一个收入分配故事。AI公司财报上的利润，有一部分来自客服、初级岗位的预算转移。"
+        },
+        {
+          "tag": "原料",
+          "text": "和工业革命不同，这一轮的核心原料，来自过去二十年全球用户生产的公开内容。你我都是原料贡献者，但分红记录上没有名字。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "body",
+      "label": "02 / 岗位",
+      "icon": "→",
+      "title": [
+        "失业率还没动",
+        "新岗位先少了"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "rich",
+        "composition": "list",
+        "emphasis": "title"
+      },
+      "sub_items": [
+        {
+          "tag": "预算",
+          "text": "公司招聘计划在收缩，先从客服、运营、初级设计岗开始。过去养一个团队的预算，现在变成付给AI公司的一笔年费。"
+        },
+        {
+          "tag": "排班",
+          "text": "系统学会了重复流程后，下一步不是给员工发奖金，而是排班表先瘦了一圈。很多人还没收到裁员信，只是发现活变少了。"
+        },
+        {
+          "tag": "单价",
+          "text": "外包单价也在变化。以前一个设计稿三天出图，现在AI三分钟就能生成初稿。省下来的不是时间，是原本要付给人的那部分费用。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "hero",
+      "label": "03 / 账本",
+      "icon": "→",
+      "title": [
+        "一笔很大的钱",
+        "但没人问它从哪来"
+      ],
+      "layout": {
+        "title_scale": "xlarge",
+        "body_density": "rich",
+        "composition": "list",
+        "emphasis": "title"
+      },
+      "sub_items": [
+        {
+          "tag": "数据",
+          "text": "AI的训练数据，来自互联网的公开文本和图片，是过去二十年全球用户集体智慧的沉淀。这些免费原料，被打包成了付费产品。"
+        },
+        {
+          "tag": "账户",
+          "text": "原料成本接近零，产品收入全部进入少数几家公司的账户。原料提供方，在这本账上是空白的，没有版税，也没有结算环节。"
+        },
+        {
+          "tag": "合同",
+          "text": "你贡献的数据和公开内容，只换来一个“同意用户协议”的弹窗。这不像一份有签名和付款记录的合同，更像一张单方面通知。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "estimate",
+      "label": "04 / 估算",
+      "icon": "→",
+      "title": [
+        "如果数据是新石油",
+        "它的油田在为谁赚钱"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "normal",
+        "composition": "metric",
+        "emphasis": "number"
+      },
+      "sub_items": [
+        {
+          "tag": "先例",
+          "text": "挪威把海底的石油收入，通过主权财富基金注入公共池，国民享受了几十年分红。油田是公共财产，收益由国民共享。"
+        },
+        {
+          "tag": "对照",
+          "text": "如果把全球用户的公开数据看作一片新油田，那它的开采利润，现在只流进了少数私人公司的账户，没有进入公共池。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "2000亿+",
+      "highlight_sub": "美元量级",
+      "footnote": "基于现有头部公司利润的推演，有人在严肃计算一个“AI红利公共池”的可能性。这不是定论，是一个正在计算的数学题。"
+    },
+    {
+      "type": "flow",
+      "label": "05 / 模型",
+      "icon": "→",
+      "title": [
+        "一个还在推演的",
+        "“AI红利”计算模型"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "rich",
+        "composition": "steps",
+        "emphasis": "card"
+      },
+      "sub_items": [
+        {
+          "tag": "总判断",
+          "text": "这不是一个阻止岗位消失的方案，这是一个对冲技术冲击代价的缓冲设计。目前还在非常早期的模型推演阶段。"
+        }
+      ],
+      "steps": [
+        "界定科技巨头的“超额利润”部分，即由公共数据训练带来的、超出常规市场竞争的利润。",
+        "按一定比例，将这部分利润注入一个独立的公共资金池，每年滚动注入，形成规模。",
+        "当技术和分配模型成熟，池内资金或许能以某种形式，为每个数据贡献者提供红利记录。"
+      ],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "cta",
+      "label": "06 / 下一步",
+      "icon": "!",
+      "title": [
+        "这笔账，还没算完"
+      ],
+      "layout": {
+        "title_scale": "xlarge",
+        "body_density": "normal",
+        "composition": "cta",
+        "emphasis": "action"
+      },
+      "sub_items": [
+        {
+          "tag": "下一步",
+          "text": "作者在个人主页记录了这个“公共账本”的计算过程、各方进展和反对意见。只记录，不募捐，欢迎理性勘误。"
+        },
+        {
+          "tag": "评论区",
+          "text": "这个想法很初步，可能算错，可能天真。欢迎在评论区补充你看漏的环节、反对的理由，或者更准确的算法。"
+        },
+        {
+          "tag": "验算",
+          "text": "如果评论区证明这笔账值得继续算下去，作者下一步会尝试整理不同国家类似缓冲金的运作模型，看看有什么能借鉴。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    }
+  ]
+}

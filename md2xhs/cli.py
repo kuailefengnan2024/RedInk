@@ -74,18 +74,29 @@ def cmd_plan(args: argparse.Namespace) -> int:
 
 def cmd_render(args: argparse.Namespace) -> int:
     data = json.loads(Path(args.input).read_text(encoding="utf-8"))
-    carousel = build_carousel(data)
+    is_design = "pages" in data and isinstance(data["pages"], list)
     load_dotenv(ROOT / ".env")
     if args.renderer == "html":
-        paths = LlmHtmlCodeRenderer(
+        renderer = LlmHtmlCodeRenderer(
             load_llm_from_yaml(role="render"),
             llm_factory=lambda: load_llm_from_yaml(role="render"),
             max_workers=3,
-        ).render_carousel(carousel, args.output)
+        )
+        if is_design:
+            print("Detecting render_design format. Rendering directly without LLM...")
+            paths = renderer.render_design(data, args.output)
+        else:
+            carousel = build_carousel(data)
+            paths = renderer.render_carousel(carousel, args.output)
     else:
+        if is_design:
+            print("Pillow renderer does not support render_design JSON directly.", file=sys.stderr)
+            return 1
+        carousel = build_carousel(data)
         paths = FinanceDarkRenderer().render_all(carousel.slides, args.output)
     print(f"rendered {len(paths)} -> {args.output}")
     return 0
+
 
 
 def cmd_optimize(args: argparse.Namespace) -> int:

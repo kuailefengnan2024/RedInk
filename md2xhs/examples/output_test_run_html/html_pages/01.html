@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+.page {
+  box-sizing: border-box;
+  width: 1242px;
+  height: 1660px;
+  overflow: hidden;
+  position: relative;
+  padding: 100px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+h1, h2, h3, h4, h5, h6, p, span, li, div {
+  text-wrap: pretty;
+}
+.page-title, h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+.system-page-label {
+  font-size: 38px;
+  font-weight: 600;
+  color: #888888;
+  margin-bottom: 48px;
+  text-align: left;
+  width: 100%;
+  font-family: system-ui, -apple-system, sans-serif;
+  letter-spacing: 0;
+}
+
+
+.page {
+  box-sizing: border-box;
+  padding: 100px;
+  justify-content: space-between; 
+  background-color: #F8F7F3;
+}
+
+.page-title {
+  color: #111;
+}
+
+.page-title .title-main {
+  font-size: 136px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.page-title .title-sub {
+  font-size: 136px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0;
+  color: #888;
+  text-wrap: pretty;
+}
+
+.proof-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.proof-item {
+  padding-top: 32px;
+  border-top: 2px solid #D8D8D8;
+}
+
+.proof-tag {
+  font-size: 40px;
+  font-weight: 600;
+  color: #111;
+  margin: 0 0 16px 0;
+}
+
+.proof-text {
+  font-size: 42px;
+  line-height: 1.6;
+  color: #444;
+  margin: 0;
+  text-wrap: pretty;
+}
+</style>
+</head>
+<body>
+<main class="page page-01 type-cover">
+  <header class="page-title">
+    <p class="title-main">新闻里讲<span style="white-space: nowrap;">效率革命</span></p>
+    <p class="title-sub">工资条上只看到<span style="white-space: nowrap;">招聘冻结</span></p>
+  </header>
+  <section class="proof-list">
+    <div class="proof-item">
+      <p class="proof-tag">喂养</p>
+      <p class="proof-text">大模型变得更聪明，靠的是<span style="white-space: nowrap;">公共数据</span>。这笔原料费，目前没有体现在任何一家公司的<span style="white-space: nowrap;">账单上</span>。</p>
+    </div>
+    <div class="proof-item">
+      <p class="proof-tag">代价</p>
+      <p class="proof-text">一些<span style="white-space: nowrap;">岗位预算</span>消失，是为了另一些公司财报更厚。<span style="white-space: nowrap;">效率提升了</span>，但<span style="white-space: nowrap;">招聘需求</span>先变少了。</p>
+    </div>
+  </section>
+</main>
+<script>
+(function() {
+    const page = document.querySelector('.page');
+    if (!page) return;
+    
+    // Ensure the page root itself is exactly fixed size
+    page.style.width = '1242px';
+    page.style.height = '1660px';
+    page.style.boxSizing = 'border-box';
+    page.style.overflow = 'hidden';
+    page.style.position = 'relative';
+    page.style.display = 'flex';
+    page.style.flexDirection = 'column';
+    
+    // Check if the content overflows the page height
+    const scrollHeight = page.scrollHeight;
+    const clientHeight = 1660;
+    
+    if (scrollHeight > clientHeight) {
+        const style = window.getComputedStyle(page);
+        const paddingTop = parseFloat(style.paddingTop) || 0;
+        const paddingBottom = parseFloat(style.paddingBottom) || 0;
+        
+        const label = page.querySelector('.system-page-label');
+        const labelHeight = label ? label.offsetHeight + parseFloat(window.getComputedStyle(label).marginBottom || 0) : 0;
+        const availableHeight = clientHeight - paddingTop - paddingBottom - labelHeight;
+        
+        const children = Array.from(page.children).filter(child => !child.classList.contains('system-page-label'));
+        if (children.length === 0) return;
+        
+        const wrapper = document.createElement('div');
+        wrapper.className = 'page-content-wrapper';
+        wrapper.style.width = '100%';
+        wrapper.style.height = 'auto';
+        wrapper.style.display = 'flex';
+        wrapper.style.flexDirection = 'column';
+        
+        // Move children into wrapper
+        children.forEach(child => wrapper.appendChild(child));
+        page.appendChild(wrapper);
+        
+        // Measure content height and scale if it exceeds available space
+        const contentHeight = wrapper.offsetHeight;
+        if (contentHeight > availableHeight) {
+            const scale = availableHeight / contentHeight;
+            wrapper.style.transform = 'scale(' + scale + ')';
+            wrapper.style.transformOrigin = 'top center';
+        }
+    }
+})();
+</script>
+</body>
+</html>

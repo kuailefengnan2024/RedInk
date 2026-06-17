@@ -44,10 +44,28 @@ class LlmHtmlCodeRenderer:
         for stale in out.glob("[0-9][0-9].png"):
             stale.unlink()
 
+        # Clean stale HTML pages
+        html_dir = out / "html_pages"
+        if html_dir.exists():
+            shutil.rmtree(html_dir)
+        html_dir.mkdir(parents=True, exist_ok=True)
+
         design = self._plan_design(carousel)
         self._validate_design(design)
+        
+        # Save formatted design where html and css are lists of lines for easy editing
+        import copy
+        display_design = copy.deepcopy(design)
+        if "global_css" in display_design and isinstance(display_design["global_css"], str):
+            display_design["global_css"] = display_design["global_css"].splitlines()
+        for page in display_design.get("pages") or []:
+            if "html" in page and isinstance(page["html"], str):
+                page["html"] = page["html"].splitlines()
+            if "css" in page and isinstance(page["css"], str):
+                page["css"] = page["css"].splitlines()
+
         (out / "04_render_design.json").write_text(
-            json.dumps(design, ensure_ascii=False, indent=2),
+            json.dumps(display_design, ensure_ascii=False, indent=2),
             encoding="utf-8",
         )
 
@@ -58,13 +76,104 @@ class LlmHtmlCodeRenderer:
         for page in design.get("pages") or []:
             idx = int(page.get("index") or len(paths) + 1)
             filename = page.get("filename") or f"{idx:02d}.png"
-            png_path = out / filename
+            png_path = (out / filename).resolve()
             html_path = html_dir / f"{idx:02d}.html"
-            doc = self._build_doc(global_css, page.get("css") or "", page.get("html") or "")
+            
+            slide = carousel.slides[idx - 1]
+            page_html = page.get("html") or ""
+            
+            replacements = {
+                "{{label}}": slide.label,
+                "{{label }}": slide.label,
+                "{{ label}}": slide.label,
+                "{{ label }}": slide.label,
+                "{{icon}}": slide.icon,
+                "{{icon }}": slide.icon,
+                "{{ icon}}": slide.icon,
+                "{{ icon }}": slide.icon,
+                "{{title}}": "<br>".join(slide.title),
+                "{{title }}": "<br>".join(slide.title),
+                "{{ title}}": "<br>".join(slide.title),
+                "{{ title }}": "<br>".join(slide.title),
+                "{{highlight}}": slide.highlight,
+                "{{highlight }}": slide.highlight,
+                "{{ highlight}}": slide.highlight,
+                "{{ highlight }}": slide.highlight,
+                "{{highlight_sub}}": slide.highlight_sub,
+                "{{highlight_sub }}": slide.highlight_sub,
+                "{{ highlight_sub}}": slide.highlight_sub,
+                "{{ highlight_sub }}": slide.highlight_sub,
+                "{{footnote}}": slide.footnote,
+                "{{footnote }}": slide.footnote,
+                "{{ footnote}}": slide.footnote,
+                "{{ footnote }}": slide.footnote,
+            }
+            for key, val in replacements.items():
+                page_html = page_html.replace(key, val)
+                
+            # Strip LLM-generated header labels and icons on non-cover pages
+            if slide.type != "cover":
+                # Strip elements with page-label, page-icon, page-number, etc.
+                page_html = re.sub(
+                    r'<(span|p|div)[^>]*class\s*=\s*[\'"]?[^\'"]*(page|header)-(label|icon|number)[^\'"]*[\'"]?[^>]*>.*?</\1>',
+                    '',
+                    page_html,
+                    flags=re.DOTALL | re.IGNORECASE
+                )
+
+                # Inject our standardized page label (only current page number)
+                header_html = f'<div class="system-page-label">{idx:02d}</div>'
+                main_match = re.search(r'<main[^>]*>', page_html, re.IGNORECASE)
+                if main_match:
+                    insert_pos = main_match.end()
+                    page_html = page_html[:insert_pos] + "\n  " + header_html + page_html[insert_pos:]
+
+            doc = self._build_doc(global_css, page.get("css") or "", page_html)
             html_path.write_text(doc, encoding="utf-8")
             self._screenshot(html_path, png_path)
             paths.append(str(png_path))
         return paths
+
+    def render_design(self, design: dict, output_dir: str) -> list[str]:
+        out = Path(output_dir)
+        out.mkdir(parents=True, exist_ok=True)
+        html_dir = out / "html_pages"
+        html_dir.mkdir(parents=True, exist_ok=True)
+
+        paths: list[str] = []
+        global_css = design.get("global_css") or ""
+        if isinstance(global_css, list):
+            global_css = "\n".join(global_css)
+
+        for page in design.get("pages") or []:
+            idx = int(page.get("index") or len(paths) + 1)
+            filename = page.get("filename") or f"{idx:02d}.png"
+            png_path = (out / filename).resolve()
+            html_path = html_dir / f"{idx:02d}.html"
+
+            page_html = page.get("html") or ""
+            if isinstance(page_html, list):
+                page_html = "\n".join(page_html)
+
+            page_css = page.get("css") or ""
+            if isinstance(page_css, list):
+                page_css = "\n".join(page_css)
+
+            # Inject our standardized page label if it's not present and it's not the first page
+            if idx != 1 and "system-page-label" not in page_html:
+                header_html = f'<div class="system-page-label">{idx:02d}</div>'
+                main_match = re.search(r'<main[^>]*>', page_html, re.IGNORECASE)
+                if main_match:
+                    insert_pos = main_match.end()
+                    page_html = page_html[:insert_pos] + "\n  " + header_html + page_html[insert_pos:]
+
+            doc = self._build_doc(global_css, page_css, page_html)
+            html_path.write_text(doc, encoding="utf-8")
+            self._screenshot(html_path, png_path)
+            paths.append(str(png_path))
+        return paths
+
+
 
     def _plan_design(self, carousel: Carousel) -> dict:
         carousel_dict = carousel_to_dict(carousel)
@@ -172,7 +281,7 @@ class LlmHtmlCodeRenderer:
                 if token in blob:
                     raise ValueError(f"排版代码包含禁用内容: {token}")
             tags = re.findall(r"</?([a-zA-Z0-9]+)", html)
-            allowed = {"main", "section", "header", "div", "p", "span", "strong", "ol", "ul", "li"}
+            allowed = {"main", "section", "header", "footer", "div", "p", "span", "strong", "em", "b", "i", "br", "ol", "ul", "li", "h1", "h2", "h3", "h4", "h5", "h6"}
             illegal = sorted({t.lower() for t in tags if t.lower() not in allowed})
             if illegal:
                 raise ValueError(f"HTML 包含禁用标签: {illegal}")
@@ -185,27 +294,144 @@ class LlmHtmlCodeRenderer:
 <meta name="viewport" content="width={W}, initial-scale=1">
 <style>
 * {{ box-sizing: border-box; }}
-html, body {{ margin: 0; width: {W}px; height: {H}px; overflow: hidden; }}
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {{ margin: 0; padding: 0; }}
+html, body {{ width: {W}px; height: {H}px; overflow: hidden; }}
 body {{ font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }}
+.page {{
+  box-sizing: border-box;
+  width: {W}px;
+  height: {H}px;
+  overflow: hidden;
+  position: relative;
+  padding: 100px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}}
+h1, h2, h3, h4, h5, h6, p, span, li, div {{
+  text-wrap: pretty;
+}}
+.page-title, h1, h2, h3, h4, h5, h6 {{
+  text-wrap: balance;
+}}
+.system-page-label {{
+  font-size: 38px;
+  font-weight: 600;
+  color: #888888;
+  margin-bottom: 48px;
+  text-align: left;
+  width: 100%;
+  font-family: system-ui, -apple-system, sans-serif;
+  letter-spacing: 0;
+}}
 {global_css}
 {page_css}
 </style>
 </head>
 <body>
 {body}
+<script>
+(function() {{
+    const page = document.querySelector('.page');
+    if (!page) return;
+    
+    // Ensure the page root itself is exactly fixed size
+    page.style.width = '1242px';
+    page.style.height = '1660px';
+    page.style.boxSizing = 'border-box';
+    page.style.overflow = 'hidden';
+    page.style.position = 'relative';
+    page.style.display = 'flex';
+    page.style.flexDirection = 'column';
+    
+    const clientHeight = 1660;
+    
+    // 1. Gather elements to scale spacing
+    const elementsWithSpacing = Array.from(page.querySelectorAll('*')).concat([page]);
+    const spacingData = [];
+    elementsWithSpacing.forEach(el => {{
+        const style = window.getComputedStyle(el);
+        const data = {{
+            el: el,
+            paddingTop: parseFloat(style.paddingTop) || 0,
+            paddingBottom: parseFloat(style.paddingBottom) || 0,
+            marginTop: parseFloat(style.marginTop) || 0,
+            marginBottom: parseFloat(style.marginBottom) || 0,
+            gap: parseFloat(style.gap) || 0
+        }};
+        if (data.paddingTop || data.paddingBottom || data.marginTop || data.marginBottom || data.gap) {{
+            spacingData.push(data);
+        }}
+    }});
+
+    // 2. Shrink spacing first (gaps, margins, card paddings)
+    let spacingScale = 1.0;
+    const minSpacingScale = 0.3;
+    while (page.scrollHeight > clientHeight && spacingScale > minSpacingScale) {{
+        spacingScale -= 0.05;
+        spacingData.forEach(data => {{
+            if (data.el === page) {{
+                // Keep some padding for safety boundary
+                const newPT = Math.max(60, data.paddingTop * spacingScale);
+                const newPB = Math.max(60, data.paddingBottom * spacingScale);
+                data.el.style.paddingTop = newPT + 'px';
+                data.el.style.paddingBottom = newPB + 'px';
+            }} else {{
+                if (data.paddingTop) data.el.style.paddingTop = (data.paddingTop * spacingScale) + 'px';
+                if (data.paddingBottom) data.el.style.paddingBottom = (data.paddingBottom * spacingScale) + 'px';
+                if (data.marginTop) data.el.style.marginTop = (data.marginTop * spacingScale) + 'px';
+                if (data.marginBottom) data.el.style.marginBottom = (data.marginBottom * spacingScale) + 'px';
+                if (data.gap) data.el.style.gap = (data.gap * spacingScale) + 'px';
+            }}
+        }});
+    }}
+
+    // 3. If still overflowing, shrink font sizes as a last resort
+    if (page.scrollHeight > clientHeight) {{
+        const elementsToScale = Array.from(page.querySelectorAll('*')).filter(el => {{
+            if (el === page || el.classList.contains('system-page-label')) return false;
+            const style = window.getComputedStyle(el);
+            return parseFloat(style.fontSize) > 0;
+        }});
+        
+        elementsToScale.forEach(el => {{
+            const style = window.getComputedStyle(el);
+            el.dataset.origFontSize = parseFloat(style.fontSize);
+            const lh = style.lineHeight;
+            if (lh.endsWith('px')) {{
+                el.dataset.origLineHeight = parseFloat(lh);
+            }}
+        }});
+
+        let fontScale = 1.0;
+        const minFontScale = 0.5;
+        while (page.scrollHeight > clientHeight && fontScale > minFontScale) {{
+            fontScale -= 0.02;
+            elementsToScale.forEach(el => {{
+                el.style.fontSize = (parseFloat(el.dataset.origFontSize) * fontScale) + 'px';
+                if (el.dataset.origLineHeight) {{
+                    el.style.lineHeight = (parseFloat(el.dataset.origLineHeight) * fontScale) + 'px';
+                }}
+            }});
+        }}
+    }}
+}})();
+</script>
 </body>
 </html>
 """
 
     def _screenshot(self, html_path: Path, png_path: Path) -> None:
+        abs_png_path = png_path.resolve()
         url = html_path.resolve().as_uri()
         cmd = [
             self._chrome_path,
             "--headless=new",
+            "--no-sandbox",
             "--disable-gpu",
+            "--disable-cache",
             "--hide-scrollbars",
             f"--window-size={W},{H}",
-            f"--screenshot={png_path}",
+            f"--screenshot={abs_png_path.as_posix()}",
             url,
         ]
         subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -215,6 +441,8 @@ body {{ font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC"
             shutil.which("google-chrome"),
             shutil.which("chromium"),
             shutil.which("chrome"),
+            r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+            r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
             "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
             "/Applications/Chromium.app/Contents/MacOS/Chromium",
         ]

@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1242, initial-scale=1">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+.page {
+  box-sizing: border-box;
+  width: 1242px;
+  height: 1660px;
+  overflow: hidden;
+  position: relative;
+  padding: 100px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+h1, h2, h3, h4, h5, h6, p, span, li, div {
+  text-wrap: pretty;
+}
+.page-title, h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+.system-page-label {
+  font-size: 38px;
+  font-weight: 600;
+  color: #888888;
+  margin-bottom: 48px;
+  text-align: left;
+  width: 100%;
+  font-family: system-ui, -apple-system, sans-serif;
+  letter-spacing: 0;
+}
+
+
+/* BASIC SETUP */
+.page {
+  box-sizing: border-box;
+  padding: 100px;
+  background-color: #FFFFFF;
+  color: #111111;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  letter-spacing: 0;
+  text-wrap: pretty;
+}
+
+/* PAGE-SPECIFIC LAYOUT */
+.page-04 {
+  justify-content: flex-start; /* Align items from the top */
+  gap: 72px; /* Space between title and list */
+}
+
+/* HEADER & TITLE */
+.page-header {
+  width: 100%;
+}
+
+.page-title {
+  font-size: 112px;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0;
+  padding: 0;
+  color: #111111;
+}
+
+/* CONTENT LIST */
+.content-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px; /* Space between list items */
+  width: 100%;
+}
+
+.list-item {
+  background-color: #F7F7F7;
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.list-tag {
+  margin: 0;
+  padding: 0;
+  font-size: 34px;
+  font-weight: 600;
+  color: #888888;
+}
+
+.list-text {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #333333;
+  text-wrap: balance;
+}
+</style>
+</head>
+<body>
+<main class="page page-04 type-body">
+  <div class="system-page-label">04 / 07</div>
+  <header class="page-header">
+    <p class="page-title">钱进了公司账户<br>代价不在财报里</p>
+  </header>
+  <section class="content-list">
+    <div class="list-item">
+      <p class="list-tag">裁员</p>
+      <p class="list-text">美国 Challenger 数据显示，AI 连续数月是公司裁员的主要理由，2026 年内累计近 5 万个岗位<span style="white-space: nowrap;">因此消失。</span></p>
+    </div>
+    <div class="list-item">
+      <p class="list-tag">招聘</p>
+      <p class="list-text">冲击集中在入口。斯坦福大学报告指出，22-25 岁年轻开发者的就业率，自 2024 年以来下降了近 <span style="white-space: nowrap;">20%。</span></p>
+    </div>
+    <div class="list-item">
+      <p class="list-tag">降价</p>
+      <p class="list-text">国内压力也很直接。客服、翻译、初级设计等岗位的排班在缩水，外包单价也在<span style="white-space: nowrap;">悄悄下滑。</span></p>
+    </div>
+    <div class="list-item">
+      <p class="list-tag">拆解</p>
+      <p class="list-text">AI 不直接消灭某个职业，但它会拆解任务。一个岗位被拆成几段后，基础那段的钱就<span style="white-space: nowrap;">变少了。</span></p>
+    </div>
+  </section>
+</main>
+<script>
+(function() {
+    const page = document.querySelector('.page');
+    if (!page) return;
+    
+    // Ensure the page root itself is exactly fixed size
+    page.style.width = '1242px';
+    page.style.height = '1660px';
+    page.style.boxSizing = 'border-box';
+    page.style.overflow = 'hidden';
+    page.style.position = 'relative';
+    page.style.display = 'flex';
+    page.style.flexDirection = 'column';
+    
+    // Check if the content overflows the page height
+    const scrollHeight = page.scrollHeight;
+    const clientHeight = 1660;
+    
+    if (scrollHeight > clientHeight) {
+        const style = window.getComputedStyle(page);
+        const paddingTop = parseFloat(style.paddingTop) || 0;
+        const paddingBottom = parseFloat(style.paddingBottom) || 0;
+        
+        const label = page.querySelector('.system-page-label');
+        const labelHeight = label ? label.offsetHeight + parseFloat(window.getComputedStyle(label).marginBottom || 0) : 0;
+        const availableHeight = clientHeight - paddingTop - paddingBottom - labelHeight;
+        
+        const children = Array.from(page.children).filter(child => !child.classList.contains('system-page-label'));
+        if (children.length === 0) return;
+        
+        const wrapper = document.createElement('div');
+        wrapper.className = 'page-content-wrapper';
+        wrapper.style.width = '100%';
+        wrapper.style.height = 'auto';
+        wrapper.style.display = 'flex';
+        wrapper.style.flexDirection = 'column';
+        
+        // Move children into wrapper
+        children.forEach(child => wrapper.appendChild(child));
+        page.appendChild(wrapper);
+        
+        // Measure content height and scale if it exceeds available space
+        const contentHeight = wrapper.offsetHeight;
+        if (contentHeight > availableHeight) {
+            const scale = availableHeight / contentHeight;
+            wrapper.style.transform = 'scale(' + scale + ')';
+            wrapper.style.transformOrigin = 'top center';
+        }
+    }
+})();
+</script>
+</body>
+</html>

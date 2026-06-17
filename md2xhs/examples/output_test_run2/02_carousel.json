@@ -1,0 +1,197 @@
+{
+  "post_title": "AI多赚的钱，好像少算了一笔账",
+  "tags": [
+    "AI",
+    "工作",
+    "商业认知",
+    "账本"
+  ],
+  "caption": "AI 公司收入千亿，客服、设计、初级岗位的预算先瘦了。\n这些模型是公共数据喂大的，但账单上只有公司账户，没有数据来源。\n这笔账，可以算一算。",
+  "slides": [
+    {
+      "type": "cover",
+      "label": "01 / 封面",
+      "icon": "🤔",
+      "title": [
+        "拿走数据和岗位",
+        "然后呢？"
+      ],
+      "layout": {
+        "title_scale": "poster",
+        "body_density": "rich",
+        "composition": "statement",
+        "emphasis": "title"
+      },
+      "sub_items": [
+        {
+          "tag": "谁喂的",
+          "text": "AI 模型的核心资产是数据，这些数据来自几代网民在论坛、博客、社交媒体上免费贡献的内容。"
+        },
+        {
+          "tag": "谁赚了",
+          "text": "钱流进了少数公司的账户，但最初贡献数据的人，只收到了系统升级的弹窗通知。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "body",
+      "label": "02 / 现状",
+      "icon": "📉",
+      "title": [
+        "公司多赚了",
+        "招聘先少了"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "rich",
+        "composition": "list",
+        "emphasis": "card"
+      },
+      "sub_items": [
+        {
+          "tag": "预算挪移",
+          "text": "AI 接管客服、翻译、初级代码后，省下的不是时间，是这些岗位明年的招聘名额和薪资预算。"
+        },
+        {
+          "tag": "效率幻觉",
+          "text": "设计稿三天变三分钟，听起来很美。但对乙方来说，意味着单个项目报价变低，以前三个人的活现在一个人干。"
+        },
+        {
+          "tag": "排班瘦身",
+          "text": "很多公司的财务报表还没公布，但客服、内容审核这些岗位的排班表已经先瘦了一圈。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "hero",
+      "label": "03 / 资产",
+      "icon": "📦",
+      "title": [
+        "这笔资产",
+        "没记在账上"
+      ],
+      "layout": {
+        "title_scale": "xlarge",
+        "body_density": "rich",
+        "composition": "list",
+        "emphasis": "title"
+      },
+      "sub_items": [
+        {
+          "tag": "工业资产",
+          "text": "上一代技术革命，资产是工厂、机器、专利，产权清晰，账本上写得明明白白。"
+        },
+        {
+          "tag": "网络资产",
+          "text": "互联网公司的资产是代码、服务器、平台用户关系，虽然有争议，但核心资产归属公司。"
+        },
+        {
+          "tag": "数据资产",
+          "text": "AI 的核心资产——训练数据，是从公共互联网上抓来的。这笔原料成本，在财报上几乎是零。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "estimate",
+      "label": "04 / 估算",
+      "icon": "💰",
+      "title": [
+        "一笔千亿级的账"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "sparse",
+        "composition": "metric",
+        "emphasis": "number"
+      },
+      "sub_items": [],
+      "steps": [],
+      "phases": [],
+      "highlight": "1000亿+",
+      "highlight_sub": "美元级 / 年度超额利润（示意）",
+      "footnote": "口径：基于头部 AI 公司公开财报利润估算，用于讨论量级，非精确审计数字。这笔钱的来源，部分可视为公共数据资产的变现收益。"
+    },
+    {
+      "type": "body",
+      "label": "05 / 先例",
+      "icon": "🇳🇴",
+      "title": [
+        "挪威分石油",
+        "AI分什么？"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "rich",
+        "composition": "list",
+        "emphasis": "card"
+      },
+      "sub_items": [
+        {
+          "tag": "石油基金",
+          "text": "挪威发现石油后，没直接发钱，而是成立了主权财富基金，将石油收入投资全球，国民间接受益。"
+        },
+        {
+          "tag": "数据红利",
+          "text": "AI 的超额利润，类似一种从公共数据中提炼出的“数字石油”。这笔钱的流向，可以有不同方案。"
+        },
+        {
+          "tag": "全民账户",
+          "text": "韩国最近也在讨论设立全民共享的基金账户，一些收益直接来自对本国大型科技公司的投资。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    },
+    {
+      "type": "cta",
+      "label": "06 / 下一步",
+      "icon": "✏️",
+      "title": [
+        "算账，而不是空谈"
+      ],
+      "layout": {
+        "title_scale": "large",
+        "body_density": "normal",
+        "composition": "cta",
+        "emphasis": "action"
+      },
+      "sub_items": [
+        {
+          "tag": "邀请挑错",
+          "text": "作者正整理一份「AI 公共收益」追踪页，记录财报和数据。它不是倡议，是一份欢迎所有人来挑错的账本草稿。"
+        },
+        {
+          "tag": "评论区见",
+          "text": "你觉得这笔账该怎么算？或者你看到了哪些岗位正在被切实影响？欢迎在评论区补充案例或表达反对。"
+        },
+        {
+          "tag": "迭代方向",
+          "text": "如果评论区的讨论和案例足够扎实，下一步可以细化这份账本的计算口径，让它更接近现实。"
+        }
+      ],
+      "steps": [],
+      "phases": [],
+      "highlight": "",
+      "highlight_sub": "",
+      "footnote": ""
+    }
+  ]
+}

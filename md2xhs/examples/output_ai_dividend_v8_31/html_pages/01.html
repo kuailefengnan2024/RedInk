@@ -5,33 +5,213 @@
 <meta name="viewport" content="width=1242, initial-scale=1">
 <style>
 * { box-sizing: border-box; }
-html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li { margin: 0; padding: 0; }
+html, body { width: 1242px; height: 1660px; overflow: hidden; }
 body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+.page {
+  box-sizing: border-box;
+  width: 1242px;
+  height: 1660px;
+  overflow: hidden;
+  position: relative;
+  padding: 100px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+h1, h2, h3, h4, h5, h6, p, span, li, div {
+  text-wrap: pretty;
+}
+.page-title, h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+.system-page-label {
+  font-size: 38px;
+  font-weight: 600;
+  color: #888888;
+  margin-bottom: 48px;
+  text-align: left;
+  width: 100%;
+  font-family: system-ui, -apple-system, sans-serif;
+  letter-spacing: 0;
+}
 
 
-.page { width: 1242px; height: 1660px; background-color: #F7F7F5; box-sizing: border-box; padding: 110px 100px; display: flex; flex-direction: column; font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; position: relative; overflow: hidden; } .page-header { display: flex; align-items: center; gap: 16px; } .header-icon { font-size: 42px; } .header-label { font-size: 34px; font-weight: 600; color: #888888; letter-spacing: 0; } .title-section { margin-top: 150px; display: flex; flex-direction: column; gap: 12px; } .page-title { font-size: 144px; font-weight: 900; line-height: 1.15; color: #111111; margin: 0; letter-spacing: 0; } .sub-items-section { margin-top: auto; margin-bottom: 20px; display: flex; flex-direction: column; gap: 48px; } .sub-item { border-top: 2px solid #E0E0DE; padding-top: 36px; display: flex; flex-direction: row; gap: 40px; } .sub-tag { width: 180px; flex-shrink: 0; font-size: 36px; font-weight: 700; color: #D23A27; letter-spacing: 0; line-height: 1.5; } .sub-text { flex: 1; font-size: 40px; line-height: 1.6; color: #333333; margin: 0; font-weight: 400; letter-spacing: 0; text-align: justify; }
+/* 基本页面设置 */
+.page {
+  width: 1242px;
+  height: 1660px;
+  padding: 100px;
+  box-sizing: border-box;
+  background-color: #F8F8F8;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  /* 强制 flex 纵向布局 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* 垂直方向上推开内容，实现饱满布局 */
+}
+
+/* 防止单字成行 & 字距 */
+* {
+  text-wrap: balance;
+  letter-spacing: 0;
+}
+
+/* 封面标题 */
+.cover-header {
+  flex-shrink: 0; /* 防止标题被压缩 */
+}
+
+.page-title {
+  font-size: 152px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #111111;
+  margin: 0;
+  padding: 0;
+}
+
+/* 内容卡片列表 */
+.content-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px; /* 卡片间距 */
+}
+
+.content-item {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 40px 48px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.03);
+}
+
+/* 卡片内标签 */
+.content-tag {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 34px;
+  font-weight: 500;
+  padding: 8px 16px;
+  color: #E53935;
+  background-color: #FFEBEE;
+  border-radius: 8px;
+}
+
+/* 卡片内正文 */
+.content-text {
+  font-size: 40px;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0;
+  padding: 0;
+}
+
+.content-text span {
+  white-space: nowrap;
+}
 </style>
 </head>
 <body>
 <main class="page page-01 type-cover">
-  <header class="page-header">
-    <span class="header-icon">🧾</span>
-    <span class="header-label">01 / 账单</span>
+  <header class="cover-header">
+    <h1 class="page-title">AI的利润表很漂亮<br>但少算了一页</h1>
   </header>
-  <section class="title-section">
-    <p class="page-title">AI多赚的钱</p>
-    <p class="page-title">谁少了机会</p>
-  </section>
-  <section class="sub-items-section">
-    <div class="sub-item">
-      <div class="sub-tag">财报体面</div>
-      <p class="sub-text">英伟达和微软把算力变成连涨的收入，利润表很体面。但另一边，初级岗位的预算悄悄缩水，外包单价被压低。</p>
+  <section class="content-list">
+    <div class="content-item">
+      <div class="content-tag">极度利好ai大公司 却让普通人丢掉工作或者极度卷时长</div>
+      <p class="content-text">芯片、云和模型订阅变成了巨头收入。但被 AI 影响和替代的裁员岗位，由公众承担。</p>
     </div>
-    <div class="sub-item">
-      <div class="sub-tag">账本空白</div>
-      <p class="sub-text">系统赚的钱进了公司账户，代价却在统计口径之外。这笔钱很大，但没人问它从哪来，也没人算它该怎么分。</p>
+    <div class="content-item">
+      <div class="content-tag">训练数据来自每个人 但是ai收益却只被大公司占有</div>
+      <p class="content-text">每个用户要付费购买自己数据（点赞 聊天 图片创作 自拍 视频创作等等）训练ai的订阅制会员。这就好比花钱买自己种的粮食一样荒谬</p>
     </div>
   </section>
 </main>
+<script>
+(function() {
+    const page = document.querySelector('.page');
+    if (!page) return;
+    
+    // Ensure the page root itself is exactly fixed size
+    page.style.width = '1242px';
+    page.style.height = '1660px';
+    page.style.boxSizing = 'border-box';
+    page.style.overflow = 'hidden';
+    page.style.position = 'relative';
+    page.style.display = 'flex';
+    page.style.flexDirection = 'column';
+    
+    const clientHeight = 1660;
+    
+    // 1. Gather elements to scale spacing
+    const elementsWithSpacing = Array.from(page.querySelectorAll('*')).concat([page]);
+    const spacingData = [];
+    elementsWithSpacing.forEach(el => {
+        const style = window.getComputedStyle(el);
+        const data = {
+            el: el,
+            paddingTop: parseFloat(style.paddingTop) || 0,
+            paddingBottom: parseFloat(style.paddingBottom) || 0,
+            marginTop: parseFloat(style.marginTop) || 0,
+            marginBottom: parseFloat(style.marginBottom) || 0,
+            gap: parseFloat(style.gap) || 0
+        };
+        if (data.paddingTop || data.paddingBottom || data.marginTop || data.marginBottom || data.gap) {
+            spacingData.push(data);
+        }
+    });
+
+    // 2. Shrink spacing first (gaps, margins, card paddings)
+    let spacingScale = 1.0;
+    const minSpacingScale = 0.3;
+    while (page.scrollHeight > clientHeight && spacingScale > minSpacingScale) {
+        spacingScale -= 0.05;
+        spacingData.forEach(data => {
+            if (data.el === page) {
+                // Keep some padding for safety boundary
+                const newPT = Math.max(60, data.paddingTop * spacingScale);
+                const newPB = Math.max(60, data.paddingBottom * spacingScale);
+                data.el.style.paddingTop = newPT + 'px';
+                data.el.style.paddingBottom = newPB + 'px';
+            } else {
+                if (data.paddingTop) data.el.style.paddingTop = (data.paddingTop * spacingScale) + 'px';
+                if (data.paddingBottom) data.el.style.paddingBottom = (data.paddingBottom * spacingScale) + 'px';
+                if (data.marginTop) data.el.style.marginTop = (data.marginTop * spacingScale) + 'px';
+                if (data.marginBottom) data.el.style.marginBottom = (data.marginBottom * spacingScale) + 'px';
+                if (data.gap) data.el.style.gap = (data.gap * spacingScale) + 'px';
+            }
+        });
+    }
+
+    // 3. If still overflowing, shrink font sizes as a last resort
+    if (page.scrollHeight > clientHeight) {
+        const elementsToScale = Array.from(page.querySelectorAll('*')).filter(el => {
+            if (el === page || el.classList.contains('system-page-label')) return false;
+            const style = window.getComputedStyle(el);
+            return parseFloat(style.fontSize) > 0;
+        });
+        
+        elementsToScale.forEach(el => {
+            const style = window.getComputedStyle(el);
+            el.dataset.origFontSize = parseFloat(style.fontSize);
+            const lh = style.lineHeight;
+            if (lh.endsWith('px')) {
+                el.dataset.origLineHeight = parseFloat(lh);
+            }
+        });
+
+        let fontScale = 1.0;
+        const minFontScale = 0.5;
+        while (page.scrollHeight > clientHeight && fontScale > minFontScale) {
+            fontScale -= 0.02;
+            elementsToScale.forEach(el => {
+                el.style.fontSize = (parseFloat(el.dataset.origFontSize) * fontScale) + 'px';
+                if (el.dataset.origLineHeight) {
+                    el.style.lineHeight = (parseFloat(el.dataset.origLineHeight) * fontScale) + 'px';
+                }
+            });
+        }
+    }
+})();
+</script>
 </body>
 </html>

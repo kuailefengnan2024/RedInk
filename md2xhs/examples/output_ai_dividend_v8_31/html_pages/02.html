@@ -5,102 +5,225 @@
 <meta name="viewport" content="width=1242, initial-scale=1">
 <style>
 * { box-sizing: border-box; }
-html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li { margin: 0; padding: 0; }
+html, body { width: 1242px; height: 1660px; overflow: hidden; }
 body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+.page {
+  box-sizing: border-box;
+  width: 1242px;
+  height: 1660px;
+  overflow: hidden;
+  position: relative;
+  padding: 100px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+h1, h2, h3, h4, h5, h6, p, span, li, div {
+  text-wrap: pretty;
+}
+.page-title, h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+.system-page-label {
+  font-size: 38px;
+  font-weight: 600;
+  color: #888888;
+  margin-bottom: 48px;
+  text-align: left;
+  width: 100%;
+  font-family: system-ui, -apple-system, sans-serif;
+  letter-spacing: 0;
+}
 
 
 .page {
-  width: 1242px;
-  height: 1660px;
-  background-color: #F8F9FA;
-  padding: 100px 96px;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
-  letter-spacing: 0;
-  display: flex;
-  flex-direction: column;
-}
-.page-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 40px;
-}
-.header-icon {
-  font-size: 40px;
-}
-.header-label {
-  font-size: 36px;
-  font-weight: 600;
-  color: #666666;
-  letter-spacing: 0;
+  padding: 100px;
+  background-color: #F2F4F7;
+  justify-content: space-between;
+  text-wrap: pretty;
 }
 .page-title {
-  margin-bottom: 56px;
+  color: #111111;
+  font-size: 112px;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: center;
+}
+.metric-section {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 8px;
 }
-.title-line {
-  font-size: 110px;
-  font-weight: 900;
-  color: #111111;
-  line-height: 1.15;
-  letter-spacing: 0;
+.metric-highlight {
+  font-size: 240px;
+  font-weight: 800;
+  color: #E53935;
+  line-height: 1;
 }
-.proof-list {
+.metric-sub {
+  font-size: 38px;
+  font-weight: 500;
+  color: #555555;
+}
+.content-list {
   display: flex;
   flex-direction: column;
-  gap: 28px;
-  flex: 1;
+  gap: 20px;
+  width: 100%;
 }
-.proof-item {
+.content-item {
   background-color: #FFFFFF;
   border-radius: 16px;
-  padding: 36px 40px;
-  border-left: 8px solid #FF4D00;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  padding: 24px 48px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.03);
 }
-.proof-tag {
-  font-size: 42px;
-  font-weight: 800;
-  color: #FF4D00;
+.content-tag {
+  display: inline-block;
+  background-color: #FFEBEE;
+  color: #E53935;
+  font-size: 34px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 8px;
+  margin-bottom: 12px;
 }
-.proof-text {
-  font-size: 38px;
+.content-text {
+  font-size: 40px;
+  color: #111111;
+  line-height: 1.6;
+}
+.page-footnote {
+  width: 100%;
+  text-align: center;
+  align-self: flex-end;
+}
+.page-footnote p {
+  font-size: 36px;
+  color: #888888;
   line-height: 1.5;
-  color: #333333;
-  font-weight: 400;
 }
 </style>
 </head>
 <body>
-<main class="page page-02 type-body">
-  <header class="page-header">
-    <span class="header-icon">📉</span>
-    <span class="header-label">02 / 预算</span>
+<main class="page page-03 type-estimate">
+  <div class="system-page-label">02</div>
+  <header class="page-title">
+    <p>747亿美元<span style="white-space: nowrap;">超额利润</span><br>完全不在<span style="white-space: nowrap;">公共账本里</span></p>
   </header>
-  <section class="page-title">
-    <div class="title-line">公司多赚了</div>
-    <div class="title-line">招聘先少了</div>
+
+  <section class="metric-section">
+    <div class="metric-highlight">747亿</div>
+    <div class="metric-sub">美元 / 保守估算</div>
   </section>
-  <section class="proof-list">
-    <div class="proof-item">
-      <div class="proof-tag">冻结招聘</div>
-      <div class="proof-text">纽约联储的企业调查写得委婉，公司很少直接裁员，只是调整招聘计划。失业率还没爆，招聘软件上的已读不回先变多了。</div>
+
+  <div class="content-list">
+    <div class="content-item">
+      <div class="content-tag">硬件</div>
+      <p class="content-text">NVIDIA数据中心收入1937亿美元，按毛利率粗算，新增毛利约558亿美元。</p>
     </div>
-    <div class="proof-item">
-      <div class="proof-tag">入口变窄</div>
-      <div class="proof-text">斯坦福AI指数显示，系统主要堵死了年轻人的招聘入口。过去两年，22到25岁的软件开发者，就业机会少了快20%。</div>
+    <div class="content-item">
+      <div class="content-tag">软件</div>
+      <p class="content-text">微软Azure、AWS、Google Cloud和Meta广告效率提升，加上未上市模型公司，超额毛利保守估约189亿美元。</p>
     </div>
-    <div class="proof-item">
-      <div class="proof-tag">预算转移</div>
-      <div class="proof-text">Challenger 2026年数据显示，单是4月就有超两万个岗位因为AI没了预算。客服、运营和初级设计先被压预算，排班表先瘦了。</div>
+    <div class="content-item">
+      <div class="content-tag">红利</div>
+      <p class="content-text">如果拿20%算作公共数据红利，约1007亿元。重点不是分多少，而是这笔钱根本不在<span style="white-space: nowrap;">公共账户里</span>。</p>
     </div>
-  </section>
+  </div>
+
+  <footer class="page-footnote">
+    <p>NVIDIA FY2026, Microsoft FY2025, Amazon/Alphabet/Meta 2025 财报保守推算</p>
+  </footer>
 </main>
+<script>
+(function() {
+    const page = document.querySelector('.page');
+    if (!page) return;
+    
+    // Ensure the page root itself is exactly fixed size
+    page.style.width = '1242px';
+    page.style.height = '1660px';
+    page.style.boxSizing = 'border-box';
+    page.style.overflow = 'hidden';
+    page.style.position = 'relative';
+    page.style.display = 'flex';
+    page.style.flexDirection = 'column';
+    
+    const clientHeight = 1660;
+    
+    // 1. Gather elements to scale spacing
+    const elementsWithSpacing = Array.from(page.querySelectorAll('*')).concat([page]);
+    const spacingData = [];
+    elementsWithSpacing.forEach(el => {
+        const style = window.getComputedStyle(el);
+        const data = {
+            el: el,
+            paddingTop: parseFloat(style.paddingTop) || 0,
+            paddingBottom: parseFloat(style.paddingBottom) || 0,
+            marginTop: parseFloat(style.marginTop) || 0,
+            marginBottom: parseFloat(style.marginBottom) || 0,
+            gap: parseFloat(style.gap) || 0
+        };
+        if (data.paddingTop || data.paddingBottom || data.marginTop || data.marginBottom || data.gap) {
+            spacingData.push(data);
+        }
+    });
+
+    // 2. Shrink spacing first (gaps, margins, card paddings)
+    let spacingScale = 1.0;
+    const minSpacingScale = 0.3;
+    while (page.scrollHeight > clientHeight && spacingScale > minSpacingScale) {
+        spacingScale -= 0.05;
+        spacingData.forEach(data => {
+            if (data.el === page) {
+                // Keep some padding for safety boundary
+                const newPT = Math.max(60, data.paddingTop * spacingScale);
+                const newPB = Math.max(60, data.paddingBottom * spacingScale);
+                data.el.style.paddingTop = newPT + 'px';
+                data.el.style.paddingBottom = newPB + 'px';
+            } else {
+                if (data.paddingTop) data.el.style.paddingTop = (data.paddingTop * spacingScale) + 'px';
+                if (data.paddingBottom) data.el.style.paddingBottom = (data.paddingBottom * spacingScale) + 'px';
+                if (data.marginTop) data.el.style.marginTop = (data.marginTop * spacingScale) + 'px';
+                if (data.marginBottom) data.el.style.marginBottom = (data.marginBottom * spacingScale) + 'px';
+                if (data.gap) data.el.style.gap = (data.gap * spacingScale) + 'px';
+            }
+        });
+    }
+
+    // 3. If still overflowing, shrink font sizes as a last resort
+    if (page.scrollHeight > clientHeight) {
+        const elementsToScale = Array.from(page.querySelectorAll('*')).filter(el => {
+            if (el === page || el.classList.contains('system-page-label')) return false;
+            const style = window.getComputedStyle(el);
+            return parseFloat(style.fontSize) > 0;
+        });
+        
+        elementsToScale.forEach(el => {
+            const style = window.getComputedStyle(el);
+            el.dataset.origFontSize = parseFloat(style.fontSize);
+            const lh = style.lineHeight;
+            if (lh.endsWith('px')) {
+                el.dataset.origLineHeight = parseFloat(lh);
+            }
+        });
+
+        let fontScale = 1.0;
+        const minFontScale = 0.5;
+        while (page.scrollHeight > clientHeight && fontScale > minFontScale) {
+            fontScale -= 0.02;
+            elementsToScale.forEach(el => {
+                el.style.fontSize = (parseFloat(el.dataset.origFontSize) * fontScale) + 'px';
+                if (el.dataset.origLineHeight) {
+                    el.style.lineHeight = (parseFloat(el.dataset.origLineHeight) * fontScale) + 'px';
+                }
+            });
+        }
+    }
+})();
+</script>
 </body>
 </html>

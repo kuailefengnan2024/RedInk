@@ -5,63 +5,240 @@
 <meta name="viewport" content="width=1242, initial-scale=1">
 <style>
 * { box-sizing: border-box; }
-html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li { margin: 0; padding: 0; }
+html, body { width: 1242px; height: 1660px; overflow: hidden; }
 body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+.page {
+  box-sizing: border-box;
+  width: 1242px;
+  height: 1660px;
+  overflow: hidden;
+  position: relative;
+  padding: 100px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+h1, h2, h3, h4, h5, h6, p, span, li, div {
+  text-wrap: pretty;
+}
+.page-title, h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+.system-page-label {
+  font-size: 38px;
+  font-weight: 600;
+  color: #888888;
+  margin-bottom: 48px;
+  text-align: left;
+  width: 100%;
+  font-family: system-ui, -apple-system, sans-serif;
+  letter-spacing: 0;
+}
 
-
-.page { width: 1242px; height: 1660px; background-color: #F8F8F7; padding: 100px 96px; box-sizing: border-box; display: flex; flex-direction: column; font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; position: relative; }
-.page-header { display: flex; align-items: center; gap: 16px; margin-bottom: 48px; }
-.header-icon { font-size: 42px; }
-.header-label { font-size: 40px; font-weight: 600; color: #666666; letter-spacing: 0; }
-.title-container { margin-bottom: 48px; }
-.title-line { font-size: 112px; font-weight: 900; color: #1A1A1A; line-height: 1.15; margin: 0; letter-spacing: 0; }
-.highlight-box { background-color: #FFFFFF; border-radius: 16px; padding: 40px 48px; margin-bottom: 48px; border-left: 12px solid #D94A38; box-shadow: 0 8px 24px rgba(0,0,0,0.03); }
-.highlight-value { font-size: 92px; font-weight: 800; color: #D94A38; line-height: 1.1; margin-bottom: 12px; letter-spacing: 0; }
-.highlight-sub { font-size: 38px; font-weight: 600; color: #666666; line-height: 1.4; letter-spacing: 0; }
-.sub-items-list { display: flex; flex-direction: column; gap: 36px; flex-grow: 1; }
-.sub-item { display: flex; flex-direction: column; gap: 12px; }
-.item-tag { font-size: 40px; font-weight: 800; color: #1A1A1A; display: flex; align-items: center; letter-spacing: 0; }
-.item-tag::before { content: ""; display: inline-block; width: 12px; height: 12px; background-color: #D94A38; border-radius: 2px; margin-right: 16px; }
-.item-text { font-size: 38px; line-height: 1.55; color: #444444; margin: 0; letter-spacing: 0; }
-.footnote { margin-top: auto; padding-top: 32px; border-top: 2px solid #EAEAEA; }
-.footnote p { font-size: 34px; color: #999999; margin: 0; line-height: 1.4; letter-spacing: 0; }
+/* This is a global CSS block, but for this specific page, all styles are self-contained. */
+.page {
+    background-color: #F2F4F7;
+    padding: 100px;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.title-wrapper {
+    text-align: center;
+    width: 100%;
+}
+.page-title {
+    font-size: 112px;
+    font-weight: 800;
+    color: #111111;
+    line-height: 1.2;
+    margin: 0;
+}
+.page-subtitle {
+    font-size: 84px;
+    font-weight: 800;
+    color: #555555;
+    line-height: 1.2;
+    margin: 4px 0 0 0;
+}
+.metric-wrapper {
+    text-align: center;
+    margin: 8px 0;
+}
+.metric-highlight {
+    font-size: 156px;
+    font-weight: 900;
+    color: #E53935;
+    margin: 0;
+    line-height: 1;
+    letter-spacing: 0;
+}
+.metric-sub {
+    font-size: 38px;
+    color: #555555;
+    margin: 8px 0 0 0;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+.content-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+.content-item {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    padding: 24px 48px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.content-tag {
+    font-size: 34px;
+    font-weight: 600;
+    color: #FFFFFF;
+    background-color: #111111;
+    padding: 6px 16px;
+    border-radius: 8px;
+    margin: 0;
+    align-self: flex-start;
+}
+.content-text {
+    font-size: 40px;
+    line-height: 1.6;
+    color: #111111;
+    margin: 0;
+    text-wrap: pretty;
+}
+.footnote {
+    margin-top: auto;
+    font-size: 36px;
+    color: #555555;
+    line-height: 1.6;
+    text-align: center;
+    padding: 0 40px;
+    text-wrap: pretty;
+}
 </style>
 </head>
 <body>
-<main class="page page-03 type-estimate">
-  <header class="page-header">
-    <span class="header-icon">💰</span>
-    <span class="header-label">03 / 利润</span>
-  </header>
-  
-  <section class="title-container">
-    <p class="title-line">多出747亿美元</p>
-    <p class="title-line">没人问它从哪来</p>
-  </section>
-
-  <section class="highlight-box">
-    <div class="highlight-value">747亿美元</div>
-    <div class="highlight-sub">AI新增超额利润粗算</div>
-  </section>
-
-  <div class="sub-items-list">
-    <div class="sub-item">
-      <div class="item-tag">显卡毛利</div>
-      <p class="item-text">英伟达FY2026数据中心收入1937亿美元，按71.1%毛利率粗算，一年多出的毛利大概558亿美元，这仅仅是卖显卡的账。</p>
+<main class="page page-04 type-estimate">
+  <div class="system-page-label">03</div>
+    <div class="title-wrapper">
+        <p class="page-title">国内也是<br>类似的账</p>
+        <p class="page-subtitle">只是更难看清</p>
     </div>
-    <div class="sub-item">
-      <div class="item-tag">云端利润</div>
-      <p class="item-text">微软Azure、亚马逊AWS和谷歌云，保守切出一块AI新增利润，加起来近100亿美元。Meta靠AI提高广告效率，算它40亿美元。</p>
+    <div class="metric-wrapper">
+        <p class="metric-highlight">160-333亿</p>
+        <p class="metric-sub">人民币 / <span style="white-space: nowrap;">讨论量级</span></p>
     </div>
-    <div class="sub-item">
-      <div class="item-tag">模型合同</div>
-      <p class="item-text">OpenAI这批没上市的模型公司，企业合同的超额毛利往低了算也有50亿美元。利润进了公司账户，用户只收到隐私协议更新弹窗。</p>
-    </div>
-  </div>
-
-  <div class="footnote">
-    <p>数据来源：各公司最新财报及保守估算口径</p>
-  </div>
+    <ul class="content-list">
+        <li class="content-item">
+            <p class="content-tag">模糊</p>
+            <p class="content-text">巨头都在AI链条里，但超额利润没单独拆出来。只能先估算，合计大概160到<span style="white-space: nowrap;">333亿元。</span></p>
+        </li>
+        <li class="content-item">
+            <p class="content-tag">装睡</p>
+            <p class="content-text">按20%算公共数据红利，是32到<span style="white-space: nowrap;">67亿元。</span>数不大。但数不大和账不存在是两回事。前者是早期，后者是装睡。</p>
+        </li>
+        <li class="content-item">
+            <p class="content-tag">代价</p>
+            <p class="content-text">国内的就业压力不是凭空的。ILO把AI影响拆到任务层面，它不一定让职业消失，它只改变工资单的厚度。</p>
+        </li>
+    </ul>
+    <p class="footnote">中美两国 AI 超额收益均在持续增长。然而，作为技术养料供给者的普通民众，其工作机会却在被 AI <span style="white-space: nowrap;">悄然夺走。</span></p>
 </main>
+<script>
+(function() {
+    const page = document.querySelector('.page');
+    if (!page) return;
+    
+    // Ensure the page root itself is exactly fixed size
+    page.style.width = '1242px';
+    page.style.height = '1660px';
+    page.style.boxSizing = 'border-box';
+    page.style.overflow = 'hidden';
+    page.style.position = 'relative';
+    page.style.display = 'flex';
+    page.style.flexDirection = 'column';
+    
+    const clientHeight = 1660;
+    
+    // 1. Gather elements to scale spacing
+    const elementsWithSpacing = Array.from(page.querySelectorAll('*')).concat([page]);
+    const spacingData = [];
+    elementsWithSpacing.forEach(el => {
+        const style = window.getComputedStyle(el);
+        const data = {
+            el: el,
+            paddingTop: parseFloat(style.paddingTop) || 0,
+            paddingBottom: parseFloat(style.paddingBottom) || 0,
+            marginTop: parseFloat(style.marginTop) || 0,
+            marginBottom: parseFloat(style.marginBottom) || 0,
+            gap: parseFloat(style.gap) || 0
+        };
+        if (data.paddingTop || data.paddingBottom || data.marginTop || data.marginBottom || data.gap) {
+            spacingData.push(data);
+        }
+    });
+
+    // 2. Shrink spacing first (gaps, margins, card paddings)
+    let spacingScale = 1.0;
+    const minSpacingScale = 0.3;
+    while (page.scrollHeight > clientHeight && spacingScale > minSpacingScale) {
+        spacingScale -= 0.05;
+        spacingData.forEach(data => {
+            if (data.el === page) {
+                // Keep some padding for safety boundary
+                const newPT = Math.max(60, data.paddingTop * spacingScale);
+                const newPB = Math.max(60, data.paddingBottom * spacingScale);
+                data.el.style.paddingTop = newPT + 'px';
+                data.el.style.paddingBottom = newPB + 'px';
+            } else {
+                if (data.paddingTop) data.el.style.paddingTop = (data.paddingTop * spacingScale) + 'px';
+                if (data.paddingBottom) data.el.style.paddingBottom = (data.paddingBottom * spacingScale) + 'px';
+                if (data.marginTop) data.el.style.marginTop = (data.marginTop * spacingScale) + 'px';
+                if (data.marginBottom) data.el.style.marginBottom = (data.marginBottom * spacingScale) + 'px';
+                if (data.gap) data.el.style.gap = (data.gap * spacingScale) + 'px';
+            }
+        });
+    }
+
+    // 3. If still overflowing, shrink font sizes as a last resort
+    if (page.scrollHeight > clientHeight) {
+        const elementsToScale = Array.from(page.querySelectorAll('*')).filter(el => {
+            if (el === page || el.classList.contains('system-page-label')) return false;
+            const style = window.getComputedStyle(el);
+            return parseFloat(style.fontSize) > 0;
+        });
+        
+        elementsToScale.forEach(el => {
+            const style = window.getComputedStyle(el);
+            el.dataset.origFontSize = parseFloat(style.fontSize);
+            const lh = style.lineHeight;
+            if (lh.endsWith('px')) {
+                el.dataset.origLineHeight = parseFloat(lh);
+            }
+        });
+
+        let fontScale = 1.0;
+        const minFontScale = 0.5;
+        while (page.scrollHeight > clientHeight && fontScale > minFontScale) {
+            fontScale -= 0.02;
+            elementsToScale.forEach(el => {
+                el.style.fontSize = (parseFloat(el.dataset.origFontSize) * fontScale) + 'px';
+                if (el.dataset.origLineHeight) {
+                    el.style.lineHeight = (parseFloat(el.dataset.origLineHeight) * fontScale) + 'px';
+                }
+            });
+        }
+    }
+})();
+</script>
 </body>
 </html>
